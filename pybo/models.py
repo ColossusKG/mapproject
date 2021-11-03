@@ -16,4 +16,13 @@ class Answer(models.Model):
     create_date = models.DateTimeField()
 
 
-#class gmap01(models.Model):
+class Gmap01(models.Model):
+    num = models.IntegerField(max_length=10)
+    city = models.CharField(max_length=10)
+    name = models.CharField(max_length=50)
+    cate = models.CharField(max_length=50)
+    doroaddr = models.CharField(max_length=100)
+    dongaddr = models.CharField(max_length=100)
+    zipcode = models.IntegerField(max_length=10)
+    lat = models.FloatField(max_length=20)
+    lng = models.FloatField(max_length=20)
