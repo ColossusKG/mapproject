@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Home ver3</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: rgb(214, 156, 97);
+        }
+
+        .navbar {
+            width: 100%;
+            height: auto;
+            float: left;
+            margin: 0% 0% 0 0%;
+            padding: 10px;
+            background-color: #600010;
+        }        
+        
+        #sidenav {
+            width: 20%;
+            height: 80%;
+            float: left;
+            border: 1px solid dodgerblue;
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        .main {
+            width: 80%;
+            height:80%;
+            float: left;
+            border-radius: 0px;
+            background-color: lightcyan;
+            padding: 10px;
+        }
+
+    </style>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#topnav").load("topnav.html");
+            $("#botfooter").load("footer.html");
+        });
+        function game(gamesrc){
+            document.getElementById("game").innerHTML='<iframe width="100%" height="100%" src="'+gamesrc+'.html" frameborder=0 framespacing=0 scrolling=no vspace=0></iframe>';
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <div class="navbar navbar-expand navbar-dark bg-dark" id="topnav"></div>
+
+    <div class='w3-sidebar w3-collapse' id='sidenav'>
+    
+      
+      <h2 class="left">Games</h2><hr>
+      <a href="javascript:game('webGame/0hh1/index')">OHH1</a><hr>
+      <a href="javascript:game('webGame/MicrosoftEdge-S.U.R.F.-master/index')">SURF</a><hr>
+      <a href='javascript:game("webGame/dodge")'>점프회피</a><hr>
+      <a href="javascript:game('webGame/astray-master/index')">어둠의 미로찾기</a><hr>
+      <a href="javascript:game('webGame/hextris-gh-pages/index')">Hextris</a><hr>
+      <h4 class="left">Simple Games</h4><hr>
+      <a href='javascript:game("webGame/2048")'>2048</a><hr>
+      <a href="javascript:game('webGame/canvas-tetris-master/index')">테트리스</a><hr>
+      <a href='javascript:game("webGame/CONCENTRATION")'>집중력 테스트</a><hr>
+      <a href='javascript:game("webGame/RESPONSE-CHECK-SELF")'>반응속도 테스트</a><hr>
+    </div>
+
+    <div class="main" id="game"></div>
+    <footer class="footer" id="botfooter"></footer>
+</body>
+
+</html>
