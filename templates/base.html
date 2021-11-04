@@ -1,5 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
     <!-- Required meta tags -->
@@ -9,21 +9,21 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
     <!-- pybo CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <title>게시판</title>
+    <title>pybo test</title>
 </head>
 <body>
-
-{% include 'navbar.html' %}
-
+{% include "navbar.html" %}
 <!-- 기본 템플릿 안에 삽입될 내용 Start -->
 {% block content %}
 {% endblock %}
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
-
 <!-- jQuery JS -->
 <script src="{% static 'jquery-3.4.1.min.js' %}"></script>
 <!-- Bootstrap JS -->
 <script src="{% static 'bootstrap.min.js' %}"></script>
-
+<!-- 자바스크립트 Start -->
+{% block script %}
+{% endblock %}
+<!-- 자바스크립트 End -->
 </body>
 </html>
