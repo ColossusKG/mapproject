@@ -52,10 +52,10 @@
 
 
     <script>
-        $(document).ready(function(){
-            $("#topnav").load("topnav.html");
-            $("#botfooter").load("footer.html");
-        });
+        {#$(document).ready(function(){#}
+        {#    $("#topnav").load("topnav.html");#}
+        {#    $("#botfooter").load("footer.html");#}
+        {# });#}
         function game(gamesrc){
             document.getElementById("game").innerHTML='<iframe width="100%" height="100%" src="'+gamesrc+'.html" frameborder=0 framespacing=0 scrolling=no vspace=0></iframe>';
         }
@@ -65,7 +65,7 @@
 <body>
 
 
-    <div class="navbar navbar-expand navbar-dark bg-dark" id="topnav"></div>
+    {% include 'topnav.html' %}
 
     <div class='w3-sidebar w3-collapse' id='sidenav'>
     
@@ -84,7 +84,7 @@
     </div>
 
     <div class="main" id="game"></div>
-    <footer class="footer" id="botfooter"></footer>
+    {% include 'footer.html' %}
 </body>
 
 </html>

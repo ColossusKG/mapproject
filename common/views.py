@@ -1,13 +1,14 @@
-from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from common.forms import UserForm
+from django.shortcuts import render, redirect
 
-# Create your views here.
+from .forms import UserForm
 
 
-''' 계정생성 '''
 def signup(request):
-    if request.method == 'POST':
+    """
+    계정생성
+    """
+    if request.method == "POST":
         form = UserForm(request.POST)
         if form.is_valid():
             form.save()
