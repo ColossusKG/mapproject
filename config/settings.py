@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'common.apps.CommonConfig',
+    'maps',
     'pybo.apps.PyboConfig',
     'django.contrib.admin',
     'django.contrib.auth',
