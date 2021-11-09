@@ -6,10 +6,10 @@
             <ul class="right_bar" >
                 {%if user.is_authenticated %}
              <li><a class="navbar-brand" href="#">마이페이지</a></li>
-             <li><a class="navbar-brand" href="#">로그아웃</a></li>
+             <li><a class="navbar-brand" href="{% url 'common:logout' %}">로그아웃</a></li>
              {% else %}
-                <li><a class="navbar-brand" href="#">로그인</a></li>
-                <li><a class="navbar-brand" href="#">회원가입</a></li>
+                <li><a class="navbar-brand" href="{% url 'common:login' %}">로그인</a></li>
+                <li><a class="navbar-brand" href="{% url 'common:signup' %}">회원가입</a></li>
               {% endif %}
             </ul>
     </ul>
