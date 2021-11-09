@@ -1,29 +1,39 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-    <!-- pybo CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <title>pybo test1</title>
+     <!-- bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css'%}">
+
+    <!-- main CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+    <title>지역화폐 사용처</title>
+
+    <!-- header CSS -->
+    <link rel="stylesheet" media="screen" type="text/css" href="{% static 'font.css' %}">
+	<link rel="stylesheet" media="screen" type="text/css" href="{% static 'reset.css' %}">
+	<link rel="stylesheet" media="screen" type="text/css" href="{% static 'common.css' %}">
 </head>
 <body>
+<!-- 네비게이션바 -->
+{% include "header.html" %}
 {% include "navbar.html" %}
-<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+
+<!-- 기본 템플릿 안에 삽입될 내용 start -->
 {% block content %}
 {% endblock %}
-<!-- 기본 템플릿 안에 삽입될 내용 End -->
-<!-- jQuery JS -->
-<script src="{% static 'jquery-3.4.1.min.js' %}"></script>
-<!-- Bootstrap JS -->
+<!-- 기본 템플릿 안에 삽입될 내용 end -->
+
+<!-- jQuery JS-->
+<script src="{% static 'jquery-3.6.0.js' %}"></script>
+<!-- bootstrap js -->
 <script src="{% static 'bootstrap.min.js' %}"></script>
 <!-- 자바스크립트 Start -->
 {% block script %}
 {% endblock %}
 <!-- 자바스크립트 End -->
+{% include "footer.html" %}
 </body>
 </html>

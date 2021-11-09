@@ -1,29 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="header">
-		<h1 style="text-align: center;">지역화폐 결제 매장 찾기</h1>
-        <p style="margin-top: 9px;text-align: center;">* 가맹점 폐업 또는 업종변경, 가맹점 정보변경 등으로 현재 정보와 다를 수 있으니 매장에 사용 가능 여부를 확인하기 바랍니다.</p>
-</div>
-<!-- 네비게이션바-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <a class="navbar-brand" href="{% url 'maps:shop_list' %}">가맹점 찾기</a>
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="'navbarNav" aria-expand="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-    </button>
-</nav>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <a class="navbar-brand" href="" id="gapyeong">가평군</a>
-    <a class="navbar-brand" href="" id="goyang">고양시</a>
-    <a class="navbar-brand" href="" id="gwacheon">과천시</a>
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="'navbarNav" aria-expand="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-    </button>
-</nav>
-
-
 <div class="container my-3">
  <div class="row justify-content-between my-3">  <!-- 양쪽정렬 justify-content-between로 변경 -->
         <div class="col-2">
@@ -40,17 +16,15 @@
             </div>
         </div>
     </div>
-
-<div class ="col-10"  width="500" height="300" >{{ map | safe}}</div>
-
+<div class="map">
+<div class ="col-7"  width="400" height="300" >{{ map | safe}}</div>
+</div>
 <table class= "table table-striped">
     <thead>
     <tr>
         <th>번호</th>
         <th>상호명</th>
         <th>주소</th>
-        <th>lng</th>
-        <th>lat</th>
     </tr>
     </thead>
     <tbody>
@@ -60,8 +34,6 @@
         <td>{{forloop.counter0|add:1 }}</td>
         <td>{{shop.name}}</td>
         <td>{{shop.addr2}}</td>
-        <td>{{shop.lng}}</td>
-        <td>{{shop.lat}}</td>
     </tr>
     {% endfor %}
     {% endif %}
@@ -70,25 +42,25 @@
 
 <!-- 페이징처리 시작 -->
 
-<ul class="pagination justify-content-center">
+<div class="paging">
     <!-- 이전 페이지 -->
+    <ul>
     {% if shop_list.has_previous %}
-   <a class="page-link" data-page="{{ shop_list.previous_page_number}}" href="#" >이전</a>
-        </li>
+   <a class="page-link" data-page="{{ shop_list.previous_page_number}}" href="#"><</a>
         {% else %}
         <li class="page-item disabled">
-            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+            <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><</a>
         </li>
         {% endif %}
         <!-- 페이지리스트 -->
         {% for page_number in shop_list.paginator.page_range %}
-        {% if page_number >= shop_list.number|add:-4 and page_number <= shop_list.number|add:4 %}
+        {% if page_number >= shop_list.number|add:-3 and page_number <= shop_list.number|add:3 %}
             {% if page_number == shop_list.number %}
-            <li class="page-item active" aria-current="page">
+            <li aria-current="page">
                 <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
             </li>
             {% else %}
-            <li class="page-item">
+            <li>
                 <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
             </li>
             {% endif %}
@@ -97,14 +69,15 @@
         <!-- 다음페이지 -->
         {% if shop_list.has_next %}
         <li class="page-item">
-            <a class="page-link" data-page="{{ shop_list.next_page_number }}" href="#">다음</a>
+            <a class="page-link" data-page="{{ shop_list.next_page_number }}" href="#">></a>
         </li>
         {% else %}
         <li class="page-item disabled">
-            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">></a>
         </li>
         {% endif %}
     </ul>
+</div>
     <!-- 페이징처리 끝 -->
     <form id="searchForm" method="get" action="{% url 'maps:shop_list' %}">
         <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
@@ -125,11 +98,7 @@ $(document).ready(function(){
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
-    $("#gwacheon").on('click', function() {
-        $("#kw").val($(".kw").val());
-        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
-        $("#searchForm").submit();
-    });
+
 });
 </script>
 {% endblock %}
