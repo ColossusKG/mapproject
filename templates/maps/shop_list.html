@@ -45,8 +45,8 @@
 <div class="paging">
     <!-- 이전 페이지 -->
     <ul>
-    {% if shop_list.has_previous %}
-   <a class="page-link" data-page="{{ shop_list.previous_page_number}}" href="#"><</a>
+        {% if shop_list.has_previous %}
+       <a class="page-link" data-page="{{ shop_list.previous_page_number}}" href="#"><</a>
         {% else %}
         <li class="page-item disabled">
             <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><</a>
@@ -54,7 +54,8 @@
         {% endif %}
         <!-- 페이지리스트 -->
         {% for page_number in shop_list.paginator.page_range %}
-        {% if page_number >= shop_list.number|add:-3 and page_number <= shop_list.number|add:3 %}
+        {% if page_number >= shop_list.number|add:-5 and page_number <= shop_list.number|add:5 %}
+
             {% if page_number == shop_list.number %}
             <li aria-current="page">
                 <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
@@ -82,6 +83,7 @@
     <form id="searchForm" method="get" action="{% url 'maps:shop_list' %}">
         <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
         <input type="hidden" id="page" name="page" value="{{ page }}">
+        <input type="hidden" id="city" name="city" value="{{ city }}">
     </form>
 </div>
 {% endblock %}

@@ -4,9 +4,10 @@ from django.http import HttpResponse
 from django.db.models import Q
 from .models import *
 import pandas as pd
-import csv
+import sys
 import folium
 import geocoder
+import requests
 from folium import plugins
 
 
@@ -21,9 +22,11 @@ def shop_list(request):
     page = request.GET.get('page', '1')  # 페이지
     kw = request.GET.get('kw', '')  # 검색
 
-    g = geocoder.ip('me')
-    map = folium.Map(location=(g.latlng), zoom_start=20)
-    shop_list = ''
+    # g = geocoder.ip('me')
+    # map = folium.Map(location=(g.latlng), zoom_start=20)
+
+    # city = getattr(sys.modules[__name__], city)
+    # shop_list = city.objects.order_by()
 
     if city == '가평군':
         shop_list = gg01.objects.order_by()
@@ -81,15 +84,16 @@ def shop_list(request):
         shop_list = gg27.objects.order_by()
     if city == '화성시':
         shop_list = gg28.objects.order_by()
-    # if city != '':
-    #     findurl = "https://maps.googleapis.com/maps/api/geocode/json?address="
-    #     api_key = "AIzaSyA3mjXMzjFeFCBDwYGK5Ja-xtu7EPh-iqo"
-    #     apiquery = "&key=" + api_key
-    #     findmapurl = findurl + city + apiquery
-    #     mapdata = request.get(findmapurl).json()
-    #     mlat = mapdata['results'][0]['geometry']['location']['lat']
-    #     mlng = mapdata['results'][0]['geometry']['location']['lng']
-    #     map = folium.Map(location=(mlat, mlng), zoom_start=12)
+
+    findurl = "https://maps.googleapis.com/maps/api/geocode/json?address="
+    api_key = "AIzaSyA3mjXMzjFeFCBDwYGK5Ja-xtu7EPh-iqo"
+    apiquery = "&key=" + api_key
+    findmapurl = findurl + city + apiquery
+    mapdata = requests.get(findmapurl).json()
+    mlat = mapdata['results'][0]['geometry']['location']['lat']
+    mlng = mapdata['results'][0]['geometry']['location']['lng']
+    map = folium.Map(location=(mlat, mlng), zoom_start=12)
+
 
 
     if kw:
@@ -109,5 +113,5 @@ def shop_list(request):
     # 페이징 처리
     paginator = Paginator(shop_list, 10) # 페이지당 10개 보여주기
     page_obj = paginator.get_page(page) # 페이지 객체 생성
-    content = {'shop_list' : page_obj, 'page':page, 'kw':kw, 'map':map}
+    content = {'shop_list' : page_obj, 'page':page, 'kw':kw, 'map':map, 'city':city}
     return render(request,'maps/shop_list.html', content)
