@@ -81,15 +81,15 @@ def shop_list(request):
         shop_list = gg27.objects.order_by()
     if city == '화성시':
         shop_list = gg28.objects.order_by()
-    if city != '':
-        findurl = "https://maps.googleapis.com/maps/api/geocode/json?address="
-        api_key = "AIzaSyA3mjXMzjFeFCBDwYGK5Ja-xtu7EPh-iqo"
-        apiquery = "&key=" + api_key
-        findmapurl = findurl + city + apiquery
-        mapdata = request.get(findmapurl).json()
-        mlat = mapdata['results'][0]['geometry']['location']['lat']
-        mlng = mapdata['results'][0]['geometry']['location']['lng']
-        map = folium.Map(location=(mlat, mlng), zoom_start=12)
+    # if city != '':
+    #     findurl = "https://maps.googleapis.com/maps/api/geocode/json?address="
+    #     api_key = "AIzaSyA3mjXMzjFeFCBDwYGK5Ja-xtu7EPh-iqo"
+    #     apiquery = "&key=" + api_key
+    #     findmapurl = findurl + city + apiquery
+    #     mapdata = request.get(findmapurl).json()
+    #     mlat = mapdata['results'][0]['geometry']['location']['lat']
+    #     mlng = mapdata['results'][0]['geometry']['location']['lng']
+    #     map = folium.Map(location=(mlat, mlng), zoom_start=12)
 
 
     if kw:
