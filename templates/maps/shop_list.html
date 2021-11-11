@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container my-3">
+<div class="container my-3" xmlns="http://www.w3.org/1999/html">
  <div class="row justify-content-between my-3">  <!-- 양쪽정렬 justify-content-between로 변경 -->
         <div class="col-2">
             <select class="form-control so">
@@ -17,23 +17,26 @@
         </div>
     </div>
 <div class="map">
-<div width="400" height="300" >{{ map | safe}}</div>
+<div class="col-10"  >{{ map | safe}}</div>
 </div>
-<table class= "table table-striped">
+    <table class= "table table-striped shop_table">
     <thead>
-    <tr>
+    <tr class="text-center">
         <th>번호</th>
         <th>상호명</th>
         <th>주소</th>
+
     </tr>
     </thead>
     <tbody>
     {% if shop_list %}
     {% for shop in shop_list %}
-    <tr>
+    <tr class="text-center">
         <td>{{forloop.counter0|add:1 }}</td>
         <td>{{shop.name}}</td>
-        <td>{{shop.addr2}}</td>
+        <td><span class="col-7">{{shop.addr2}}</span><a href="#" data-uri="#"
+               class="col-1 btn float-right btn-secondary btn-block save_btn"><span>저장</span></a></td>
+
     </tr>
     {% endfor %}
     {% endif %}
@@ -45,8 +48,10 @@
 <div class="paging">
     <!-- 이전 페이지 -->
     <ul>
-        {% if shop_list.has_previous %}
-       <a class="page-link" data-page="{{ shop_list.previous_page_number}}" href="#"><</a>
+    {% if shop_list.has_previous %}
+        <li class="page-item">
+   <a class="page-link" data-page="{{ shop_list.previous_page_number}}" href="#"><</a>
+        </li>
         {% else %}
         <li class="page-item disabled">
             <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><</a>
@@ -54,10 +59,9 @@
         {% endif %}
         <!-- 페이지리스트 -->
         {% for page_number in shop_list.paginator.page_range %}
-        {% if page_number >= shop_list.number|add:-5 and page_number <= shop_list.number|add:5 %}
-
+        {% if page_number >= shop_list.number|add:-3 and page_number <= shop_list.number|add:3 %}
             {% if page_number == shop_list.number %}
-            <li aria-current="page">
+            <li class="page-item active" aria-current="page">
                 <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
             </li>
             {% else %}
@@ -69,7 +73,7 @@
         {% endfor %}
         <!-- 다음페이지 -->
         {% if shop_list.has_next %}
-        <li class="page-item">
+        <li class="page-item >
             <a class="page-link" data-page="{{ shop_list.next_page_number }}" href="#">></a>
         </li>
         {% else %}
@@ -81,9 +85,9 @@
 </div>
     <!-- 페이징처리 끝 -->
     <form id="searchForm" method="get" action="{% url 'maps:shop_list' %}">
+        <input type="hidden" id="city" name="city" value="{{ city }}">
         <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
         <input type="hidden" id="page" name="page" value="{{ page }}">
-        <input type="hidden" id="city" name="city" value="{{ city }}">
     </form>
 </div>
 {% endblock %}
@@ -100,7 +104,7 @@ $(document).ready(function(){
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
-
 });
+
 </script>
 {% endblock %}
