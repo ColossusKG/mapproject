@@ -1,4 +1,6 @@
 from django.shortcuts import render,  redirect ,  get_object_or_404
+import urllib
+import json
 from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.db.models import Q
@@ -85,14 +87,28 @@ def shop_list(request):
     if city == '화성시':
         shop_list = gg28.objects.order_by()
 
-    findurl = "https://maps.googleapis.com/maps/api/geocode/json?address="
-    api_key = "AIzaSyA3mjXMzjFeFCBDwYGK5Ja-xtu7EPh-iqo"
-    apiquery = "&key=" + api_key
-    findmapurl = findurl + city + apiquery
-    mapdata = requests.get(findmapurl).json()
-    mlat = mapdata['results'][0]['geometry']['location']['lat']
-    mlng = mapdata['results'][0]['geometry']['location']['lng']
-    map = folium.Map(location=(mlat, mlng), zoom_start=12)
+    def search_map(search_text):
+        client_id = 'aar7gausw4'  # 클라이언트 ID값
+        client_secret = '8xYb96nBebbCnvZJNUFFdrW8DC1Mq0QODOc120Bt'  # 클라이언트 Secret값
+        encText = urllib.parse.quote(search_text)
+        url = 'https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=' + encText
+        request = urllib.request.Request(url)
+        request.add_header('X-NCP-APIGW-API-KEY-ID', client_id)
+        request.add_header('X-NCP-APIGW-API-KEY', client_secret)
+        response = urllib.request.urlopen(request)
+        rescode = response.getcode()
+        if (rescode == 200):
+            response_body = response.read()
+            data = response_body.decode('utf-8')
+            data = json.loads(data)
+            lat_data = data['addresses'][0]['y']
+            lng_data = data['addresses'][0]['x']
+            return lat_data, lng_data
+
+        else:
+            print("Error Code:" + rescode)
+
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
 
 
 

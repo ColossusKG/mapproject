@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="test">
+<div class="container my-3">
+<div class="text">*원하는 지역(시/구)을 선택하시오*</div>
             <div class="area_list">
                 <ul>
                         <li class="city-link" data-id="가평군"  href="#"><span>가평군</span></li>
@@ -34,7 +35,7 @@
 
                 </ul>
             </div>
-    </div>
+</div>
            <form id="cityForm" method="get" action="{% url 'maps:shop_list' %}">
                <input type="hidden"  id="city" name="city" value="{{ city }}">
            </form>
