@@ -30,6 +30,29 @@ def shop_list(request):
     # city = getattr(sys.modules[__name__], city)
     # shop_list = city.objects.order_by()
 
+    def search_map(search_text):
+        client_id = 'aar7gausw4'  # 클라이언트 ID값
+        client_secret = '8xYb96nBebbCnvZJNUFFdrW8DC1Mq0QODOc120Bt'  # 클라이언트 Secret값
+        encText = urllib.parse.quote(search_text)
+        url = 'https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=' + encText
+        request = urllib.request.Request(url)
+        request.add_header('X-NCP-APIGW-API-KEY-ID', client_id)
+        request.add_header('X-NCP-APIGW-API-KEY', client_secret)
+        response = urllib.request.urlopen(request)
+        rescode = response.getcode()
+        if (rescode == 200):
+            response_body = response.read()
+            data = response_body.decode('utf-8')
+            data = json.loads(data)
+            lat_data = data['addresses'][0]['y']
+            lng_data = data['addresses'][0]['x']
+            return lat_data, lng_data
+
+        else:
+            print("Error Code:" + rescode)
+
+    map = folium.Map(location=(search_map(city)), zoom_start=20)
+
     if city == '가평군':
         shop_list = gg01.objects.order_by()
     if city == '고양시':
@@ -87,28 +110,7 @@ def shop_list(request):
     if city == '화성시':
         shop_list = gg28.objects.order_by()
 
-    def search_map(search_text):
-        client_id = 'aar7gausw4'  # 클라이언트 ID값
-        client_secret = '8xYb96nBebbCnvZJNUFFdrW8DC1Mq0QODOc120Bt'  # 클라이언트 Secret값
-        encText = urllib.parse.quote(search_text)
-        url = 'https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=' + encText
-        request = urllib.request.Request(url)
-        request.add_header('X-NCP-APIGW-API-KEY-ID', client_id)
-        request.add_header('X-NCP-APIGW-API-KEY', client_secret)
-        response = urllib.request.urlopen(request)
-        rescode = response.getcode()
-        if (rescode == 200):
-            response_body = response.read()
-            data = response_body.decode('utf-8')
-            data = json.loads(data)
-            lat_data = data['addresses'][0]['y']
-            lng_data = data['addresses'][0]['x']
-            return lat_data, lng_data
 
-        else:
-            print("Error Code:" + rescode)
-
-    map = folium.Map(location=(search_map(city)), zoom_start=12)
 
 
 
@@ -139,4 +141,4 @@ def save(request, shop_id):
 
     shop.mark.add(request.user)
 
-    return render(request, 'maps/shop_list.html')
+    return redirect('maps:shop_list')
