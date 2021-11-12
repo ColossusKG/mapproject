@@ -131,3 +131,12 @@ def shop_list(request):
     page_obj = paginator.get_page(page) # 페이지 객체 생성
     content = {'shop_list' : page_obj, 'page':page, 'kw':kw, 'map':map, 'city':city}
     return render(request,'maps/shop_list.html', content)
+
+
+# 가맹점 저장하기
+def save(request, shop_id):
+    shop = get_object_or_404(gg01, pk=shop_id)
+
+    shop.mark.add(request.user)
+
+    return render(request, 'maps/shop_list.html')

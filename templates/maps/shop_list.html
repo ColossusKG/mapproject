@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-<div class="map">
+<div class="row justify-content-between my-3">
     <div class="col-2"></div>
 <div class="col-8"  >{{ map | safe}}</div>
     <div class="col-2"></div>
@@ -36,7 +36,7 @@
     <tr class="text-center">
         <td>{{forloop.counter0|add:1 }}</td>
         <td>{{shop.name}}</td>
-        <td><span class="col-7">{{shop.addr2}}</span> {%if user.is_authenticated %}<a href="#" data-uri="#"
+        <td><span class="col-7">{{shop.addr2}}</span> {%if user.is_authenticated %}<a href="{% url 'maps:save' shop.id %}" data-uri="#"
                class="col-1 btn float-right btn-secondary btn-block save_btn"><span>저장</span></a></td>{% endif %}
 
     </tr>
