@@ -113,21 +113,22 @@ h3{
 }
 
 /*city list*/
-
-.test{
-    margin-left:auto;
-    margin-right:auto;
+.text{
+    font-family:OTWelcomeRA;
+    font-size:20px;
+    text-align:center;
+    margin-top:70px;
 }
 
-.area_list{display:block; width: 801px; margin:150px 549px ; border-top:1px solid #ddd; }
+
+.area_list{display:block; width: 801px;   margin:auto; border-top:1px solid #ddd; align-items: center; }
 .area_list>ul{
     display: table;
-    margin-left: auto;
-    margin-right: auto;
     padding:0;
 	width: 801px;
 	font-size:0;
 	border-left:1px solid #ddd;
+
 }
 .area_list>ul>li{
     font-family:SBAggroB;
@@ -151,10 +152,7 @@ h3{
 	}
 
 
-.map{
-  display:flex;
-  align-items:center;
-}
+
 
 
 /*shop list*/

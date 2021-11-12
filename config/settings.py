@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'mypage.apps.MypageConfig',
     'common.apps.CommonConfig',
     'maps.apps.MainConfig',
     'pybo.apps.PyboConfig',
