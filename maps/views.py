@@ -18,17 +18,20 @@ from folium import plugins
 def index(request):
     return render(request,'maps/main.html')
 
+
+
 #가맹점 목록 출력
 def shop_list(request):
     city = request.GET.get('city', '')
     page = request.GET.get('page', '1')  # 페이지
     kw = request.GET.get('kw', '')  # 검색
+    marker = request.GET.get('marker', '') # 지도 표시
+    save = request.GET.get('save','') #저장
 
-    # g = geocoder.ip('me')
-    # map = folium.Map(location=(g.latlng), zoom_start=20)
 
-    # city = getattr(sys.modules[__name__], city)
-    # shop_list = city.objects.order_by()
+    shop_list = data.objects.order_by().filter(
+        Q(city__icontains=city)
+    )
 
     def search_map(search_text):
         client_id = 'aar7gausw4'  # 클라이언트 ID값
@@ -51,73 +54,27 @@ def shop_list(request):
         else:
             print("Error Code:" + rescode)
 
-    map = folium.Map(location=(search_map(city)), zoom_start=20)
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
 
-    if city == '가평군':
-        shop_list = gg01.objects.order_by()
-    if city == '고양시':
-        shop_list = gg02.objects.order_by()
-    if city == '과천시':
-        shop_list = gg03.objects.order_by()
-    if city == '광명시':
-        shop_list = gg04.objects.order_by()
-    if city == '광주시':
-        shop_list = gg05.objects.order_by()
-    if city == '구리시':
-        shop_list = gg06.objects.order_by()
-    if city == '군포시':
-        shop_list = gg07.objects.order_by()
-    if city == '남양주시':
-        shop_list = gg08.objects.order_by()
-    if city == '동두천시':
-        shop_list = gg09.objects.order_by()
-    if city == '부천시':
-        shop_list = gg10.objects.order_by()
-    if city == '수원시':
-        shop_list = gg11.objects.order_by()
-    if city == '안산시':
-        shop_list = gg12.objects.order_by()
-    if city == '안성시':
-        shop_list = gg13.objects.order_by()
-    if city == '안양시':
-        shop_list = gg14.objects.order_by()
-    if city == '양주시':
-        shop_list = gg15.objects.order_by()
-    if city == '양평군':
-        shop_list = gg16.objects.order_by()
-    if city == '여주시':
-        shop_list = gg17.objects.order_by()
-    if city == '연천군':
-        shop_list = gg18.objects.order_by()
-    if city == '오산시':
-        shop_list = gg19.objects.order_by()
-    if city == '용인시':
-        shop_list = gg20.objects.order_by()
-    if city == '의왕시':
-        shop_list = gg21.objects.order_by()
-    if city == '의정부시':
-        shop_list = gg22.objects.order_by()
-    if city == '이천시':
-        shop_list = gg23.objects.order_by()
-    if city == '파주시':
-        shop_list = gg24.objects.order_by()
-    if city == '평택시':
-        shop_list = gg25.objects.order_by()
-    if city == '포천시':
-        shop_list = gg26.objects.order_by()
-    if city == '하남시':
-        shop_list = gg27.objects.order_by()
-    if city == '화성시':
-        shop_list = gg28.objects.order_by()
+    if marker: # 가맹점 지도 표시 코드
+        shop = get_object_or_404(data, pk=marker)
+        lat = shop.lat
+        lng = shop.lng
+        name = shop.name
+        latlng = 'LAT ' + str(lat) + '\nLNG ' + str(lng)
+        map = folium.Map(location=[lat, lng], zoom_start=17)
+        folium.Marker(location=[lat, lng], popup=latlng, tooltip=name).add_to(map)
 
 
-
-
-
-    if kw:
+    if kw: # 가맹점 검색 코드
         shop_list = shop_list.filter(
-            Q(name__icontains = kw)
-        )
+                Q(name__icontains = kw)
+            )
+        for shop in shop_list:
+            lat1 = shop.lat
+            lng1 = shop.lng
+            map = folium.Map(location=[lat1, lng1], zoom_start=17)
+            break
         for shop in shop_list:
             lat = shop.lat
             lng = shop.lng
@@ -125,20 +82,29 @@ def shop_list(request):
             latlng = 'LAT ' + str(lat) + '\nLNG ' + str(lng)
             folium.Marker(location = [lat, lng], popup=latlng, tooltip=name).add_to(map)
 
+        if marker:
+            shop = get_object_or_404(data, pk=marker)
+            lat = shop.lat
+            lng = shop.lng
+            name = shop.name
+            latlng = 'LAT ' + str(lat) + '\nLNG ' + str(lng)
+            map = folium.Map(location=[lat, lng], zoom_start=17)
+            folium.Marker(location=[lat, lng], popup=latlng, tooltip=name).add_to(map)
+
+    if save: # 가맹점 저장 코드
+        shop = get_object_or_404(data, pk=save)
+        shop.mark.add(request.user)
+
+
 
     map = map._repr_html_()
 
     # 페이징 처리
     paginator = Paginator(shop_list, 10) # 페이지당 10개 보여주기
     page_obj = paginator.get_page(page) # 페이지 객체 생성
-    content = {'shop_list' : page_obj, 'page':page, 'kw':kw, 'map':map, 'city':city}
+    content = {'shop_list': page_obj, 'page':page, 'kw':kw, 'map':map, 'city':city}
     return render(request,'maps/shop_list.html', content)
 
 
-# 가맹점 저장하기
-def save(request, shop_id):
-    shop = get_object_or_404(gg01, pk=shop_id)
 
-    shop.mark.add(request.user)
 
-    return redirect('maps:shop_list')

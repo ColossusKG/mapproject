@@ -7,7 +7,7 @@
             <select class="form-control so">
                 <option class ="mypage" value="" >=선택하시오=</option>
                 <option class ="mypage" value="question_list" {% if so == 'question_list' %}selected{% endif %}>질문 목록</option>
-                <option class ="mypage" value="mark_list" {% if so == 'mark_list' %}selected{% endif %}>저장 목록</option>
+                <option class ="mypage" value="mark_list" {% if so == 'mark_list' %}selected{% endif %}>추천 목록</option>
             </select>
         </div>
     </div>
@@ -110,7 +110,7 @@
             <td>{{forloop.counter0|add:1 }}</td>
             <td>{{shop.name}}</td>
             <td><span class="col-6">{{shop.addr2}}</span><a id="mark_btn" href="{% url 'mypage:save_delete' shop.id %}" data-uri="#"
-                   class="col-2 btn float-right btn-secondary btn-block save_btn"><span>삭제</span></a></td>
+                   class="col-2 btn float-right btn-secondary btn-block delete_btn"><span>삭제</span></a></td>
 
             </tr>
             {% endfor %}

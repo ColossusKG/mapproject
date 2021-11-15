@@ -11,6 +11,13 @@ body {
 	background: #fff;
 }
 
+
+.container {
+    justify-items: stretch ;
+}
+
+
+
 em, address, cite {font-style:normal;}
 
 table{width:100%;border-collapse:separate;border:0;border-spacing:0;font-size: 13px}
@@ -53,6 +60,8 @@ h2{font-size:16px;color:#000;font-weight:800}
     list-style-type:none;
 
 }
+
+
 
 /*common*/
 .login{
@@ -113,27 +122,27 @@ h3{
 }
 
 /*city list*/
-.text{
-    font-family:OTWelcomeRA;
-    font-size:20px;
-    text-align:center;
-    margin-top:70px;
+
+.test{
+    margin-top :100px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-
-.area_list{display:block; width: 801px;   margin:auto; border-top:1px solid #ddd; align-items: center; }
+.area_list{display:block; width: 100%;margin:0px; }
 .area_list>ul{
     display: table;
+    margin-left: auto;
+    margin-right: auto;
     padding:0;
-	width: 801px;
 	font-size:0;
 	border-left:1px solid #ddd;
-
+	border-top:1px solid #ddd;
 }
 .area_list>ul>li{
     font-family:SBAggroB;
 	display: inline-flex;
-    width: 200px;
+    width: 25%;
 	font-size: 16px;
 	color: #000;
 	height: 60px;
@@ -153,12 +162,17 @@ h3{
 
 
 
+.map{
+  display:flex;
+  align-items:center;
+}
 
 
 /*shop list*/
 .shop_table{
     font-family:OTWelcomeRA;
-    font-size:20px;
+    font-size:16px;
+    vertical-align : middle;
 
 }
 
@@ -166,10 +180,24 @@ td{
     vertical-align : middle;
 }
 
-.save_btn>span{
+.save_btn{
+    height : 20px;
+    width : 50px;
+    font-family:OTWelcomeRA;
+    margin-top:3px;
+    font-size: 15px;
+}
+.save_btn>{
    vertical-align : middle;
    font-family:OTWelcomeRA;
+   font-size: 15px;
 }
+
+.save_btn2{
+    padding-right : 0px;
+}
+
+
 
 
 
@@ -190,8 +218,6 @@ td{
     font-family:OTWelcomeRA;
     font-size:20px;
 }
-
-
 
 
 
