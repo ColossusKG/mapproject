@@ -1,53 +1,76 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container my-3" xmlns="http://www.w3.org/1999/html">
+
  <div class="row justify-content-between my-3">  <!-- 양쪽정렬 justify-content-between로 변경 -->
-        <div class="col-2">
-            <select class="form-control so">
-                <option value="recent" {% if so == 'recent' %}selected{% endif %}>상호명</option>
-                <option value="recommend" {% if so == 'recommend' %}selected{% endif %}>주소(읍/면/동)</option>
-                <option value="popular" {% if so == 'popular' %}selected{% endif %}>인기순</option>
-            </select>
-        </div><!--검색기능-->
-        <div class="col-4 input-group">
-            <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
-            </div>
-        </div>
+     <div class="col-2">
+
+     </div><!--검색기능-->
+     <div class="col-6"></div>
+     <div class="col-4 input-group">
+         <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+         <div class="input-group-append">
+             <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
+         </div>
+     </div>
+
+     <div class="col-12" style="font-family:OTWelcomeRA; text-align:center; font-size:18px; height:5vh">**주소를 클릭하면 해당 위치로 화면이 이동됩니다.**</div>
+
+     <div class="col-5">
+         <div>{{ map | safe}}</div>
+         <div style="height:5vh"></div>
+         {% include 'maps/maptest.html' %}
+     </div>
+
+
+    <div class="col-7">
+        <table class= "table table-striped shop_table">
+            <thead>
+            <tr class="text-center">
+                <th class="col-1">번호</th>
+                <th class="col-3">상호명</th>
+<!--                <th class="col-2">전화번호</th>-->
+                <th class="col-7">주소</th>
+                <th class="col-1">추천</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% if shop_list %}
+            {% for shop in shop_list %}
+            <tr class="text-center">
+                <td class="col-1">{{forloop.counter0|add:1 }}</td>
+                <td class="col-3">{{shop.name}}</td>
+<!--                <td></td>-->
+                    <td><a href="#" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
+                        {%if user.is_authenticated %}
+                        <td><!-- 추천영역 -->
+                            <div class="bg-light text-center border " >{{shop.mark.count}}</div>
+                            <a href="#" data-save="{{ shop.id }}"
+                        class="recommend btn btn-sm btn-secondary btn-block save_btn">추천</a>
+
+                             </td>
+                        {% else %}
+                        <td><div class="bg-light text-center border " >{{shop.mark.count}}</div>
+                        <a href="{% url 'common:login' %}" data-save="#" class="recommend btn btn-sm btn-secondary btn-block save_btn">추천</a></td>
+                        {% endif %}
+
+                </td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="3">일치하는 항목이 없습니다.</td>
+            </tr>
+            {% endif %}
+            </tbody>
+        </table>
     </div>
-<div class="row justify-content-between my-3">
-    <div class="col-2"></div>
-<div class="col-8"  >{{ map | safe}}</div>
-    <div class="col-2"></div>
-</div>
-    <table class= "table table-striped shop_table">
-    <thead>
-    <tr class="text-center">
-        <th>번호</th>
-        <th style="width:30%">상호명</th>
-        <th>주소</th>
 
-    </tr>
-    </thead>
-    <tbody>
-    {% if shop_list %}
-    {% for shop in shop_list %}
-    <tr class="text-center">
-        <td>{{forloop.counter0|add:1 }}</td>
-        <td>{{shop.name}}</td>
-        <td><span class="col-7">{{shop.addr2}}</span> {%if user.is_authenticated %}<a href="{% url 'maps:save' shop.id %}" data-uri="#"
-               class="col-1 btn float-right btn-secondary btn-block save_btn"><span>저장</span></a></td>{% endif %}
-
-    </tr>
-    {% endfor %}
-    {% endif %}
-    </tbody>
-</table>
 
 <!-- 페이징처리 시작 -->
-
-<div class="paging">
+<div class="col-2"></div>
+<div class="col-8 paging">
     <!-- 이전 페이지 -->
     <ul>
     {% if shop_list.has_previous %}
@@ -75,7 +98,7 @@
         {% endfor %}
         <!-- 다음페이지 -->
         {% if shop_list.has_next %}
-        <li class="page-item >
+        <li class="page-item" >
             <a class="page-link" data-page="{{ shop_list.next_page_number }}" href="#">></a>
         </li>
         {% else %}
@@ -85,12 +108,16 @@
         {% endif %}
     </ul>
 </div>
+     <div class="col-2"></div>
     <!-- 페이징처리 끝 -->
     <form id="searchForm" method="get" action="{% url 'maps:shop_list' %}">
+        <input type="hidden" id="save" name="save" value="{{ save }}">
+         <input type="hidden" id="marker" name="marker" value="{{ marker }}">
         <input type="hidden" id="city" name="city" value="{{ city }}">
         <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
         <input type="hidden" id="page" name="page" value="{{ page }}">
     </form>
+</div>
 </div>
 {% endblock %}
 {% block script %}
@@ -106,6 +133,22 @@ $(document).ready(function(){
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
+
+     $(".addr_map").on('click',function() {
+        $("#marker").val($(this).data("id"));
+        $("#searchForm").submit();
+    });
+
+    $(".save_btn").on('click',function() {
+        $("#save").val($(this).data("save"));
+        $("#searchForm").submit();
+    });
+    $(document).ready(function() {
+        $(".city-link").on ('click', function(){
+        $("#city").val($(this).data("id"));
+        $("#cityForm").submit();
+    });
+});
 });
 
 </script>
