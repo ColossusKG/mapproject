@@ -16,7 +16,7 @@ def index(request):
     user = request.user
 
     list = Question.objects.order_by('create_date')
-    list2 = gg01.objects.filter(mark=user.id)
+    list2 = data.objects.filter(mark=user.id)
 
     # 정렬
     if so == 'question_list':
@@ -53,14 +53,14 @@ def index(request):
 
 
 # 저장 목록 삭제
-def save_delete(request, shop_id):
+def save_delete(request, data_id):
     page = request.GET.get('page', '')
 
-    shop = get_object_or_404(gg01, pk=shop_id)
-    user =request.user
+    shop = get_object_or_404(data, pk=data_id)
+    user = request.user
     shop.mark.remove(user)
 
-    list = gg01.objects.filter(mark=user.id)
+    list = data.objects.filter(mark=user.id)
 
     paginator = Paginator(list, 10)  # 페이지당 10개씩 보여주기
     page_obj = paginator.get_page(page)

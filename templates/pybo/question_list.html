@@ -9,7 +9,6 @@
                 <option value="old" {% if so == 'old' %} selected {% endif %}>오래된 순</option>
                 <option value="recommend" {% if so == 'recommend' %}selected{% endif %}>추천순</option>
                 <option value="popular" {% if so == 'popular' %} selected {% endif %}>답변 많은 순</option>
-                <option value="view" {% if so == 'view' %} selected {% endif %}>조회순</option>
             </select>
         </div>
         <div class="col-4 input-group">
@@ -18,6 +17,9 @@
                 <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
             </div>
         </div>
+    </div>
+    <div class="col-12">
+        <a href="{% url 'pybo:question_create' %}" class="btn float-right btn-secondary question_btn"><span>질문 등록하기</span></a>
     </div>
     <table class="table question_table">
         <thead>
@@ -62,9 +64,6 @@
         {% endif %}
         </tbody>
     </table>
-       <div class="col-12">
-        <a href="{% url 'pybo:question_create' %}" class="btn float-right btn-secondary question_btn"><span>질문 등록하기</span></a>
-        </div>
     <!-- 페이징처리 시작 -->
 
     <div class="paging">
