@@ -19,7 +19,7 @@
      <div class="col-5">
          <div>{{ map | safe}}</div>
          <div style="height:5vh"></div>
-         {% include 'maps/maptest.html' %}
+         {% include "maps/maptest.html" %}
      </div>
 
 
@@ -39,10 +39,10 @@
             {% if shop_list %}
             {% for shop in shop_list %}
             <tr class="text-center">
-                <td class="col-1">{{forloop.counter0|add:1 }}</td>
-                <td class="col-3">{{shop.name}}</td>
+                <td class="col-1" style="vertical-align : middle;">{{forloop.counter0|add:1 }}</td>
+                <td class="col-3" style="vertical-align : middle;">{{shop.name}}</td>
 <!--                <td></td>-->
-                    <td><a href="#" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
+                    <td style="vertical-align : middle;"><a href="#" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
                         {%if user.is_authenticated %}
                         <td><!-- 추천영역 -->
                             <div class="bg-light text-center border " >{{shop.mark.count}}</div>
