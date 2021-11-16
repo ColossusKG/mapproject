@@ -28,10 +28,24 @@ def shop_list(request):
     marker = request.GET.get('marker', '') # 지도 표시
     save = request.GET.get('save','') #저장
 
-
     shop_list = data.objects.order_by().filter(
         Q(city__icontains=city)
     )
+
+    area_list = address.objects.order_by().filter(
+            Q(city__icontains=city)
+        )
+
+    # def area_list(city):
+    #
+    #     area_list = address.objects.order_by().filter(
+    #         Q(city__icontains=city)
+    #     )
+    #
+    #     return render(request, 'maps/maptest.html', {'area_list': area_list})
+    #
+    # area_list(city)
+
 
     def search_map(search_text):
         client_id = 'aar7gausw4'  # 클라이언트 ID값
@@ -102,8 +116,18 @@ def shop_list(request):
     # 페이징 처리
     paginator = Paginator(shop_list, 10) # 페이지당 10개 보여주기
     page_obj = paginator.get_page(page) # 페이지 객체 생성
-    content = {'shop_list': page_obj, 'page':page, 'kw':kw, 'map':map, 'city':city}
+    content = {'shop_list': page_obj, 'page':page, 'kw':kw, 'map':map, 'city':city, 'area_list':area_list}
     return render(request,'maps/shop_list.html', content)
+
+
+def area_list(request):
+    city =request.GET.get('city','')
+
+    area_list = address.objects.order_by().filter(
+        Q(city__icontains=city)
+    )
+
+    return render(request,'maps/maptest.html',{'area_list':area_list})
 
 
 
