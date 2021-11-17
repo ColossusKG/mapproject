@@ -23,6 +23,7 @@ def index(request):
 #가맹점 목록 출력
 def shop_list(request):
     city = request.GET.get('city', '')
+    area = request.GET.get('area','')# 행정구역별 검색
     page = request.GET.get('page', '1')  # 페이지
     kw = request.GET.get('kw', '')  # 검색
     marker = request.GET.get('marker', '') # 지도 표시
@@ -35,16 +36,6 @@ def shop_list(request):
     area_list = address.objects.order_by().filter(
             Q(city__icontains=city)
         )
-
-    # def area_list(city):
-    #
-    #     area_list = address.objects.order_by().filter(
-    #         Q(city__icontains=city)
-    #     )
-    #
-    #     return render(request, 'maps/maptest.html', {'area_list': area_list})
-    #
-    # area_list(city)
 
 
     def search_map(search_text):
@@ -69,6 +60,14 @@ def shop_list(request):
             print("Error Code:" + rescode)
 
     map = folium.Map(location=(search_map(city)), zoom_start=12)
+
+    if area: # 행정구역별 표시 코드
+        shop_list = data.objects.order_by().filter(
+            Q(addr2__icontains=area)
+        )
+        map = folium.Map(location=(search_map(area)), zoom_start=12)
+
+
 
     if marker: # 가맹점 지도 표시 코드
         shop = get_object_or_404(data, pk=marker)
@@ -120,14 +119,6 @@ def shop_list(request):
     return render(request,'maps/shop_list.html', content)
 
 
-def area_list(request):
-    city =request.GET.get('city','')
-
-    area_list = address.objects.order_by().filter(
-        Q(city__icontains=city)
-    )
-
-    return render(request,'maps/maptest.html',{'area_list':area_list})
 
 
 
