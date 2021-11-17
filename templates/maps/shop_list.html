@@ -19,7 +19,17 @@
      <div class="col-5">
          <div>{{ map | safe}}</div>
          <div style="height:5vh"></div>
-         {% include "maps/maptest.html" %}
+         <div class="area_list" style="width:100%">
+        <ul>
+            {% if area_list %}
+            {% for area in area_list %}
+            <li class="area-link " data-id="{{area.area2}}"  href="#"><span>{{area.area2}}</span></li>
+            {% endfor %}
+            {% else %}
+            <div style="color:black;">정보없음</div>
+            {% endif %}
+        </ul>
+</div>
      </div>
 
 
@@ -111,8 +121,9 @@
      <div class="col-2"></div>
     <!-- 페이징처리 끝 -->
     <form id="searchForm" method="get" action="{% url 'maps:shop_list' %}">
+        <input type="hidden"  id="area" name="area" value="{{ area }}">
         <input type="hidden" id="save" name="save" value="{{ save }}">
-         <input type="hidden" id="marker" name="marker" value="{{ marker }}">
+        <input type="hidden" id="marker" name="marker" value="{{ marker }}">
         <input type="hidden" id="city" name="city" value="{{ city }}">
         <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
         <input type="hidden" id="page" name="page" value="{{ page }}">
@@ -143,12 +154,11 @@ $(document).ready(function(){
         $("#save").val($(this).data("save"));
         $("#searchForm").submit();
     });
-    $(document).ready(function() {
-        $(".city-link").on ('click', function(){
-        $("#city").val($(this).data("id"));
-        $("#cityForm").submit();
+
+    $(".area-link").on ('click', function(){
+    $("#area").val($(this).data("id"));
+    $("#searchForm").submit();
     });
-});
 });
 
 </script>
