@@ -1,15 +1,16 @@
-<div class="area_list" style="width:100%">
-        <ul>
-            {% if area_list %}
-            {% for area in area_list %}
-            <li class="area-link " data-id="{{area.area}}"  href="#"><span>{{area.area}}</span></li>
-            {% endfor %}
-            {% else %}
-            <div style="color:black;">정보없음</div>
-            {% endif %}
-        </ul>
-</div>
+<!--<div class="area_list" style="width:100%">-->
+<!--        <ul>-->
+<!--            {% if area_list %}-->
+<!--            {% for area in area_list %}-->
+<!--            <li class="area-link " data-id="{{area.area}}"  href="#"><span>{{area.area}}</span></li>-->
+<!--            {% endfor %}-->
+<!--            {% else %}-->
+<!--            <div style="color:black;">정보없음</div>-->
+<!--            {% endif %}-->
+<!--        </ul>-->
+<!--</div>-->
 
-<form id="cityForm" method="get" action="{% url 'maps:shop_list' %}">
-        <input type="hidden"  id="city" name="city" value="{{ city }}">
-</form>
+<!--<form id="areaForm" method="get" action="{% url 'maps:shop_list' %}">-->
+<!--        <input type="hidden"  id="area" name="area" value="{{ area }}">-->
+<!--</form>-->
+

@@ -26,14 +26,15 @@ class data(models.Model):
 
 class address(models.Model):
     city = models.CharField(max_length=10)
-    area = models.CharField(max_length=20)
+    area1 = models.CharField(max_length=20)
+    area2 = models.CharField(max_length=20)
 
     class Meta:
-        db_table = 'address'
+        db_table = 'district'
         managed = False
 
     def __str__(self):
-        return self.area
+        return self.area2
 
 
 
