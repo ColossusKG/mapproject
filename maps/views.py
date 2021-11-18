@@ -1,11 +1,12 @@
 import json
 import urllib
-
+import requests
 import folium
+import lxml
+from bs4 import BeautifulSoup
 from django.core.paginator import Paginator
 from django.db.models import Q
-from django.shortcuts import render, get_object_or_404
-
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 
 
