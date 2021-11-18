@@ -101,8 +101,9 @@
             {% for shop in shop_list %}
             <tr class="text-center">
                 <td class="col-1" style="vertical-align : middle;">{{forloop.counter0|add:1 }}</td>
-                <td class="col-3" style="vertical-align : middle;">{{shop.name}}</td>
-<!--                <td></td>-->
+                <td class="col-3" style="vertical-align : middle;">
+                    <a href="{% url 'maps:naver' shop.id %}" data-id="{{ shop.id }}" class="naver">{{shop.name}}</a>
+                </td>
                     <td style="vertical-align : middle;"><a href="#" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
                         {%if user.is_authenticated %}
                         <td><!-- 추천영역 -->
