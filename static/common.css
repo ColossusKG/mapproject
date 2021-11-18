@@ -129,11 +129,45 @@ h3{
     margin-right:auto;
 }
 
-.area_list{display:block; width: 100%;margin:0px; }
-.area_list>ul{
+.city_list{display:block; width: 100%;margin:0px; }
+.city_list>ul{
     display: table;
     margin-left: auto;
     margin-right: auto;
+    padding:0;
+	font-size:0;
+	border-left:1px solid #ddd;
+	border-top:1px solid #ddd;
+}
+.city_list>ul>li{
+    font-family:SBAggroB;
+	display: inline-flex;
+    width: 25%;
+	font-size: 16px;
+	color: #000;
+	height: 60px;
+	line-height: 19px;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	background: #fff;
+	align-items: center;
+}
+.city_list>ul>li span {
+	margin: 0 auto;
+}
+.city_list>ul>li:hover{
+	background:#eee;
+	}
+
+
+/*area_list*/
+.area_list{display:block; width: 445px; margin-top:auto;  margin-bottom:auto;}
+.area_list>ul{
+    display: table;
+    width: 445px;
+    margin-left: 0;
+    margin-right: 0;
     padding:0;
 	font-size:0;
 	border-left:1px solid #ddd;
@@ -159,6 +193,8 @@ h3{
 .area_list>ul>li:hover{
 	background:#eee;
 	}
+
+
 
 
 

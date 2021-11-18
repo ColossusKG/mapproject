@@ -24,6 +24,19 @@ class data(models.Model):
         return self.name
 
 
+class address(models.Model):
+    city = models.CharField(max_length=10)
+    area1_kind = models.CharField(max_length=20)
+    area1 = models.CharField(max_length=20)
+    area2 = models.CharField(max_length=20)
+
+    class Meta:
+        db_table = 'district'
+        managed = False
+
+    def __str__(self):
+        return self.area2
+
 
 
 
