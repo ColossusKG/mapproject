@@ -50,6 +50,7 @@ def shop_list(request):
             Q(addr2__icontains=area2)
         )
 
+
     # 가맹점 지도 표시 코드
     if marker:
         map = map_marker(marker)
@@ -254,7 +255,7 @@ def shop_list(request):
         area2_list = address.objects.order_by().filter(
             Q(city__icontains=city)
         )
-        
+
     if area2:
         shop_list = data.objects.order_by().filter(
             Q(addr2__icontains=area2)
