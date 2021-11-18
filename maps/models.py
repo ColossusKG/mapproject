@@ -26,6 +26,7 @@ class data(models.Model):
 
 class address(models.Model):
     city = models.CharField(max_length=10)
+    area1_kind = models.CharField(max_length=20)
     area1 = models.CharField(max_length=20)
     area2 = models.CharField(max_length=20)
 
