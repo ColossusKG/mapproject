@@ -1,11 +1,12 @@
 import json
 import urllib
-
+import requests
 import folium
+import lxml
+from bs4 import BeautifulSoup
 from django.core.paginator import Paginator
 from django.db.models import Q
-from django.shortcuts import render, get_object_or_404
-
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 
 
@@ -343,3 +344,17 @@ def map_marker(marker):
 
 
 
+def naver(request, id):
+    shop = get_object_or_404(data, pk=id)
+    findurl = 'https://search.naver.com/search.naver?query='
+    findurl = findurl + shop.addr2
+    findurl = requests.get(findurl).text
+    bs = BeautifulSoup(findurl, 'lxml')
+    bsfind = bs.find_all('a', {'class': '_3g_0T'})
+    a = 'https://map.naver.com/v5/search/' + shop.name
+    for bs in bsfind:
+        if bs.get_text() == shop.name:
+            a = bs['href']
+
+    return redirect(a)
+    # return render(request,'maps/shop_list.html', {'next':next})
