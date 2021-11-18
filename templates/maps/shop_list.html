@@ -19,11 +19,62 @@
      <div class="col-5">
          <div>{{ map | safe}}</div>
          <div style="height:5vh"></div>
+         {% if city == '고양시' %}
+         <select class="form-control area1">
+                <option  value="" >==상세주소를 선택하시오==</option>
+                <option  value="덕양구" {% if area1 == '덕양구' %}selected{% endif %}>덕양구</option>
+                <option  value="일산서구" {% if area1 == '일산서구' %}selected{% endif %}>일산서구</option>
+                <option  value="일산동구" {% if area1 == '일산동구' %}selected{% endif %}>일산동구</option>
+         </select>
+         {% elif city == '수원시'%}
+         <select class="form-control area1">
+                <option  value="" >==상세주소를 선택하시오==</option>
+                <option  value="장안구" {% if area1 == '장안구' %}selected{% endif %}>장안구</option>
+                <option  value="권선구" {% if area1 == '권선구' %}selected{% endif %}>권선구</option>
+                <option  value="팔달구" {% if area1 == '팔달구' %}selected{% endif %}>팔달구</option>
+                <option  value="영통구" {% if area1 == '영통구' %}selected{% endif %}>영통구</option>
+         </select>
+         {% elif city == '안산시'%}
+         <select class="form-control area1">
+                <option  value="" >==상세주소를 선택하시오==</option>
+                <option  value="상록구" {% if area1 == '상록구' %}selected{% endif %}>상록구</option>
+                <option  value="단원구" {% if area1 == '단원구' %}selected{% endif %}>단원구</option>
+         </select>
+         {% elif city == '안양시'%}
+         <select class="form-control area1">
+                <option  value="" >==상세주소를 선택하시오==</option>
+                <option  value="만안구" {% if area1 == '만안구' %}selected{% endif %}>만안구</option>
+                <option  value="동안구" {% if area1 == '동안구' %}selected{% endif %}>동안구</option>
+         </select>
+         {% elif city == '용인시'%}
+         <select class="form-control area1">
+                <option  value="" >==상세주소를 선택하시오==</option>
+                <option  value="처인구" {% if area1 == '처인구' %}selected{% endif %}>처인구</option>
+                <option  value="기흥구" {% if area1 == '기흥구' %}selected{% endif %}>기흥구</option>
+                <option  value="수지구" {% if area1 == '수지구' %}selected{% endif %}>수지구</option>
+         </select>
+
+         {% endif %}
+
+<!--            {% if area1_list %}-->
+<!--          <select class="form-control area1">-->
+<!--&lt;!&ndash;                <option class ="mypage" value="" >==세부주소를 선택하세요==</option>&ndash;&gt;-->
+
+<!--                {% for area in area1_list %}-->
+<!--                {% if area.area1_kind != null %}-->
+<!--                <option class ="mypage" value="{{area.area1_kind}}" {% if area1 == '{{area.area1_kind}}' %}selected{% endif %}>{{area.area1}}</option>-->
+<!--              -->
+<!--                {% endif %}-->
+<!--                {% endfor %}-->
+
+<!--          </select>-->
+<!--         {% endif %}-->
+         <div style="height:5vh"></div>
          <div class="area_list" style="width:100%">
         <ul>
-            {% if area_list %}
-            {% for area in area_list %}
-            <li class="area-link " data-id="{{area.area2}}"  href="#"><span>{{area.area2}}</span></li>
+            {% if area2_list %}
+            {% for area in area2_list %}
+            <li class="area-link" data-id="{{area.area2}}"  href="#"><span>{{area.area2}}</span></li>
             {% endfor %}
             {% else %}
             <div style="color:black;">정보없음</div>
@@ -120,11 +171,13 @@
 </div>
      <div class="col-2"></div>
     <!-- 페이징처리 끝 -->
+
     <form id="searchForm" method="get" action="{% url 'maps:shop_list' %}">
-        <input type="hidden"  id="area" name="area" value="{{ area }}">
+        <input type="hidden" id="city" name="city" value="{{ city }}">
+        <input type="hidden" id="area1" name="area1" value="{{ area1 }}">
+        <input type="hidden"  id="area2" name="area2" value="{{ area2 }}">
         <input type="hidden" id="save" name="save" value="{{ save }}">
         <input type="hidden" id="marker" name="marker" value="{{ marker }}">
-        <input type="hidden" id="city" name="city" value="{{ city }}">
         <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
         <input type="hidden" id="page" name="page" value="{{ page }}">
     </form>
@@ -156,10 +209,17 @@ $(document).ready(function(){
     });
 
     $(".area-link").on ('click', function(){
-    $("#area").val($(this).data("id"));
-    $("#searchForm").submit();
+        $("#area2").val($(this).data("id"));
+        $("#searchForm").submit();
+    });
+
+    $(".area1").on('change', function() {
+        $("#area1").val($(this).val());
+        $("#page").val(1);
+        $("#searchForm").submit();
     });
 });
+
 
 </script>
 {% endblock %}
