@@ -15,11 +15,7 @@ def index(request):
     so = request.GET.get('so', 'recent')  # 정렬기준
 
     # 정렬
-    if so == 'recommend':
-        question_list = Question.objects.annotate(num_voter=Count('voter')).order_by('-num_voter', '-create_date')
-    elif so == 'popular':
-        question_list = Question.objects.annotate(num_answer=Count('answer')).order_by('-num_answer', '-create_date')
-    elif so == 'view':
+    if so == 'view':
         question_list = Question.objects.annotate(num_answer=Count('hit')).order_by('-hit', '-create_date')
     elif so == 'recent':
         question_list = Question.objects.order_by('-create_date')
@@ -29,15 +25,11 @@ def index(request):
     # 조회
     if kw:
         question_list = question_list.filter(
-            Q(subject__icontains=kw) |  # 제목검색
-            Q(content__icontains=kw) |  # 내용검색
-            Q(author__username__icontains=kw) |  # 질문 글쓴이검색
-            Q(answer__author__username__icontains=kw) |  # 답변 글쓴이검색
-            Q(answer__content__icontains=kw)  # 답변 내용검색
+            Q(subject__icontains=kw)  # 제목검색
         ).distinct()
 
     # 페이징처리
-    paginator = Paginator(question_list, 10)  # 페이지당 10개씩 보여주기
+    paginator = Paginator(question_list, 20)  # 페이지당 10개씩 보여주기
     page_obj = paginator.get_page(page)
 
     context = {'question_list': page_obj, 'page': page, 'kw': kw, 'so': so}

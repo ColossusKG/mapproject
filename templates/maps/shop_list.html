@@ -1,188 +1,214 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container my-3" xmlns="http://www.w3.org/1999/html">
+<div class="container-fluid" xmlns="http://www.w3.org/1999/html">
+    <br>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-1">
+            <select class="form-control city">
+                <option  value="경기도" >시/군 선택</option>
+                <option  value="가평군" {% if city == '가평군' %}selected{% endif %}>가평군</option>
+                <option  value="고양시" {% if city == '고양시' %}selected{% endif %}>고양시</option>
+                <option  value="과천시" {% if city == '과천시' %}selected{% endif %}>과천시</option>
+                <option  value="광명시" {% if city == '광명시' %}selected{% endif %}>광명시</option>
+                <option  value="광주시" {% if city == '광주시' %}selected{% endif %}>광주시</option>
+                <option  value="구리시" {% if city == '구리시' %}selected{% endif %}>구리시</option>
+                <option  value="군포시" {% if city == '덕양구' %}selected{% endif %}>군포시</option>
+                <option  value="남양주시" {% if city == '남양주시' %}selected{% endif %}>남양주시</option>
+                <option  value="동두천시" {% if city == '동두천시' %}selected{% endif %}>동두천시</option>
+                <option  value="부천시" {% if city == '부천시' %}selected{% endif %}>부천시</option>
+                <option  value="수원시" {% if city == '수원시' %}selected{% endif %}>수원시</option>
+                <option  value="안산시" {% if city == '안산시' %}selected{% endif %}>안산시</option>
+                <option  value="안성시" {% if city == '안성시' %}selected{% endif %}>안성시</option>
+                <option  value="안양시" {% if city == '안양시' %}selected{% endif %}>안양시</option>
+                <option  value="양주시" {% if city == '양주시' %}selected{% endif %}>양주시</option>
+                <option  value="양평군" {% if city == '양평군' %}selected{% endif %}>양평군</option>
+                <option  value="여주시" {% if city == '여주시' %}selected{% endif %}>여주시</option>
+                <option  value="연천군" {% if city == '연천군' %}selected{% endif %}>연천군</option>
+                <option  value="오산시" {% if city == '오산시' %}selected{% endif %}>오산시</option>
+                <option  value="용인시" {% if city == '용인시' %}selected{% endif %}>용인시</option>
+                <option  value="의왕시" {% if city == '의왕시' %}selected{% endif %}>의왕시</option>
+                <option  value="의정부시" {% if city == '의정부시' %}selected{% endif %}>의정부시</option>
+                <option  value="이천시" {% if city == '이천시' %}selected{% endif %}>이천시</option>
+                <option  value="파주시" {% if city == '파주시' %}selected{% endif %}>파주시</option>
+                <option  value="평택시" {% if city == '평택시' %}selected{% endif %}>평택시</option>
+                <option  value="포천시" {% if city == '포천시' %}selected{% endif %}>포천시</option>
+                <option  value="하남시" {% if city == '하남시' %}selected{% endif %}>하남시</option>
+                <option  value="화성시" {% if city == '화성시' %}selected{% endif %}>화성시</option>
+            </select>
 
- <div class="row justify-content-between my-3">  <!-- 양쪽정렬 justify-content-between로 변경 -->
-     <div class="col-2">
-
-     </div><!--검색기능-->
-     <div class="col-6"></div>
-     <div class="col-4 input-group">
-         <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
-         <div class="input-group-append">
-             <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
-         </div>
-     </div>
-
-     <div class="col-12" style="font-family:OTWelcomeRA; text-align:center; font-size:18px; height:5vh">**주소를 클릭하면 해당 위치로 화면이 이동됩니다.**</div>
-
-     <div class="col-5">
-         <div>{{ map | safe}}</div>
-         <div style="height:5vh"></div>
-         {% if city == '고양시' %}
-         <select class="form-control area1">
-                <option  value="" >==상세주소를 선택하시오==</option>
+            <br>
+             {% if city == '고양시' %}
+            <select class="form-control area1">
+                <option  value="" >=구 선택=</option>
                 <option  value="덕양구" {% if area1 == '덕양구' %}selected{% endif %}>덕양구</option>
                 <option  value="일산서구" {% if area1 == '일산서구' %}selected{% endif %}>일산서구</option>
                 <option  value="일산동구" {% if area1 == '일산동구' %}selected{% endif %}>일산동구</option>
-         </select>
-         {% elif city == '수원시'%}
-         <select class="form-control area1">
-                <option  value="" >==상세주소를 선택하시오==</option>
+            </select>
+            {% elif city == '수원시'%}
+            <select class="form-control area1">
+                <option  value="" >=구 선택=</option>
                 <option  value="장안구" {% if area1 == '장안구' %}selected{% endif %}>장안구</option>
                 <option  value="권선구" {% if area1 == '권선구' %}selected{% endif %}>권선구</option>
                 <option  value="팔달구" {% if area1 == '팔달구' %}selected{% endif %}>팔달구</option>
                 <option  value="영통구" {% if area1 == '영통구' %}selected{% endif %}>영통구</option>
-         </select>
-         {% elif city == '안산시'%}
-         <select class="form-control area1">
-                <option  value="" >==상세주소를 선택하시오==</option>
+            </select>
+            {% elif city == '안산시'%}
+            <select class="form-control area1">
+                <option  value="" >=구 선택=</option>
                 <option  value="상록구" {% if area1 == '상록구' %}selected{% endif %}>상록구</option>
                 <option  value="단원구" {% if area1 == '단원구' %}selected{% endif %}>단원구</option>
-         </select>
-         {% elif city == '안양시'%}
-         <select class="form-control area1">
-                <option  value="" >==상세주소를 선택하시오==</option>
+            </select>
+            {% elif city == '안양시'%}
+            <select class="form-control area1">
+                <option  value="" >=구 선택=</option>
                 <option  value="만안구" {% if area1 == '만안구' %}selected{% endif %}>만안구</option>
                 <option  value="동안구" {% if area1 == '동안구' %}selected{% endif %}>동안구</option>
-         </select>
-         {% elif city == '용인시'%}
-         <select class="form-control area1">
-                <option  value="" >==상세주소를 선택하시오==</option>
+            </select>
+            {% elif city == '용인시'%}
+            <select class="form-control area1">
+                <option  value="" >=구 선택=</option>
                 <option  value="처인구" {% if area1 == '처인구' %}selected{% endif %}>처인구</option>
                 <option  value="기흥구" {% if area1 == '기흥구' %}selected{% endif %}>기흥구</option>
                 <option  value="수지구" {% if area1 == '수지구' %}selected{% endif %}>수지구</option>
-         </select>
-
-         {% endif %}
-
-<!--            {% if area1_list %}-->
-<!--          <select class="form-control area1">-->
-<!--&lt;!&ndash;                <option class ="mypage" value="" >==세부주소를 선택하세요==</option>&ndash;&gt;-->
-
-<!--                {% for area in area1_list %}-->
-<!--                {% if area.area1_kind != null %}-->
-<!--                <option class ="mypage" value="{{area.area1_kind}}" {% if area1 == '{{area.area1_kind}}' %}selected{% endif %}>{{area.area1}}</option>-->
-<!--              -->
-<!--                {% endif %}-->
-<!--                {% endfor %}-->
-
-<!--          </select>-->
-<!--         {% endif %}-->
-         <div style="height:5vh"></div>
-         <div class="area_list" style="width:100%">
-        <ul>
-            {% if area2_list %}
-            {% for area in area2_list %}
-            <li class="area-link" data-id="{{area.area2}}"  href="#"><span>{{area.area2}}</span></li>
-            {% endfor %}
-            {% else %}
-            <div style="color:black;">정보없음</div>
+            </select>
             {% endif %}
-        </ul>
-</div>
-     </div>
+        </div>
 
-
-    <div class="col-7">
-        <table class= "table table-striped shop_table">
-            <thead>
-            <tr class="text-center">
-                <th class="col-1">번호</th>
-                <th class="col-3">상호명</th>
-<!--                <th class="col-2">전화번호</th>-->
-                <th class="col-7">주소</th>
-                <th class="col-1">추천</th>
-
-            </tr>
-            </thead>
-            <tbody>
-            {% if shop_list %}
-            {% for shop in shop_list %}
-            <tr class="text-center">
-                <td class="col-1" style="vertical-align : middle;">{{forloop.counter0|add:1 }}</td>
-                <td class="col-3" style="vertical-align : middle;">
-                    <a href="{% url 'maps:naver' shop.id %}" data-id="{{ shop.id }}" class="naver">{{shop.name}}</a>
-                </td>
-                    <td style="vertical-align : middle;"><a href="#" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
-                        {%if user.is_authenticated %}
-                        <td><!-- 추천영역 -->
-                            <div class="bg-light text-center border " >{{shop.mark.count}}</div>
-                            <a href="#" data-save="{{ shop.id }}"
-                        class="recommend btn btn-sm btn-secondary btn-block save_btn">추천</a>
-
-                             </td>
-                        {% else %}
-                        <td><div class="bg-light text-center border " >{{shop.mark.count}}</div>
-                        <a href="{% url 'common:login' %}" data-save="#" class="recommend btn btn-sm btn-secondary btn-block save_btn">추천</a></td>
-                        {% endif %}
-
-                </td>
-            </tr>
-            {% endfor %}
-            {% else %}
-            <tr>
-                <td colspan="3">일치하는 항목이 없습니다.</td>
-            </tr>
-            {% endif %}
-            </tbody>
-        </table>
+<!--    <div style="height:3vh"></div>-->
+        <div class="col-5">
+            <div class="area_list" style="width:1300px">
+                <ul>
+                    {% if area1_list %}
+                    {% for area in area1_list %}
+                    <li class="area-link" data-id="{{area.addr2}}"  href="#"><span>{{area.addr2}}</span></li>
+                    {% endfor %}
+                    {% else %}
+                    <div style="color:black;">정보없음</div>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
     </div>
 
+        <div class="row justify-content-between my-3" style="">
+            <div class="col-1"></div>
+            <div class="col-5" style="">
+                <div style="height:5vh"></div>
+                <div class="input-group">
+                <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+                    <div class="input-group-append">
+                 <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
+                    </div>
+                </div>
+                <div style="height:5vh"></div>
 
-<!-- 페이징처리 시작 -->
-<div class="col-2"></div>
-<div class="col-8 paging">
-    <!-- 이전 페이지 -->
-    <ul>
-    {% if shop_list.has_previous %}
-        <li class="page-item">
-   <a class="page-link" data-page="{{ shop_list.previous_page_number}}" href="#"><</a>
-        </li>
-        {% else %}
-        <li class="page-item disabled">
-            <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><</a>
-        </li>
-        {% endif %}
-        <!-- 페이지리스트 -->
-        {% for page_number in shop_list.paginator.page_range %}
-        {% if page_number >= shop_list.number|add:-3 and page_number <= shop_list.number|add:3 %}
-            {% if page_number == shop_list.number %}
-            <li class="page-item active" aria-current="page">
-                <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
-            </li>
-            {% else %}
-            <li>
-                <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
-            </li>
-            {% endif %}
-        {% endif %}
-        {% endfor %}
-        <!-- 다음페이지 -->
-        {% if shop_list.has_next %}
-        <li class="page-item" >
-            <a class="page-link" data-page="{{ shop_list.next_page_number }}" href="#">></a>
-        </li>
-        {% else %}
-        <li class="page-item disabled">
-            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">></a>
-        </li>
-        {% endif %}
-    </ul>
-</div>
-     <div class="col-2"></div>
-    <!-- 페이징처리 끝 -->
+                <div style="width:100% ">{{ map | safe}}</div>
+                <div style="height:5vh"></div>
+            </div>
 
-    <form id="searchForm" method="get" action="{% url 'maps:shop_list' %}">
-        <input type="hidden" id="city" name="city" value="{{ city }}">
-        <input type="hidden" id="area1" name="area1" value="{{ area1 }}">
-        <input type="hidden"  id="area2" name="area2" value="{{ area2 }}">
-        <input type="hidden" id="save" name="save" value="{{ save }}">
-        <input type="hidden" id="marker" name="marker" value="{{ marker }}">
-        <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
-        <input type="hidden" id="page" name="page" value="{{ page }}">
-    </form>
-</div>
+        <div class="col-5">
+            <table class= "table table-striped shop_table">
+                <thead>
+                <tr class="text-center">
+                    <th style="width:25%">상호명</th>
+                    <th  style="width:55%">주소</th>
+                    {% if so == '추천순' %}
+                    <th  style="width:20%"><a href="#" class="so" data-so="이름순"><span class="sort">추천▲<span class="tooltiptext">이름순 정렬하기</span></span></a></th>
+                    {% else %}
+                    <th  style="width:20%"><a href="#" class="so" data-so="추천순"><span class="sort">추천<span class="tooltiptext">추천순 정렬하기</span></span></a></th>
+                    {% endif %}
+
+                </tr>
+                </thead>
+                <tbody>
+                {% if shop_list %}
+                {% for shop in shop_list %}
+                <tr class="text-center ">
+                    <td class="col-4 table_a" style="vertical-align : middle;">
+                        <a href="{% url 'maps:naver' shop.id %}" data-id="{{ shop.id }}" class="naver">{{shop.name}}</a>
+                    </td>
+                    <td class="col-5 table_a" style="vertical-align : middle;"><a href="#" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
+                        {%if user.is_authenticated %}
+                        <td class="col-3 table_a" ><!-- 추천영역 -->
+                            <div style="width:50px; border:1px solid gray;  margin-left:10px;"><span>{{shop.mark.count}}  </span></div>
+                            <a href="#" data-save="{{ shop.id }}" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a>
+                             </td>
+                        {% else %}
+                        <td class="col-3 table_a" >
+                            <div style="width:50px; border:1px solid gray;  margin-left:10px;"><span>{{shop.mark.count}}  </span></div>
+                            <a href="{% url 'common:login' %}" data-save="#" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a></td>
+                        {% endif %}
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td colspan="3">일치하는 항목이 없습니다.</td>
+                </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+            <div class="col-1"></div>
+        </div>
+
+        <!-- 페이징처리 시작 -->
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 paging">
+            <!-- 이전 페이지 -->
+            <ul>
+            {% if shop_list.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" data-page="{{ shop_list.previous_page_number}}" href="#"><</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><</a>
+                </li>
+                {% endif %}
+                <!-- 페이지리스트 -->
+                {% for page_number in shop_list.paginator.page_range %}
+                {% if page_number >= shop_list.number|add:-3 and page_number <= shop_list.number|add:3 %}
+                    {% if page_number == shop_list.number %}
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
+                    </li>
+                    {% endif %}
+                {% endif %}
+                {% endfor %}
+                <!-- 다음페이지 -->
+                {% if shop_list.has_next %}
+                <li class="page-item" >
+                    <a class="page-link" data-page="{{ shop_list.next_page_number }}" href="#">></a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" tabindex="-1" aria-disabled="true" href="#">></a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="col-2"></div>
+    </div>
+        <!-- 페이징처리 끝 -->
+
+
+        <form id="searchForm" method="get" action="{% url 'maps:shop_list' %}">
+            <input type="hidden" id="city" name="city" value="{{ city }}">
+            <input type="hidden" id="area1" name="area1" value="{{ area1 }}">
+            <input type="hidden" id="area2" name="area2" value="{{ area2 }}">
+            <input type="hidden" id="save" name="save" value="{{ save }}">
+            <input type="hidden" id="marker" name="marker" value="{{ marker }}">
+            <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
+            <input type="hidden" id="page" name="page" value="{{ page }}">
+            <input type="hidden" id="so" name="so" value="{{ so }}">
+        </form>
+    </div>
 </div>
 {% endblock %}
 {% block script %}
@@ -209,17 +235,33 @@ $(document).ready(function(){
         $("#searchForm").submit();
     });
 
+    $(".city").on('change',function() {
+        $("#city").val($(this).val());
+        $("#area1").val("");
+        $("#area2").val("");
+        $("#page").val(1);
+        $("#searchForm").submit();
+     });
+
+    $(".area1").on('change', function() {
+            $("#area1").val($(this).val());
+            $("#area2").val("");
+            $("#page").val(1);
+            $("#searchForm").submit();
+        });
+
     $(".area-link").on ('click', function(){
         $("#area2").val($(this).data("id"));
         $("#searchForm").submit();
     });
 
-    $(".area1").on('change', function() {
-        $("#area1").val($(this).val());
+    $(".so").on('click',function(){
+        $("#so").val($(this).data("so"));
         $("#page").val(1);
         $("#searchForm").submit();
-    });
+     });
 });
+
 
 
 </script>

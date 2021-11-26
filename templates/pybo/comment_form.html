@@ -2,16 +2,21 @@
 
 {% block content %}
 <div class="container my-3">
-    <h5 class="border-bottom pb-2">댓글등록하기</h5>
+    <div class="comment">
+        <h5 class="border-bottom pb-2" style="font-size:30px; text-align:center;">댓글 등록</h5>
     <form method="post" class="post-form my-3">
         {% csrf_token %}
         {% include "form_errors.html" %}
         <div class="form-group">
             <label for="content">댓글내용</label>
             <textarea class="form-control"name="content" id="content" 
-                      rows="3">{{ form.content.value|default_if_none:'' }}</textarea>
+                      rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">저장하기</button>
+        <div style="text-align:right;">
+            <button type="submit" class="btn btn-primary">저장하기</button>
+        </div>
+
     </form>
+    </div>
 </div>
 {% endblock %}

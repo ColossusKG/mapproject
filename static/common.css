@@ -16,6 +16,56 @@ body {
     justify-items: stretch ;
 }
 
+/*header*/
+h1{font-size:50px;color:#000;font-weight:800}
+h2{font-size:22px;color:#000;font-weight:800}
+
+.header{
+    height:150px; font-family:SBAggroB;
+    background:white; padding:20px;}
+#header-paragraph{
+    margin-top:18px;text-align:center;
+    font-size:16px;color:#000;line-height:25px
+}
+#header-img{
+    text-align:center;
+}
+
+
+
+#mainpage {
+    padding:0px;
+    float:left;
+}
+#mainpage-logo{
+    background: lightsteelblue;
+    height:100vh;
+    -ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;
+    font-family: SBAggroB;
+    text-align:center;
+}
+
+#mainpage-logo-div{
+    width:100%; height:80vh; line-height: 80vh; text-align: center;
+
+}
+
+#mainpage-logo-div-img{
+    width:80%; max-width: 80%;
+    text-align: center; vertical-align: center;
+
+
+}
+
+#mainpage-citylist{
+    display:flex; height:100vh;
+    -ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%
+}
+
+.test{
+    margin:auto;
+    width:98%
+}
 
 
 em, address, cite {font-style:normal;}
@@ -24,30 +74,22 @@ table{width:100%;border-collapse:separate;border:0;border-spacing:0;font-size: 1
 table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-top:-1px;font-size:0;line-height:0;text-indent:-9999px}
 
 
-/*header*/
-h1{font-size:30px;color:#000;font-weight:800}
-h2{font-size:16px;color:#000;font-weight:800}
-
-
-
-.wrap{display:block;width:100%;height:auto;margin:0;padding:0}
-.header{margin:50px auto 40px auto;width:940px; font-family:SBAggroL; }
-.header>h1{margin-top:15px;text-align:center;}
-.header>.txt{margin-top:18px;text-align:center;font-size:16px;color:#000;line-height:25px }
 
 .contents{display:block;margin:0 auto;min-height:550px;width:941px;}
 .contents>h2{text-align:center;}
 
-.search_img{display:block;margin:0 auto}
+
 
 
 /*navbar*/
+
+
 .navbar{
-    font-family:SBAggroL;
+    font-family:SBAggroB;
     border-top:1px solid #ddd;
     }
 .navbar>ul{
-            width:1898px;
+            width:100%;
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
@@ -61,36 +103,74 @@ h2{font-size:16px;color:#000;font-weight:800}
 
 }
 
+.navbar>ul>li>.char:hover{
+   color:gray;
+}
+
+.navbar>ul>li>.char:active{
+   color:gray;
+}
+
+.navbar>ul>ul>li>.char:hover{
+   color:gray;
+}
+
+.navbar>ul>ul>li>.char:active{
+   color:gray;
+}
+
+.char{
+    padding-top:8px;
+    padding-bottom:0px;
+}
+
 
 
 /*common*/
 .login{
-    margin: 130px auto;
+    margin: 100px auto;
     border: solid 1px gray;
-    border-radius: 25px;
     width: 50%;
     text-align: center;
 
 }
 .signup{
-    margin: 130px auto;
+    margin: 100px auto;
     border: solid 1px gray;
-    border-radius: 25px;
     width: 50%;
+    height: 500px;
     text-align: center;
+
 }
 
 h3{
     text-align: center;
-    font-family:OTWelcomeBA;
+    font-family:SBAggroB;
     font-size: 35px;
     margin-top: 40px;
-    margin-bottom: 10px;
     }
 
 .locker{
  margin-top:10px;
 }
+
+details{
+    align-content: center;
+}
+details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+details[open] > summary { background:#444;}
+details[open] > summary ~ * { animation:reveal 0.5s;}
+.tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+
+@keyframes reveal {
+    from { opacity:0; transform:translate3d(0, -30px, 0); }
+    to { opacity:1; transform:translate3d(0, 0, 0); }
+}
+
+
+
 
 .form-group>input{
 	display: inline-block;
@@ -101,13 +181,13 @@ h3{
 	line-height: inherit;
 	height: 40px;
 	width: 50%;
-	margin-bottom:20px;
+	margin: 10px auto;
 	border:1px solid #ddd
 }
 
 .form-group>label{
     font-family:OTWelcomeRA;
-    font-size:20px;
+    font-size:15px;
 }
 
 
@@ -123,13 +203,8 @@ h3{
 
 /*city list*/
 
-.test{
-    margin-top :100px;
-    margin-left:auto;
-    margin-right:auto;
-}
 
-.city_list{display:block; width: 100%;margin:0px; }
+.city_list{display:block; margin:auto; align-items:center; }
 .city_list>ul{
     display: table;
     margin-left: auto;
@@ -162,25 +237,31 @@ h3{
 
 
 /*area_list*/
-.area_list{display:block; width: 445px; margin-top:auto;  margin-bottom:auto;}
+/*version1
+.area1{
+    width:100%;
+}
+
+.area_list{display:block;  margin:auto;  margin-bottom:auto;}
 .area_list>ul{
     display: table;
-    width: 445px;
-    margin-left: 0;
-    margin-right: 0;
+    width :100%;
+    margin-left:auto;
+    margin-right:auto;
     padding:0;
 	font-size:0;
-	border-left:1px solid #ddd;
-	border-top:1px solid #ddd;
+
 }
 .area_list>ul>li{
     font-family:SBAggroB;
 	display: inline-flex;
-    width: 25%;
+    width: 10%;
 	font-size: 16px;
 	color: #000;
 	height: 60px;
 	line-height: 19px;
+	border-left:1px solid #ddd;
+	border-top:1px solid #ddd;
 	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	text-align: center;
@@ -194,45 +275,104 @@ h3{
 	background:#eee;
 	}
 
+.area_list>ul>li.on{
+	background:#eee;
+	}
+}*/
 
 
+/*version2*/
+.address{
+ width:80%;
+ margin-left:auto;
+ margin-right:auto;
+ }
 
 
-.map{
-  display:flex;
-  align-items:center;
+.shoplist-list-col-side{
+    -ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%;
 }
+#shoplist-list-map-div{
+    -ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;
+}
+
+#shoplist-list-list-div {
+    -ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;
+}
+
+
 
 
 /*shop list*/
 .shop_table{
-    font-family:OTWelcomeRA;
+    width:100%;
+    font-family:IBMPlexSansKR-Regular;
     font-size:16px;
     vertical-align : middle;
+    text-align:center;
 
+}
+
+
+
+.table_a>a:link{
+    color:black;
+}
+
+.table_a>a:hover{
+    color:blue;
 }
 
 td{
     vertical-align : middle;
 }
 
-.save_btn{
-    height : 20px;
-    width : 50px;
-    font-family:OTWelcomeRA;
-    margin-top:3px;
-    font-size: 15px;
-}
-.save_btn>{
-   vertical-align : middle;
-   font-family:OTWelcomeRA;
-   font-size: 15px;
+.sort>.tooltiptext{
+    visibility: hidden;
+    width: 70px;
+    border:1px solid DarkSlateGray;
+    border-radius:5px;
+    color:DarkSlateGray;
+    text-align:center;
+    padding: 5px 0;
+    font-size:10px;
+    position: absolute;
+    z-index: 1;
+    left:88%;
+    bottom:99%
+
 }
 
-.save_btn2{
-    padding-right : 0px;
+.sort:hover>.tooltiptext{
+    visibility: visible;
 }
 
+
+
+.recommend{
+    font-size:20px;
+    vertical-align : middle;
+    margin-left:6px;
+}
+
+.recommend>.tooltiptext{
+    visibility:hidden;
+    width: 70px;
+    border:1px solid DarkSlateGray;
+    border-radius:5px;
+    color:DarkSlateGray;
+    text-align:center;
+    padding: 5px 0;
+    font-size:10px;
+    position: absolute;
+    z-index: 1;
+    left:70%;
+
+}
+
+.recommend:hover>.tooltiptext{
+    visibility: visible;
+}
 
 
 
@@ -244,21 +384,43 @@ td{
 }
 
 .question_btn>span{
-    font-family:OTWelcomeRA;
-    font-size:18px;
+    font-family: GowunBatang-Regular;
+    font-size:17px;
 
 }
 
 .question_table{
     text-align:center;
-    font-family:OTWelcomeRA;
-    font-size:20px;
+    font-family: IBMPlexSansKR-Regular;
+    font-size:17px;
 }
 
+.so{
+    font-family: IBMPlexSansKR-Regular;
+}
 
+.search{
+    font-family: IBMPlexSansKR-Regular;
+}
 
+/*question detail*/
 
+.question_detail{
+ font-family: GowunBatang-Regular;
+ font-size:18px;
+}
 
+.detail{
+    margin:0;
+}
+
+.comment{
+    font-family: GowunBatang-Regular;
+}
+
+.question{
+    font-family: GowunBatang-Regular;
+}
 
 
 
@@ -276,18 +438,23 @@ td{
 
 /*footer*/
 .footer{
-    width:1900px;
-    position: fixed;
+    height:150px;
+    /*position: ;*/
     bottom: 0;
     left: 0;
-    display:block;
-    background:#303030;
+    display:flex;
+    background: #C0C0C0;
     padding:10px 0 10px 0;
+
     }
 
-.footer>.foot_content{text-align:center; margin:auto; color:white;}
-
-
+.footer>.foot_content{
+    text-align:center;
+    margin:auto;
+    color:white;
+    font-family:IBMPlexSansKR-Regular;
+    font-size:15px;
+}
 
 
 
