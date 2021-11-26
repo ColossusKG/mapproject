@@ -7,13 +7,18 @@
      <!-- bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css'%}">
 
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
     <!-- main CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
     <title>지역화폐 사용처1</title>
 
     <!-- header CSS -->
     <link rel="stylesheet" media="screen" type="text/css" href="{% static 'font.css' %}">
-	<link rel="stylesheet" media="screen" type="text/css" href="{% static 'common.css' %}">
+	<link rel="stylesheet" media="screen" type="text/css" href="/static/common.css?ver=1">
+    <link rel="stylesheet" media="screen and (max-width:660px)"  type="text/css" href="/static/common-mobile.css?ver=1">
 </head>
 <body>
 <!-- 네비게이션바 -->
@@ -24,17 +29,19 @@
 {% block content %}
 {% endblock %}
 <!-- 기본 템플릿 안에 삽입될 내용 end -->
-
+{% include "footer.html" %}
 <!-- jQuery JS-->
 <script src="{% static 'jquery-3.4.1.min.js' %}"></script>
 <!-- bootstrap js -->
 <script src="{% static 'bootstrap.min.js' %}"></script>
 <!-- 자바스크립트 Start -->
+
+
+
 {% block script %}
 
 
 {% endblock %}
 <!-- 자바스크립트 End -->
-{% include "footer.html" %}
 </body>
 </html>
