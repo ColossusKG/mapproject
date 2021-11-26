@@ -1,16 +1,18 @@
 <!-- 네비게이션바-->
+{% load static %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom nav-item">
     <ul>
-        <li><a class="navbar-brand " href="{% url 'maps:index' %}">가맹점 찾기</a></li>
-        <li><a class="navbar-brand" href="{% url 'pybo:index' %}">문의게시판</a></li>
+        <li><a class="navbar-brand " href="{% url 'maps:index' %}"><img class="logo" src="{% static 'logo3.png' %}" style="height:30px; width:100%"/></a></li>
+        <li><a class="navbar-brand char " href="{% url 'maps:shop_list' %}">가맹점 찾기</a></li>
+        <li><a class="navbar-brand char" href="{% url 'pybo:index' %}">문의게시판</a></li>
             <ul class="right_bar" >
                 {%if user.is_authenticated %}
-             <li><a class="navbar-brand " href="{% url 'mypage:index' %}">마이페이지</a></li>
-             <li><a class="navbar-brand " href="{% url 'common:logout' %}">로그아웃</a></li>
-             {% else %}
-                <li><a class="navbar-brand " href="{% url 'common:login' %}">로그인</a></li>
-                <li><a class="navbar-brand " href="{% url 'common:signup' %}">회원가입</a></li>
-              {% endif %}
+                    <li><a class="navbar-brand char" href="{% url 'mypage:index' %}">마이페이지</a></li>
+                    <li><a class="navbar-brand char" href="{% url 'common:logout' %}">로그아웃</a></li>
+                {% else %}
+                    <li><a class="navbar-brand char" href="{% url 'common:login' %}">로그인</a></li>
+                    <li><a class="navbar-brand char" href="{% url 'common:signup' %}">회원가입</a></li>
+                {% endif %}
             </ul>
     </ul>
 </nav>
