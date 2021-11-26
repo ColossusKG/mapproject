@@ -2,31 +2,29 @@
 {% load pybo_filter %}
 {% block content %}
 <div class="container my-3">
+    <div style="font-family:SBAggroB; font-size:30px;">문의게시판</div>
+    <hr style="margin-top: 0.1rem;">
     <div class="row justify-content-between my-3">  <!-- 양쪽정렬 justify-content-between로 변경 -->
         <div class="col-2">
             <select class="form-control so">
                 <option value="recent" {% if so == 'recent' %}selected{% endif %}>최신순</option>
                 <option value="old" {% if so == 'old' %} selected {% endif %}>오래된 순</option>
-                <option value="recommend" {% if so == 'recommend' %}selected{% endif %}>추천순</option>
                 <option value="popular" {% if so == 'popular' %} selected {% endif %}>답변 많은 순</option>
             </select>
         </div>
-        <div class="col-4 input-group">
-            <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}">
+        <div class="col-4 input-group search">
+            <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}" placeholder="제목을 입력하세요">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
+                <button class="btn btn-outline-secondary" type="button" id="btn_search" >찾기</button>
             </div>
         </div>
     </div>
-    <div class="col-12">
-        <a href="{% url 'pybo:question_create' %}" class="btn float-right btn-secondary question_btn"><span>질문 등록하기</span></a>
-    </div>
+
     <table class="table question_table">
         <thead>
-        <tr class="text-center thead-dark">
+        <tr class="text-center thead-gray">
             <th>번호</th>
-            <th>추천</th>
-            <th style="width:50%">제목</th>
+            <th style="width:40%">제목</th>
             <th>글쓴이</th>
             <th>작성일시</th>
             <th>조회수</th>
@@ -40,13 +38,8 @@
                 <!-- 번호 = 전체건수 - 시작인덱스 - 현재인덱스 + 1 -->
                 {{ question_list.paginator.count|sub:question_list.start_index|sub:forloop.counter0|add:1 }}
             </td>
-            <td>
-                {% if question.voter.all.count > 0 %}
-                <span class="badge badge-warning px-2 py-1">{{ question.voter.all.count }}</span>
-                {% endif %}
-            </td>
             <td class="text-left">
-                <a href="{% url 'pybo:detail' question.id %}">{{ question.subject }}</a>
+                <a href="{% url 'pybo:detail' question.id %}" style="color:black;">{{ question.subject }}</a>
                 {{ question.subject.update_counter }}
                 {% if question.answer_set.count > 0 %}
                 <span class="text-danger small ml-2">{{ question.answer_set.count }}</span>
@@ -64,6 +57,10 @@
         {% endif %}
         </tbody>
     </table>
+
+    <div class="col-12">
+        <a href="{% url 'pybo:question_create' %}" class="btn float-right btn-secondary question_btn"><span>문의하기</span></a>
+    </div>
     <!-- 페이징처리 시작 -->
 
     <div class="paging">
@@ -80,7 +77,7 @@
         {% endif %}
         <!-- 페이지리스트 -->
         {% for page_number in question_list.paginator.page_range %}
-        {% if page_number >= question_list.number|add:-5 and page_number <= question_list.number|add:5 %}
+        {% if page_number >= question_list.number|add:-3 and page_number <= question_list.number|add:3 %}
             {% if page_number == question_list.number %}
             <li class="page-item active" aria-current="page">
                 <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
