@@ -1,6 +1,5 @@
 E.idea
 *.pyc
 __pycache__
-db.sqlite3
 db.7z
 db.sqbpro
