@@ -34,32 +34,34 @@ h2{font-size:22px;color:#000;font-weight:800}
 
 
 #mainpage {
+    margin:0px;
     padding:0px;
-    float:left;
+    display: inline-flex;
 }
 #mainpage-logo{
+    float:left;
     background: lightsteelblue;
     height:100vh;
-    -ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;
+    flex-basis:41.666667%;
     font-family: SBAggroB;
     text-align:center;
+
 }
 
 #mainpage-logo-div{
     width:100%; height:80vh; line-height: 80vh; text-align: center;
+    align-items: center; justify-items: center;
 
 }
 
 #mainpage-logo-div-img{
     width:80%; max-width: 80%;
-    text-align: center; vertical-align: center;
-
-
 }
 
 #mainpage-citylist{
+    background-color: lightgoldenrodyellow;
     display:flex; height:100vh;
-    -ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%
+    flex-basis:58.333333%
 }
 
 .test{
@@ -82,6 +84,11 @@ table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-to
 
 
 /*navbar*/
+
+
+#navbar-logo{
+     height:30px;
+}
 
 
 .navbar{
@@ -153,6 +160,15 @@ h3{
 .locker{
  margin-top:10px;
 }
+
+
+.display-when-wide{
+}
+.display-when-narrow{
+    display: none;
+}
+
+
 
 details{
     align-content: center;
@@ -290,7 +306,10 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 
 
 .shoplist-list-col-side{
-    -ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%;
+    -ms-flex:0 0 6%;flex:0 0 6%;max-width:6%;
+}
+.shoplist-list-col-small{
+    -ms-flex:0 0 2.6%;flex:0 0 2.6%;max-width:2.6%;
 }
 #shoplist-list-map-div{
     -ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;
@@ -301,6 +320,21 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 }
 
 
+.text-center{
+    width:100%;
+}
+.shoplist-list-table-name{
+    width:25%;
+}
+.shoplist-list-table-addr{
+    width:60%;
+}
+.shoplist-list-table-recom1{
+    width:15%;
+}
+.shoplist-list-table-recom2{
+    width:15%;
+}
 
 
 /*shop list*/
