@@ -160,7 +160,10 @@ h3{
 .locker{
  margin-top:10px;
 }
-
+#button-in-wide-map{
+    border:1px solid black;
+    border-radius:7px;
+}
 
 .display-when-wide{
 }

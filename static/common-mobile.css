@@ -168,14 +168,14 @@ h3{
     display: inline-flex;
 }
 
-#button-in-map{
+#button-in-narrow-map{
     background-color: white;
     opacity:0.85;
     position:absolute;
     z-index:2;
     margin : 3% 0 0 14%;
     border:1px solid black;
-    border-radius:5px;
+    border-radius:7px;
 }
 .display-when-narrow > div > div > select{
     font-size:12px;

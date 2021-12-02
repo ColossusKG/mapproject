@@ -17,7 +17,7 @@ class data(models.Model):
 
 
     class Meta:
-       db_table = 'maps_data'
+       db_table = 'maps_data2'
        managed = True
 
     def __str__(self):

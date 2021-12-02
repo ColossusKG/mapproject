@@ -3,3 +3,5 @@ E.idea
 __pycache__
 db.7z
 db.sqbpro
+db.sqlite3
+db1.sqlite3
