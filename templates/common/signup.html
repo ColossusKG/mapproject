@@ -1,11 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container my-3">
-    <div class="signup">
+    <div class="signup" style="height:100%;">
          <h3>회원가입</h3>
     <form method="post" class="post-form" style="margin-top: 30px;">
         {% csrf_token %}
-        {% include "form_errors.html" %}
+        {% if form.errors %}
+        {% for field in form %}
+        {% for error in field.errors %}  <!-- 필드 오류를 출력한다. -->
+        <div class="alert alert-danger">
+            <strong>{{ field.name }}</strong>
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}   <!-- 넌필드 오류를 출력한다. -->
+        <div class="alert alert-danger">
+            <strong>{{ error }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
         <div class="form-group">
             <label for="username">사용자 이름:</label>
             <input type="text" class="form-control" name="username" id="username"
