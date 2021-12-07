@@ -6,6 +6,7 @@
             <img id="navbar-logo" src="{% static 'logo3.png' %}"></a>
         </li>
         <li><a class="navbar-brand char" href="{% url 'maps:shop_list' %}">가맹점 찾기</a></li>
+        <li><a class="navbar-brand char" href="{% url 'board:index' %}">가맹점 후기</a></li>
         <li><a class="navbar-brand char" href="{% url 'pybo:index' %}">문의게시판</a></li>
             <ul class="right_bar" >
                 {%if user.is_authenticated %}
