@@ -9,7 +9,7 @@
             <select class="form-control so">
                 <option value="recent" {% if so == 'recent' %}selected{% endif %}>최신순</option>
                 <option value="old" {% if so == 'old' %} selected {% endif %}>오래된 순</option>
-                <option value="popular" {% if so == 'popular' %} selected {% endif %}>답변 많은 순</option>
+                <option value="popular" {% if so == 'popular' %} selected {% endif %}>조회순</option>
             </select>
         </div>
         <div class="col-4 input-group search">
@@ -59,7 +59,7 @@
     </table>
 
     <div class="col-12">
-        <a href="{% url 'pybo:question_create' %}" class="btn float-right btn-secondary question_btn"><span>문의하기</span></a>
+        <a href="{% url 'pybo:question_create' %}?next={{request.path}}" class="btn float-right btn-secondary question_btn"><span>문의하기</span></a>
     </div>
     <!-- 페이징처리 시작 -->
 
