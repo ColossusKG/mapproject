@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
     <br class="display-when-wide">
-    <details open class="display-when-wide" id="button-addr">
+    <details open id="button-in-wide-map" class="display-when-wide">
         <summary>주소 검색</summary>
         <div class="row justify-content-between my-3 address">
             <div class="col-4">
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div id="shoplist-list-map-object" style="width:100%;">
-                <details open class="display-when-narrow" id="button-in-map">
+                <details open class="display-when-narrow" id="button-in-narrow-map">
                     <summary>주소 검색</summary>
                     <div class="row justify-content-between my-3 address" >
                         <div class="col-4">
@@ -217,11 +217,11 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div class="display-when-narrow input-group">
-                    <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">찾기</button>
-                    </div>
+                    <div class="input-group">
+                    <input type="text" class="form-control kw2" value="{{ kw2|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="btn_search2">찾기</button>
+                        </div>
                     </div>
                 </details>
                 <div class="map">
@@ -349,11 +349,24 @@ function getDisplayInfo() {
     return size;
 }
 
+function EnterToSearch(e){
+    if(e.keyCode==13){
+        alert('enter');
+        return false;
+    }
+}
+
 $(document).ready(function(){
 
 
     $("#btn_search").on('click', function() {
         $("#kw").val($(".kw").val());
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+        $("#searchForm").submit();
+    });
+
+     $("#btn_search2").on('click', function() {
+        $("#kw").val($(".kw2").val());
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
