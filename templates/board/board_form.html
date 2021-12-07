@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container question" style="height:55vh;">
+    <form method="post" class="post-form my-3" enctype="multipart/form-data" >
+    <div style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;  width:70%; margin:10% auto 0% auto; ">
+    <h5 class="pt-2" style="text-align:center;">[{{shop_name}}] 한 줄 후기 작성하기</h5>
+        <div  class="my-3 border-bottom pb-2" style="font-size:15px;text-align:center;">(인증 사진 첨부해야 후기 작성 가능)</div>
+        {% csrf_token %}
+        <!-- 오류표시 Start -->
+        {% if messages %}
+        <div class="alert alert-danger my-3" role="alert">
+        {% for message in messages %}
+        <strong>{{ message.message }}</strong>
+        {% endfor %}
+        </div>
+        {% endif %}
+        <!-- 오류표시 End -->
+
+            <div style="text-aling:center">
+                <label for="filename" style="color:blue; font-size:20px;">인증 사진:</label>
+                <input type="file"  name="filename" id="filename">
+            </div>
+        <br>
+            {% if image %}
+        <div style="font-size:16px;">[저장된 파일명: {{ image }}] </div>
+        <div style="font-size:15px;">(사진을 변경하려면 저장할 사진을 첨부해주세요)</div>
+            {% endif %}
+        <br>
+
+
+        <div class="form-group">
+            <label for="content" style="display:none;">한 줄 후기</label>
+            <input type="text" style="width:100%; font-size:20px;" maxlength="40" name="content" id="content" placeholder="한 줄 후기를 작성해주세요!(최대 40자)"
+                value="{{ form.content.value|default_if_none:'' }}"/>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:20px;">
+        <button type="submit" class="btn btn-secondary" >저장하기</button>
+    </div>
+    </form>
+</div>
+{% endblock %}

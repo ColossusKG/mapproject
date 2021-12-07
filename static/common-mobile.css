@@ -92,9 +92,10 @@ table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-to
     height:40px;
     font-family:IBMPlexSansKR-Bold;
     margin:auto;
+    padding-left:10px;
 }
 .navbar-brand{
-    font-size:16px;
+    font-size:15px;
 }
 
 .navbar>ul{
@@ -367,6 +368,9 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
     width:15%;
 }
 
+#shoplist-list-map-object>.map{
+    margin-top: 0;
+}
 
 
 
@@ -444,7 +448,15 @@ td{
     visibility: visible;
 }
 
+/* comment_lsit */
 
+.comment_list>.comment{
+    width:47%;
+    margin:3% 0.5%;
+    min-height:400px;
+    height:100%;
+    padding:1px;
+}
 
 
 
