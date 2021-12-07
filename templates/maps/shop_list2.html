@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
     <br class="display-when-wide">
-    <details open class="display-when-wide">
+    <details open class="display-when-wide" id="button-addr">
         <summary>주소 검색</summary>
         <div class="row justify-content-between my-3 address">
             <div class="col-4">
@@ -224,7 +224,9 @@
                     </div>
                     </div>
                 </details>
+                <div class="map">
                 {{ map | safe}}
+                </div>
             </div>
         </div>
         <div class="shoplist-list-col-small"></div>
@@ -235,9 +237,9 @@
                     <th class="shoplist-list-table-name">상호명</th>
                     <th class="shoplist-list-table-addr">주소</th>
                     {% if so == '추천순' %}
-                    <th class="shoplist-list-table-recom1"><a href="#" class="so" data-so="이름순"><span class="sort">추천▲<span class="tooltiptext">이름순 정렬하기</span></span></a></th>
+                    <th class="shoplist-list-table-recom1"><a href="#" class="so" data-so="이름순" title="이름순 정렬하기"><span class="sort">추천▲</span></a></th>
                     {% else %}
-                    <th class="shoplist-list-table-recom2"><a href="#" class="so" data-so="추천순"><span class="sort">추천<span class="tooltiptext">추천순 정렬하기</span></span></a></th>
+                    <th class="shoplist-list-table-recom2"><a href="#" class="so" data-so="추천순" title="추천순 정렬하기"><span class="sort">추천</span></a></th>
                     {% endif %}
 
                 </tr>
@@ -251,14 +253,20 @@
                     </td>
                     <td class="table_a shoplist-list-table-addr" style="vertical-align : middle;"><a href="#" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
                         {%if user.is_authenticated %}
-                        <td class="table_a shoplist-list-table-recom1" ><!-- 추천영역 -->
-                            <div style="width:50px; border:1px solid gray;  margin-left:10px;"><span class="" style="">{{shop.mark.count}}  </span></div>
+                        <td class="table_a shoplist-list-table-recom1" >
+                            <!-- 추천영역 -->
+                            <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span class="" style="">{{shop.mark.count}}  </span></div>
                             <a href="#" data-save="{{ shop.id }}" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a>
                              </td>
                         {% else %}
                         <td class="table_a shoplist-list-table-recom2" >
-                            <div style="width:50px; border:1px solid gray;  margin-left:10px;"><span class="" style="">{{shop.mark.count}}  </span></div>
-                            <a href="{% url 'common:login' %}" data-save="#" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a></td>
+                            <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span class="" style="">{{shop.mark.count}}</span></div>
+                            <a href="{% url 'common:login' %}?next={{request.path}}" data-save="#" class="save_btn">
+                                <i class="fas fa-thumbs-up recommend" >
+                                    <span class="tooltiptext">추천하기</span>
+                                </i>
+                            </a>
+                        </td>
                         {% endif %}
                 </tr>
                 {% endfor %}
@@ -290,7 +298,7 @@
                 {% endif %}
                 <!-- 페이지리스트 -->
                 {% for page_number in shop_list.paginator.page_range %}
-                {% if page_number >= shop_list.number|add:-3 and page_number <= shop_list.number|add:3 %}
+                {% if page_number >= shop_list.number|add:-2 and page_number <= shop_list.number|add:2 %}
                     {% if page_number == shop_list.number %}
                     <li class="page-item active" aria-current="page">
                         <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
