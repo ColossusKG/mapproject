@@ -29,4 +29,14 @@ urlpatterns = [
     #path('', base_views.index, name='index'),  # '/' 에 해당되는 path
 ]
 
+# 이미지 저장 경로 추가
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+# urlpatterns += [
+#     re_path(r'^%s(?P.*)$' % re.escape(settings.STATIC_URL.lstrip('/')), serve, kwargs={'document_root': settings.STATIC_ROOT})
+# ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, insecure=True)
+
+handler500 = 'common.views.server_error'
+handler404 = 'common.views.page_not_found'
