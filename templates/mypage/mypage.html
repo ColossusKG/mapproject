@@ -35,7 +35,7 @@
             {% endfor %}
             {% else %}
             <tr>
-                <td colspan="3">저장된 장소가 없습니다.</td>
+                <td colspan="3">추천한 장소가 없습니다.</td>
             </tr>
             {% endif %}
             </tbody>
@@ -101,6 +101,8 @@
         </div>
         {% endfor %}
     </div>
+    {% else %}
+    <div style="text-align:center; font-family:IBMPlexSansKR-Regular;  font-size:17px;">등록한 후기가 없습니다.</div>
 
     <div class="paging">
     <ul >
