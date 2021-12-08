@@ -13,7 +13,7 @@
                     <li><a class="navbar-brand char" href="{% url 'mypage:index' %}">마이페이지</a></li>
                     <li><a class="navbar-brand char" href="{% url 'common:logout' %}">로그아웃</a></li>
                 {% else %}
-                    <li><a class="navbar-brand char" href="{% url 'common:login' %}">로그인</a></li>
+                    <li><a class="navbar-brand char" href="{% url 'common:login' %}?next={{request.path}}">로그인</a></li>
                     <li><a class="navbar-brand char" href="{% url 'common:signup' %}">회원가입</a></li>
                 {% endif %}
             </ul>
