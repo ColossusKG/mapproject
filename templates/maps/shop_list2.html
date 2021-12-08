@@ -110,7 +110,7 @@
         <div class="shoplist-list-col-side"></div>
         <div id="shoplist-list-map-div"  style="">
             <div class="display-when-wide input-group">
-                <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+                <input onkeyup="enterkey();" type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
                 </div>
@@ -218,7 +218,7 @@
                         </div>
                     </div>
                     <div class="input-group">
-                    <input type="text" class="form-control kw2" value="{{ kw2|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+                    <input onkeyup="enterkey();" type="text" class="form-control kw2" value="{{ kw2|default_if_none:'' }}"placeholder="상호명을 입력하세요">
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="button" id="btn_search2">찾기</button>
                         </div>
@@ -349,21 +349,21 @@ function getDisplayInfo() {
     return size;
 }
 
-function EnterToSearch(e){
-    if(e.keyCode==13){
-        alert('enter');
-        return false;
+function enterkey(){
+    if(window.event.keyCode==13){
+        $("#kw").val($(".kw").val());
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+        $("#searchForm").submit();
     }
 }
 
 $(document).ready(function(){
-
-
     $("#btn_search").on('click', function() {
         $("#kw").val($(".kw").val());
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
+
 
      $("#btn_search2").on('click', function() {
         $("#kw").val($(".kw2").val());
@@ -377,8 +377,10 @@ $(document).ready(function(){
     });
 
     $(".save_btn").on('click',function() {
+        if(confirm("정말로 추천하시겠습니까?")) {
         $("#save").val($(this).data("save"));
         $("#searchForm").submit();
+        }
     });
 
     $(".city").on('change',function() {
