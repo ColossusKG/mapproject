@@ -1418,3 +1418,83 @@ IndexError: list index out of range
 2021-12-07 14:12:10,852 [ERROR] django.request: Internal Server Error: /static/common-mobile.css
 2021-12-07 14:12:10,909 [ERROR] django.request: Internal Server Error: /favicon.ico
 2021-12-07 14:13:38,045 [INFO] django.utils.autoreload: C:\Users\BIT\PycharmProjects\map_project2\config\settings\local.py changed, reloading.
+2021-12-09 14:46:17,377 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:46:18,681 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-yjin2\maps\views.py", line 34, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-yjin2\maps\views.py", line 169, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-09 14:46:33,383 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:46:34,180 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:46:49,811 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\common\views.py changed, reloading.
+2021-12-09 14:46:50,607 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:50:12,203 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:50:13,309 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:51:25,881 [ERROR] django.request: Internal Server Error: /static/751463.png
+2021-12-09 14:51:32,628 [ERROR] django.request: Internal Server Error: /pybo/199/
+2021-12-09 14:52:09,351 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:52:10,257 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:52:20,450 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\common\views.py changed, reloading.
+2021-12-09 14:52:21,635 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:52:23,526 [ERROR] django.request: Internal Server Error: /pybo/199/
+2021-12-09 14:52:24,802 [ERROR] django.request: Internal Server Error: /pybo/199/
+2021-12-09 14:54:47,907 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:54:49,046 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:54:50,312 [WARNING] django.request: Not Found: /pybo/199/
+2021-12-09 14:54:51,337 [WARNING] django.request: Not Found: /pybo/199/
+2021-12-09 14:54:52,089 [WARNING] django.request: Not Found: /pybo/199/
+2021-12-09 14:55:09,440 [WARNING] django.request: Not Found: /li777
+2021-12-09 14:55:20,907 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:55:21,940 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:55:24,683 [ERROR] django.request: Internal Server Error: /pybo/177/
+2021-12-09 14:56:49,789 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\common\views.py changed, reloading.
+2021-12-09 14:56:50,912 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:56:52,209 [WARNING] django.request: Not Found: /pybo/177/
+2021-12-09 14:57:07,943 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:57:08,960 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:57:12,266 [WARNING] django.request: Not Found: /li333
+2021-12-09 14:57:45,656 [WARNING] django.request: Not Found: /pybo/177/
+2021-12-09 14:57:49,907 [WARNING] django.request: Not Found: /pybo/177/
+2021-12-09 14:58:38,754 [WARNING] django.request: Not Found: /pybo/177/
+2021-12-09 14:58:54,625 [WARNING] django.request: Not Found: /static/bootstrap.min.css
+2021-12-09 14:58:54,629 [WARNING] django.request: Not Found: /static/font.css
+2021-12-09 14:58:54,634 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 14:58:54,639 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-09 14:58:54,643 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-09 14:58:54,680 [WARNING] django.request: Not Found: /static/logo4.png
+2021-12-09 14:58:54,685 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 14:58:54,769 [WARNING] django.request: Not Found: /favicon.ico
+2021-12-09 14:59:13,488 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\settings\local.py changed, reloading.
+2021-12-09 14:59:34,261 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:59:35,548 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-yjin2\maps\views.py", line 34, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-yjin2\maps\views.py", line 169, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-09 14:59:35,888 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 14:59:35,897 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 14:59:41,810 [WARNING] django.request: Not Found: /lis555
+2021-12-09 14:59:41,850 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 14:59:41,857 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 15:08:20,538 [WARNING] django.request: Not Found: /lis555
+2021-12-09 15:08:20,600 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 15:08:20,622 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 15:08:23,362 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 15:08:23,372 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 15:08:25,155 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 15:08:25,170 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 15:08:27,480 [WARNING] django.request: Not Found: /pybo/4564/
+2021-12-09 15:08:27,505 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 15:08:27,525 [WARNING] django.request: Not Found: /static/common-mobile.css
