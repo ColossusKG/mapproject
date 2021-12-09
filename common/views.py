@@ -23,7 +23,7 @@ def signup(request):
     return render(request, 'common/signup.html', {'form': form})
 
 
-def page_not_found(request, excpetions):
+def page_not_found(request, *args, **kwargs):
     """
     404 Page not found
     """
