@@ -2,4 +2,5 @@ from .base import *
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-DEBUG = True
+DEBUG = False
+# DEBUG = True
