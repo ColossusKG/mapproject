@@ -49,23 +49,24 @@ h2{font-size:22px;color:#000;font-weight:800}
 
 #mainpage-logo{
     width:100%;
-    line-height: 20vh;
+    height:10vh;
     background: lightsteelblue;
     font-family: SBAggroB;
     text-align:center;
+
 }
 
 #mainpage-logo-div{
     width:100%;
-    height:20vh;
-    line-height:20vh;
+     margin:50px 0;
+
 }
 #mainpage-logo-div-img{
     width:60%;
 }
 
 #mainpage-citylist{
-    height:80vh;
+    height:90vh;
     width:100%;
 }
 
