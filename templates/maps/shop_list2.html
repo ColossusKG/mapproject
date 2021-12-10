@@ -218,7 +218,7 @@
                         </div>
                     </div>
                     <div class="input-group">
-                    <input onkeyup="enterkey();" type="text" class="form-control kw2" value="{{ kw2|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+                    <input onkeyup="enterkey2();" type="text" class="form-control kw2" value="{{ kw2|default_if_none:'' }}"placeholder="상호명을 입력하세요">
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="button" id="btn_search2">찾기</button>
                         </div>
@@ -229,6 +229,7 @@
                 </div>
             </div>
         </div>
+        {% if
         <div class="shoplist-list-col-small"></div>
         <div id="shoplist-list-list-div">
             <table class= "table table-striped shop_table">
@@ -356,6 +357,15 @@ function enterkey(){
         $("#searchForm").submit();
     }
 }
+
+function enterkey2(){
+    if(window.event.keyCode==13){
+        $("#kw").val($(".kw2").val());
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+        $("#searchForm").submit();
+    }
+}
+
 
 $(document).ready(function(){
     $("#btn_search").on('click', function() {
