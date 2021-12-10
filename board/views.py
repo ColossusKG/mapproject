@@ -30,7 +30,7 @@ def index(request):
     address = request.GET.get('address','')
     page = request.GET.get('page','1')
 
-    if shop_name :
+    if shop_name or address:
         shop_list = data.objects.order_by().filter(
             Q(addr2__icontains=address) & Q(name__icontains=shop_name)
         )
@@ -41,7 +41,7 @@ def index(request):
 
         paginator = Paginator(shop_list, 10)
         page_obj = paginator.get_page(page)
-        content={'shop_list':page_obj,'page':page,'shop_name':shop_name}
+        content={'shop_list':page_obj,'page':page,'shop_name':shop_name,'address':address}
         return render(request,'board/board.html',content)
     else:
         return render(request,'board/board.html')
