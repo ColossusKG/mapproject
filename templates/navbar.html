@@ -5,13 +5,10 @@
         <li><a href="{% url 'maps:index' %}">
             <img id="navbar-logo" src="{% static 'logo3.png' %}"></a>
         </li>
-        <li><a class="navbar-brand char" href="{% url 'maps:shop_list' %}"> 가맹점 찾기</a></li>
-        <li><a class="navbar-brand char" href="{% url 'board:index' %}">가맹점 후기</a></li>
-        <li><a class="navbar-brand char" href="{% url 'pybo:index' %}">문의게시판</a></li>
             <ul class="right_bar" >
                 {%if user.is_authenticated %}
                     <li><a class="navbar-brand char" href="{% url 'mypage:index' %}">마이페이지</a></li>
-                    <li><a class="navbar-brand char" href="{% url 'common:logout' %}">로그아웃</a></li>
+                    <li><a class="navbar-brand char" href="{% url 'common:logout' %}">로그아웃({{request.user}})</a></li>
                 {% else %}
                     <li><a class="navbar-brand char" href="{% url 'common:login' %}?next={{request.path}}">로그인</a></li>
                     <li><a class="navbar-brand char" href="{% url 'common:signup' %}">회원가입</a></li>
