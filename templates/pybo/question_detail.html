@@ -13,10 +13,10 @@
     {% endif %}
     <div class="question_detail">
         <div class="row justify-content-between detail">
-            <div class="col-4">
-                <h2 class="py-2" style="vertical-align:bottom;">[{{ question.subject }}]</h2>
+            <div class="col-8">
+                <h2 class="py-2" style="text-align:left;vertical-align:bottom;font-family: OTWelcomeRA;">[{{ question.subject }}]</h2>
             </div>
-            <div class="col-3" style="text-align:right; height:30px; margin-top:20px">
+            <div class="col-4" style="text-align:right; height:25px; margin-top:20px">
                 <div>{{ question.author.username }}
                     <span style="font-size:13px;">
                         {% if question.modify_date %}
@@ -125,25 +125,25 @@
         </div>
     </div>
     {% endfor %}
+<!--    <form action="{% url 'pybo:answer_create' question.id %}" method="post" class="my-3">-->
+<!--        {% csrf_token %}-->
+<!--        {% if form.errors %}-->
+<!--        <div class="alert alert-danger" role="alert">-->
+<!--            {% for field in form %}-->
+<!--            {% if field.errors %}-->
+<!--            <strong>{{ field.label }}</strong>-->
+<!--            {{ field.errors }}-->
+<!--            {% endif %}-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--        {% endif %}-->
 
-    <form action="{% url 'pybo:answer_create' question.id %}" method="post" class="my-3">
-        {% csrf_token %}
-        {% if form.errors %}
-        <div class="alert alert-danger" role="alert">
-            {% for field in form %}
-            {% if field.errors %}
-            <strong>{{ field.label }}</strong>
-            {{ field.errors }}
-            {% endif %}
-            {% endfor %}
-        </div>
-        {% endif %}
-        <div class="form-group">
-            <textarea {% if not user.is_authenticated %}disabled{% endif %}
-                      name="content" id="content" class="form-control" rows="10">{% if not user.is_authenticated %}로그인 후 입력이 가능합니다.{% endif %}</textarea>
-        </div>
-        <input type="submit" value="답변등록" class="btn btn-primary">
-    </form>
+<!--        <div class="form-group">-->
+<!--            <textarea name="content" id="content" class="form-control" rows="10" style=""></textarea>-->
+<!--        </div>-->
+<!--        <input type="submit" value="답변등록" class="btn btn-primary">-->
+<!--    </form>-->
+
 </div>
 </div>
 {% endblock %}
