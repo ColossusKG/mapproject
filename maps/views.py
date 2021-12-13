@@ -26,125 +26,132 @@ def shop_list(request):
     save = request.GET.get('save','') #저장
     so = request.GET.get('so','')
 
-
-
-    shop_list = data.objects.order_by('name').filter(
-        Q(city__icontains=city)
-    )
-    map = folium.Map(location=(search_map(city)), zoom_start=12)
-
-
-    # 행정 구역 리스트 출력
-    area1_list = district.objects.order_by().filter(
-        Q(city__icontains=city)
-    )
-     # 추천순으로 배열
-    if so == '추천순':
-        shop_list = data.objects.order_by('-mark').filter(
+    if city == "김포/성남/시흥":
+        map = folium.Map(location=(search_map('김포시')), zoom_start=12)
+        map = map._repr_html_()
+        content = {'city': city, 'map': map}
+    else:
+        shop_list = data.objects.order_by('name').filter(
             Q(city__icontains=city)
         )
-
-        if not area1:
-            area1_list = district.objects.order_by().filter(
-                Q(city__icontains=city)
-            )
-        if area1 and not area2:
-            area1_list = district.objects.order_by().filter(
-                Q(city__icontains=city) and Q(addr1__icontains=area1)
-            )
-            shop_list = data.objects.order_by('-mark').filter(
-                Q(city__icontains=city) and Q(addr2__icontains=area1)
-            )
-            map = folium.Map(location=(search_map(city + ' ' + area1)), zoom_start=16)
-        elif area1 and area2:
-            area1_list = district.objects.order_by().filter(
-                Q(city__icontains=city) and Q(addr1__icontains=area1)
-            )
-            shop_list = data.objects.order_by('-mark').filter(
-                Q(city__icontains=city) and Q(addr2__icontains=area1 + ' ' + area2)
-            )
-            if city != area2:
-                map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
-
-        elif not area1 and area2:
-            area1_list = district.objects.order_by().filter(
-                Q(city__icontains=city)
-            )
-            shop_list = data.objects.order_by('-mark').filter(
-                Q(city__icontains=city) and Q(addr2__icontains=area2)
-            )
-            if city != area2:
-                map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
-
-    # 이름순으로 배열
-    else:
-        if not area1:
-            area1_list = district.objects.order_by().filter(
-                Q(city__icontains=city)
-            )
-        if area1 and not area2:
-            area1_list = district.objects.order_by().filter(
-                Q(city__icontains=city) and Q(addr1__icontains=area1)
-            )
-            shop_list = data.objects.order_by('name').filter(
-                Q(city__icontains=city) and Q(addr2__icontains=area1)
-            )
-            map = folium.Map(location=(search_map(city + ' ' + area1)), zoom_start=16)
-        elif area1 and area2:
-            area1_list = district.objects.order_by().filter(
-                Q(city__icontains=city) and Q(addr1__icontains=area1)
-            )
-            shop_list = data.objects.order_by('name').filter(
-                Q(city__icontains=city) and Q(addr2__icontains=area1 + ' ' + area2)
-            )
-            if city != area2:
-                map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
-        elif not area1 and area2:
-            area1_list = district.objects.order_by().filter(
-                Q(city__icontains=city)
-            )
-            shop_list = data.objects.order_by('-mark').filter(
-                Q(city__icontains=city) and Q(addr2__icontains=area2)
-            )
-            if city != area2:
-                map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
+        map = folium.Map(location=(search_map(city)), zoom_start=12)
 
 
-    # 가맹점 지도 표시 코드
-    if marker:
-        map = map_marker(marker)
-
-    # 가맹점 검색 코드
-    if kw:
-        shop_list = shop_list.filter(
-            Q(name__icontains=kw)
+        # 행정 구역 리스트 출력
+        area1_list = district.objects.order_by().filter(
+            Q(city__icontains=city)
         )
-        for shop in shop_list:
-            lat1 = shop.lat
-            lng1 = shop.lng
-            map = folium.Map(location=[lat1, lng1], zoom_start=17)
-            break
-        for shop in shop_list:
-            lat = shop.lat
-            lng = shop.lng
-            name = shop.name
-            latlng = 'LAT ' + str(lat) + '\nLNG ' + str(lng)
-            folium.Marker(location=[lat, lng], popup=latlng, tooltip=name).add_to(map)
-        # 검색 후 가맹점 지도 표시
+         # 추천순으로 배열
+        if so == '추천순':
+            shop_list = data.objects.order_by('-mark').filter(
+                Q(city__icontains=city)
+            )
+
+            if not area1:
+                area1_list = district.objects.order_by().filter(
+                    Q(city__icontains=city)
+                )
+            if area1 and not area2:
+                area1_list = district.objects.order_by().filter(
+                    Q(city__icontains=city) and Q(addr1__icontains=area1)
+                )
+                shop_list = data.objects.order_by('-mark').filter(
+                    Q(city__icontains=city) and Q(addr2__icontains=area1)
+                )
+                map = folium.Map(location=(search_map(city + ' ' + area1)), zoom_start=16)
+            elif area1 and area2:
+                area1_list = district.objects.order_by().filter(
+                    Q(city__icontains=city) and Q(addr1__icontains=area1)
+                )
+                shop_list = data.objects.order_by('-mark').filter(
+                    Q(city__icontains=city) and Q(addr2__icontains=area1 + ' ' + area2)
+                )
+                if city != area2:
+                    map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
+
+            elif not area1 and area2:
+                area1_list = district.objects.order_by().filter(
+                    Q(city__icontains=city)
+                )
+                shop_list = data.objects.order_by('-mark').filter(
+                    Q(city__icontains=city) and Q(addr2__icontains=area2)
+                )
+                if city != area2:
+                    map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
+
+        # 이름순으로 배열
+        else:
+            if not area1:
+                area1_list = district.objects.order_by().filter(
+                    Q(city__icontains=city)
+                )
+            if area1 and not area2:
+                area1_list = district.objects.order_by().filter(
+                    Q(city__icontains=city) and Q(addr1__icontains=area1)
+                )
+                shop_list = data.objects.order_by('name').filter(
+                    Q(city__icontains=city) and Q(addr2__icontains=area1)
+                )
+                map = folium.Map(location=(search_map(city + ' ' + area1)), zoom_start=16)
+            elif area1 and area2:
+                area1_list = district.objects.order_by().filter(
+                    Q(city__icontains=city) and Q(addr1__icontains=area1)
+                )
+                shop_list = data.objects.order_by('name').filter(
+                    Q(city__icontains=city) and Q(addr2__icontains=area1 + ' ' + area2)
+                )
+                if city != area2:
+                    map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
+            elif not area1 and area2:
+                area1_list = district.objects.order_by().filter(
+                    Q(city__icontains=city)
+                )
+                shop_list = data.objects.order_by('-mark').filter(
+                    Q(city__icontains=city) and Q(addr2__icontains=area2)
+                )
+                if city != area2:
+                    map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
+
+
+        # 가맹점 지도 표시 코드
         if marker:
             map = map_marker(marker)
 
-    if save:  # 가맹점 저장 코드
-        shop = get_object_or_404(data, pk=save)
-        shop.mark.add(request.user)
+        # 가맹점 검색 코드
+        if kw:
+            shop_list = shop_list.filter(
+                Q(name__icontains=kw)
+            )
+            for shop in shop_list:
+                lat1 = shop.lat
+                lng1 = shop.lng
+                map = folium.Map(location=[lat1, lng1], zoom_start=17)
+                break
+            for shop in shop_list:
+                lat = shop.lat
+                lng = shop.lng
+                name = shop.name
+                latlng = 'LAT ' + str(lat) + '\nLNG ' + str(lng)
+                folium.Marker(location=[lat, lng], tooltip=name).add_to(map)
+            # 검색 후 가맹점 지도 표시
+            if marker:
+                map = map_marker(marker)
 
-    map = map._repr_html_()
+        if save:  # 가맹점 저장 코드
+            shop = get_object_or_404(data, pk=save)
+            shop.mark.add(request.user)
 
-    # 페이징 처리
-    paginator = Paginator(shop_list, 10)  # 페이지당 10개 보여주기
-    page_obj = paginator.get_page(page)  # 페이지 객체 생성
-    content = {'shop_list': page_obj, 'page': page, 'kw': kw, 'map': map, 'city': city, 'area1_list': area1_list,
-            'area1':area1, 'area2':area2, 'so':so}
+        map = map._repr_html_()
+
+
+
+        # 페이징 처리
+        paginator = Paginator(shop_list, 10)  # 페이지당 10개 보여주기
+        page_obj = paginator.get_page(page)  # 페이지 객체 생성
+        content = {'shop_list': page_obj, 'page': page, 'kw': kw, 'map': map, 'city': city, 'area1_list': area1_list,
+                'area1':area1, 'area2':area2, 'so':so}
+
+
     return render(request, 'maps/shop_list2.html', content)
 
 
