@@ -39,6 +39,7 @@
                 <a class="btn btn-light" href="{% url 'common:signup' %}?next={{request.path}}">회원가입</a>
                 {% else %}
                 <div style="font-size:20px;">{{request.user}}님 환영합니다!</div>
+                <a class="btn btn-light" href="{% url 'common:logout' %}?next={{request.path}}">로그아웃</a>
                 {% endif %}
             </div>
         </div>
