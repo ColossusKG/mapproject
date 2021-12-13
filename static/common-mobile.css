@@ -16,18 +16,19 @@ body {
 h1{font-size:50px;color:#000;font-weight:800}
 h2{font-size:22px;color:#000;font-weight:800}
 
-.header{width:95vw;height:70px;
+.header{width:95vw;height:80px;
     text-align:center;
     font-family:IBMPlexSansKR-Regular; background:white; padding:3px;
     display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;
 }
 #header-img{
-    -ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;
+    margin:auto;
+     text-align:center;
+
 }
 #header-paragraph{
-    margin:0px;
+    margin:1%;
     text-align:center;font-size:12px;color:#000;line-height:15px;
-    -ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;
 }
 
 
@@ -217,7 +218,7 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 .form-group>input{
 	display: inline-block;
 	color: #000;
-	font-size:13px;
+	font-size:17px;
 	padding: 10px 0;
 	border: 0;
 	line-height: inherit;
@@ -228,8 +229,13 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 }
 
 .form-group>label{
-    font-family:OTWelcomeRA;
-    font-size:15px;
+    font-family: OTWelcomeRA;
+    font-size:17px;
+}
+
+.form-group>textarea{
+	color: #000;
+	font-size:17px;
 }
 
 
@@ -305,6 +311,22 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 
 #shoplist-list-list-div{
     -ms-flex:0 0 95%;flex:0 0 95%;max-width:95%
+}
+#etc_list{
+    -ms-flex:0 0 95%;flex:0 0 95%;max-width:95%
+}
+.etc_list{
+ width:25%;
+ height:200px;
+ margin:1%;
+}
+.etc_list>a>img{
+    width:80%;
+    height:80%;
+}
+.etc_list>a{
+    font-size:13px;
+    margin-top:20%;
 }
 
 .text-center{
@@ -423,7 +445,7 @@ td{
 }
 
 .question_btn>span{
-    font-family: GowunBatang-Regular;
+    font-family:  OTWelcomeRA;
     font-size:17px;
 
 }
@@ -445,7 +467,7 @@ td{
 /*question detail*/
 
 .question_detail{
- font-family: GowunBatang-Regular;
+ font-family:  OTWelcomeRA;
  font-size:18px;
 }
 
@@ -454,11 +476,10 @@ td{
 }
 
 .comment{
-    font-family: GowunBatang-Regular;
+    font-family: OTWelcomeRA;
 }
 
 .question{
-    font-family: GowunBatang-Regular;
 }
 
 

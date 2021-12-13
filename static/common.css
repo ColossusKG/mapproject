@@ -18,10 +18,11 @@ body {
 
 /*header*/
 h1{font-size:50px;color:#000;font-weight:800}
-h2{font-size:22px;color:#000;font-weight:800}
+h2{font-size:30px;color:#000;font-weight:800}
 
 .header{
     height:150px; font-family:SBAggroB;
+    vertical-align:middle;
     background:white; padding:20px;}
 #header-paragraph{
     margin-top:18px;text-align:center;
@@ -96,11 +97,13 @@ table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-to
 
 
 .navbar{
+    text-align:center;
     height:60px;
     font-family:SBAggroB;
     border-top:1px solid #ddd;
     }
 .navbar>ul{
+
             width:100%;
 			list-style-type: none;
 			margin: 0;
@@ -134,6 +137,12 @@ table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-to
 .char{
     padding-top:8px;
     padding-bottom:0px;
+}
+
+/* navbar2*/
+.menu{
+    color:black;
+    margin: 0 15px;
 }
 
 
@@ -176,6 +185,7 @@ h3{
 #button-in-wide-map{
     border:1px solid black;
     border-radius:7px;
+
 }
 
 #button-addr{
@@ -191,6 +201,8 @@ h3{
 
 details{
     align-content: center;
+    margin:auto;
+    width:90%;
 }
 details > summary {background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
 details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
@@ -209,20 +221,25 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 
 .form-group>input{
 	display: inline-block;
-	color: #000;
-	font-size:13px;
 	padding: 10px 0;
+	color: #000;
+	font-size:17px;
 	border: 0;
 	line-height: inherit;
-	height: 40px;
+	height: 50px;
 	width: 50%;
-	margin: 10px auto;
+	margin: auto;
 	border:1px solid #ddd
+}
+
+.form-group>textarea{
+	color: #000;
+	font-size:17px;
 }
 
 .form-group>label{
     font-family:OTWelcomeRA;
-    font-size:15px;
+    font-size:20px;
 }
 
 
@@ -293,6 +310,22 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 
 #shoplist-list-list-div {
     -ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;
+}
+#etc_list {
+    -ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;
+}
+
+.etc_list{
+ width:25%;
+ height:300px;
+}
+.etc_list>a>img{
+    width:80%;
+    height:80%;
+}
+.etc_list>a{
+    font-size:20px;
+    margin-top:20%;
 }
 
 
@@ -404,7 +437,7 @@ td{
 }
 
 .question_btn>span{
-    font-family: GowunBatang-Regular;
+    font-family: OTWelcomeRA;
     font-size:17px;
 
 }
@@ -426,23 +459,27 @@ td{
 /*question detail*/
 
 .question_detail{
- font-family: GowunBatang-Regular;
- font-size:18px;
+    height:100%;
+    font-size:18px;
 }
 
 .detail{
     margin:0;
 }
 
-.comment{
-    font-family: GowunBatang-Regular;
+.ques_comment{
+    height:100vh;
 }
 
 .question{
-    font-family: GowunBatang-Regular;
+    height:100vh;
 }
 
+.ques_form{
 
+}
+
+/* mypage */
 
 
 

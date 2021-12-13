@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
     <br class="display-when-wide">
@@ -36,14 +37,9 @@
                     <option  value="포천시" {% if city == '포천시' %}selected{% endif %}>포천시</option>
                     <option  value="하남시" {% if city == '하남시' %}selected{% endif %}>하남시</option>
                     <option  value="화성시" {% if city == '화성시' %}selected{% endif %}>화성시</option>
+                    <option  value="김포/성남/시흥" {% if city == '김포/성남/시흥' %}selected{% endif %}>김포/성남/시흥</option>
                 </select>
                 <br>
-                <select class="form-control" onchange="if(this.value) location.href=(this.value)" >
-                    <option>김포,성남,시흥 선택</option>
-                    <option value="https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283" >김포시</option>
-                    <option value="https://www.seongnam.go.kr/prgm/slove/sloveAgentList.do?menuIdx=1000329">성남시</option>
-                    <option value="https://www.si-ru.kr/?inc=store">시흥시</option>
-                </select>
             </div>
             <div class="col-4">
                 {% if city == '고양시' %}
@@ -103,18 +99,19 @@
                 </select>
                 {% endif %}
             </div>
+             <div class="col-8 display-when-wide input-group" style="width:80%; ">
+                <input onkeyup="enterkey();" type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
+                </div>
+            </div>
         </div>
     </details>
 
     <div class="row justify-content-between my-3" style="">
         <div class="shoplist-list-col-side"></div>
         <div id="shoplist-list-map-div"  style="">
-            <div class="display-when-wide input-group">
-                <input onkeyup="enterkey();" type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
-                </div>
-            </div>
+
             <div id="shoplist-list-map-object" style="width:100%;">
                 <details open class="display-when-narrow" id="button-in-narrow-map">
                     <summary>주소 검색</summary>
@@ -150,12 +147,7 @@
                                 <option  value="포천시" {% if city == '포천시' %}selected{% endif %}>포천시</option>
                                 <option  value="하남시" {% if city == '하남시' %}selected{% endif %}>하남시</option>
                                 <option  value="화성시" {% if city == '화성시' %}selected{% endif %}>화성시</option>
-                            </select>
-                            <select class="form-control" onchange="if(this.value) location.href=(this.value)" >
-                                <option>김포/성남/시흥</option>
-                                <option value="https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283" >김포시</option>
-                                <option value="https://www.seongnam.go.kr/prgm/slove/sloveAgentList.do?menuIdx=1000329">성남시</option>
-                                <option value="https://www.si-ru.kr/?inc=store">시흥시</option>
+                                <option  value="김포/성남/시흥" {% if city == '김포/성남/시흥' %}selected{% endif %}>김포/성남/시흥</option>
                             </select>
                         </div>
                         <div class="col-4">
@@ -229,7 +221,19 @@
                 </div>
             </div>
         </div>
-        {% if
+
+        {% if city == "김포/성남/시흥" %}
+        <div id="etc_list">
+            <br><br><br>
+                <div style="font-size:20px; text-align:center; font-family:SBAggroB;"> 김포시, 성남시, 시흥시는 외부링크로 연결됩니다.</div>
+            <div class="row justify-content-around" style="margin-top:10%; text-align:center; font-family:SBAggroB;">
+                <div class="etc_list" style="border: 1px solid;"><a href="https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283"><img src="{% static '김포시.png' %}"><br>김포시 가맹점 찾기</a></div>
+                <div class="etc_list" style="border: 1px solid;"><a href="https://www.seongnam.go.kr/prgm/slove/sloveAgentList.do?menuIdx=1000329"><img src="{% static '성남시.png' %}"><br>성남시 가맹점 찾기</a></div>
+                <div class="etc_list" style="border: 1px solid;"><a href="https://www.si-ru.kr/?inc=store"><img src="{% static '시흥시.png' %}"><br>시흥시 가맹점 찾기</a></div>
+            </div>
+        </div>
+        <div class="shoplist-list-col-side"></div>
+        {% else %}
         <div class="shoplist-list-col-small"></div>
         <div id="shoplist-list-list-div">
             <table class= "table table-striped shop_table">
@@ -273,7 +277,11 @@
                 {% endfor %}
                 {% else %}
                 <tr>
+                    {%if city == '경기도' %}
+                    <td colspan="3">주소를 선택해주세요.</td>
+                    {% else %}
                     <td colspan="3">일치하는 항목이 없습니다.</td>
+                    {% endif %}
                 </tr>
                 {% endif %}
                 </tbody>
@@ -324,6 +332,7 @@
             </ul>
         </div>
         <div class="col-2"></div>
+        {% endif %}
     </div>
         <!-- 페이징처리 끝 -->
 
@@ -331,6 +340,7 @@
             <input type="hidden" id="city" name="city" value="{{ city }}">
             <input type="hidden" id="area1" name="area1" value="{{ area1 }}">
             <input type="hidden"  id="area2" name="area2" value="{{ area2 }}">
+            <input type="hidden"  id="etc" name="etc" value="{{ etc }}">
             <input type="hidden" id="save" name="save" value="{{ save }}">
             <input type="hidden" id="marker" name="marker" value="{{ marker }}">
             <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
@@ -349,6 +359,7 @@ function getDisplayInfo() {
     }
     return size;
 }
+
 
 function enterkey(){
     if(window.event.keyCode==13){
@@ -397,6 +408,7 @@ $(document).ready(function(){
         $("#city").val($(this).val());
         $("#area1").val("");
         $("#area2").val("");
+        $("#etc").val("");
         $("#page").val(1);
         $("#searchForm").submit();
     });
@@ -404,12 +416,22 @@ $(document).ready(function(){
     $(".area1").on('change', function() {
         $("#area1").val($(this).val());
         $("#area2").val("");
+        $("#etc").val("");
         $("#page").val(1);
         $("#searchForm").submit();
     });
 
     $(".area2").on ('change', function(){
         $("#area2").val($(this).val());
+        $("#etc").val("");
+        $("#searchForm").submit();
+    });
+
+    $(".etc").on ('click', function(){
+        $("#etc").val($(this).data("etc"));
+        $("#city").val("경기도");
+        $("#area1").val("");
+        $("#area2").val("");
         $("#searchForm").submit();
     });
 
