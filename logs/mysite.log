@@ -1501,3 +1501,26 @@ IndexError: list index out of range
 2021-12-09 15:08:27,505 [WARNING] django.request: Not Found: /static/common.css
 2021-12-09 15:08:27,525 [WARNING] django.request: Not Found: /static/common-mobile.css
 >>>>>>> f8c52731113b7aa1fc07955fd79ff520694d0880
+2021-12-13 17:34:01,344 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-13 17:34:02,583 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:34:02,641 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:34:51,300 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:34:51,341 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:34:52,845 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:35:29,003 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:44,840 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:53,346 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-13 17:39:56,951 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:56,983 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:56,996 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:39:58,766 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:58,790 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:40:48,753 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:40:48,786 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:40:50,443 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:40:50,466 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:40:57,329 [WARNING] django.request: Not Found: /static/common.css
+2021-12-13 17:40:57,332 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-13 17:40:57,339 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:40:57,356 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:41:05,012 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\settings\local.py changed, reloading.
