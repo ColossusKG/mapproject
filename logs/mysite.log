@@ -1,0 +1,1526 @@
+2021-12-03 14:18:06,113 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:18:18,645 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 14:19:11,639 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 14:19:12,702 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:19:26,028 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\common\views.py changed, reloading.
+2021-12-03 14:19:26,954 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:19:45,161 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 14:19:46,906 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 14:19:56,183 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:19:59,583 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 14:20:08,810 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 14:21:19,676 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 14:21:21,218 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:21:24,033 [WARNING] django.request: Not Found: /static/bootstrap.min.css
+2021-12-03 14:21:24,037 [WARNING] django.request: Not Found: /static/font.css
+2021-12-03 14:21:24,039 [WARNING] django.request: Not Found: /static/common.css
+2021-12-03 14:21:24,042 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-03 14:21:24,045 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-03 14:21:24,048 [WARNING] django.request: Not Found: /static/logo4.png
+2021-12-03 14:21:24,051 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-03 14:21:24,058 [WARNING] django.request: Not Found: /static/favicon.ico
+2021-12-03 14:21:29,502 [WARNING] django.request: Not Found: /static/bootstrap.min.css
+2021-12-03 14:21:29,504 [WARNING] django.request: Not Found: /static/font.css
+2021-12-03 14:21:29,507 [WARNING] django.request: Not Found: /static/common.css
+2021-12-03 14:21:29,508 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-03 14:21:29,512 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-03 14:21:29,516 [WARNING] django.request: Not Found: /static/logo4.png
+2021-12-03 14:21:29,522 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-03 14:21:29,556 [WARNING] django.request: Not Found: /static/favicon.ico
+2021-12-03 14:21:39,475 [WARNING] django.request: Not Found: /static/bootstrap.min.css
+2021-12-03 14:21:39,479 [WARNING] django.request: Not Found: /static/font.css
+2021-12-03 14:21:39,486 [WARNING] django.request: Not Found: /static/common.css
+2021-12-03 14:21:39,490 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-03 14:21:39,493 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-03 14:21:39,530 [WARNING] django.request: Not Found: /static/logo4.png
+2021-12-03 14:21:39,533 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-03 14:21:39,616 [WARNING] django.request: Not Found: /static/favicon.ico
+2021-12-03 14:21:41,381 [WARNING] django.request: Not Found: /static/bootstrap.min.css
+2021-12-03 14:21:41,382 [WARNING] django.request: Not Found: /static/font.css
+2021-12-03 14:21:41,384 [WARNING] django.request: Not Found: /static/common.css
+2021-12-03 14:21:41,385 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-03 14:21:41,386 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-03 14:21:41,398 [WARNING] django.request: Not Found: /static/logo4.png
+2021-12-03 14:21:41,399 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-03 14:21:49,817 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\common\views.py changed, reloading.
+2021-12-03 14:21:50,933 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:21:52,818 [WARNING] django.request: Not Found: /static/bootstrap.min.css
+2021-12-03 14:21:52,823 [WARNING] django.request: Not Found: /static/font.css
+2021-12-03 14:21:52,826 [WARNING] django.request: Not Found: /static/common.css
+2021-12-03 14:21:52,830 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-03 14:21:52,833 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-03 14:21:52,845 [WARNING] django.request: Not Found: /static/logo4.png
+2021-12-03 14:21:52,849 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-03 14:21:54,302 [WARNING] django.request: Not Found: /static/bootstrap.min.css
+2021-12-03 14:21:54,303 [WARNING] django.request: Not Found: /static/font.css
+2021-12-03 14:21:54,304 [WARNING] django.request: Not Found: /static/common.css
+2021-12-03 14:21:54,309 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-03 14:21:54,310 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-03 14:21:54,320 [WARNING] django.request: Not Found: /static/logo4.png
+2021-12-03 14:21:54,321 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-03 14:21:59,403 [WARNING] django.request: Not Found: /static/bootstrap.min.css
+2021-12-03 14:21:59,405 [WARNING] django.request: Not Found: /static/font.css
+2021-12-03 14:21:59,408 [WARNING] django.request: Not Found: /static/common.css
+2021-12-03 14:21:59,409 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-03 14:21:59,413 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-03 14:21:59,413 [WARNING] django.request: Not Found: /static/logo4.png
+2021-12-03 14:21:59,417 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-03 14:21:59,450 [WARNING] django.request: Not Found: /static/favicon.ico
+2021-12-03 14:22:18,954 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\base.py changed, reloading.
+2021-12-03 14:22:48,374 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:22:53,277 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\common\views.py changed, reloading.
+2021-12-03 14:22:54,183 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:23:02,584 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\local.py changed, reloading.
+2021-12-03 14:47:29,620 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:49:46,079 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\local.py changed, reloading.
+2021-12-03 14:58:28,255 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 14:58:53,058 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:00:16,116 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:00:20,755 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:00:23,057 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+KeyError: 'addresses'
+2021-12-03 15:01:37,297 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:01:38,414 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:02:13,754 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\common\views.py changed, reloading.
+2021-12-03 15:02:14,599 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:02:51,787 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\common\views.py changed, reloading.
+2021-12-03 15:02:52,619 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:05:38,573 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:05:39,869 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:05:43,308 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\common\views.py changed, reloading.
+2021-12-03 15:05:44,204 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:05:54,309 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\common\views.py changed, reloading.
+2021-12-03 15:05:55,504 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:07:01,466 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:07:02,281 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:07:07,832 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:07:08,734 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:07:11,020 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:07:11,794 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:07:19,533 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:07:20,234 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:07:29,986 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:07:30,674 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:07:53,039 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\common\views.py changed, reloading.
+2021-12-03 15:07:57,437 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:08:56,600 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\common\views.py changed, reloading.
+2021-12-03 15:08:57,730 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:09:03,919 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:18:51,214 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:18:58,157 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:19:08,742 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:19:11,000 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:19:11,605 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:19:11,841 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:19:12,009 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:19:12,186 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:19:19,266 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:20:01,140 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\local.py changed, reloading.
+2021-12-03 15:20:16,664 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:20:18,146 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:20:28,538 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:20:57,945 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:20:59,001 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:21:00,604 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:21:33,798 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:21:34,771 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:21:36,096 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:22:33,436 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\base.py changed, reloading.
+2021-12-03 15:22:34,252 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:22:44,522 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:22:45,539 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:22:57,944 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\base.py changed, reloading.
+2021-12-03 15:22:58,772 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:23:08,637 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:24:34,933 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:24:35,996 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:24:49,580 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:34:30,706 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:35:10,165 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\base.py changed, reloading.
+2021-12-03 15:35:11,149 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:35:16,383 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:35:25,939 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\local.py changed, reloading.
+2021-12-03 15:41:25,604 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:41:27,066 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-03 15:42:06,630 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\base.py changed, reloading.
+2021-12-03 15:42:07,697 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:42:22,752 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\base.py changed, reloading.
+2021-12-03 15:42:23,817 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-03 15:55:39,661 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\urls.py changed, reloading.
+2021-12-03 15:55:40,709 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 09:02:47,254 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 09:04:42,444 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 09:04:57,633 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\local.py changed, reloading.
+2021-12-06 10:14:14,676 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 10:14:34,983 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-3\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 10:14:45,827 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-3\config\settings\local.py changed, reloading.
+2021-12-06 14:15:08,244 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 14:15:10,548 [ERROR] django.security.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2021-12-06 14:15:10,818 [WARNING] django.request: Bad Request: /
+2021-12-06 14:15:10,994 [ERROR] django.security.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2021-12-06 14:15:11,008 [WARNING] django.request: Bad Request: /favicon.ico
+2021-12-06 14:15:20,065 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 14:15:23,278 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: maps_data2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 146, in shop_list
+    page_obj = paginator.get_page(page)  # 其捞瘤 按眉 积己
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: maps_data2
+2021-12-06 14:15:33,899 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 14:18:59,807 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 14:19:04,770 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 14:19:05,963 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 14:19:09,464 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 14:19:10,702 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 14:19:11,821 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 14:19:12,678 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 14:21:07,410 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 14:21:08,350 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 14:21:09,577 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: maps_data2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 146, in shop_list
+    page_obj = paginator.get_page(page)  # 其捞瘤 按眉 积己
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: maps_data2
+2021-12-06 14:21:10,371 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: maps_data2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 146, in shop_list
+    page_obj = paginator.get_page(page)  # 其捞瘤 按眉 积己
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: maps_data2
+2021-12-06 14:21:10,986 [INFO] django.request: OK: /pybo/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pybo_question
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\pybo\views\base_views.py", line 34, in index
+    page_obj = paginator.get_page(page)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pybo_question
+2021-12-06 14:21:14,713 [INFO] django.request: OK: /pybo/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pybo_question
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\pybo\views\base_views.py", line 34, in index
+    page_obj = paginator.get_page(page)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pybo_question
+2021-12-06 14:59:06,374 [INFO] django.request: OK: /pybo/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pybo_question
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\pybo\views\base_views.py", line 34, in index
+    page_obj = paginator.get_page(page)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pybo_question
+2021-12-06 14:59:38,545 [INFO] django.request: OK: /pybo/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pybo_question
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\pybo\views\base_views.py", line 34, in index
+    page_obj = paginator.get_page(page)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pybo_question
+2021-12-06 14:59:40,463 [INFO] django.request: OK: /pybo/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pybo_question
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\pybo\views\base_views.py", line 34, in index
+    page_obj = paginator.get_page(page)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pybo_question
+2021-12-06 14:59:41,503 [INFO] django.request: OK: /pybo/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pybo_question
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\pybo\views\base_views.py", line 34, in index
+    page_obj = paginator.get_page(page)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pybo_question
+2021-12-06 14:59:47,226 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: maps_data2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 146, in shop_list
+    page_obj = paginator.get_page(page)  # 其捞瘤 按眉 积己
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: maps_data2
+2021-12-06 14:59:48,055 [INFO] django.request: OK: /pybo/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: pybo_question
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\pybo\views\base_views.py", line 34, in index
+    page_obj = paginator.get_page(page)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
+    number = self.validate_number(number)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\db\backends\sqlite3\base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: pybo_question
+2021-12-06 15:10:39,667 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\config\settings\local.py changed, reloading.
+2021-12-06 15:18:29,379 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:18:46,206 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:19:02,229 [INFO] django.request: OK: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 111, in shop_list
+    map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 15:19:17,825 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:19:18,769 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:19:22,294 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:19:23,090 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:19:34,219 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:19:35,063 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:19:38,605 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:19:39,495 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:19:46,176 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:19:47,066 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:20:06,058 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:20:06,925 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:21:27,391 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:21:28,235 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:23:36,795 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:23:37,658 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:23:54,815 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:23:55,915 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:25:04,121 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:25:05,305 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:26:08,691 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:26:09,578 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:26:25,564 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:26:26,949 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:26:31,671 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 15:26:36,574 [ERROR] django.request: Internal Server Error: /l234
+2021-12-06 15:26:40,290 [ERROR] django.request: Internal Server Error: /l23433
+2021-12-06 15:27:08,563 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 15:27:33,586 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 15:28:38,600 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 15:28:39,686 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 15:28:42,952 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 16:19:34,357 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 16:19:35,216 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 16:19:55,733 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-06 16:19:56,873 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 16:19:59,046 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:20:00,888 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:20:06,069 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 35, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 170, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 16:20:06,328 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:20:10,151 [ERROR] django.request: Internal Server Error: /li23434
+2021-12-06 16:20:10,192 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:23:21,047 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\maps\views.py changed, reloading.
+2021-12-06 16:23:22,406 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 16:23:26,052 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:23:27,960 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:23:31,096 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 36, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 171, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 16:23:31,367 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:23:40,051 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:24:45,713 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\maps\views.py changed, reloading.
+2021-12-06 16:24:46,826 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 16:24:48,422 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:24:48,660 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:24:48,676 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:24:54,960 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:24:55,081 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:24:55,099 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:24:59,392 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 37, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 172, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 16:24:59,640 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:24:59,693 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:24:59,709 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:04,866 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:25:04,983 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:05,029 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:16,865 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:25:17,011 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:17,029 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:20,217 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:25:20,347 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:20,363 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:24,789 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:25:24,918 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:24,934 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:27,780 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:25:27,900 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:27,916 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:32,602 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 37, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 172, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 16:25:32,811 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:25:32,862 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:32,880 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:25:58,163 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\maps\views.py changed, reloading.
+2021-12-06 16:25:59,037 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 16:26:01,427 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:26:01,807 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:26:01,822 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:26:02,568 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 30, in shop_list
+    if data.filter(Q(city__icontains=city))==0:
+AttributeError: type object 'data' has no attribute 'filter'
+2021-12-06 16:26:02,608 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:26:02,714 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:26:02,732 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:26:26,056 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 30, in shop_list
+AttributeError: type object 'data' has no attribute 'filter'
+2021-12-06 16:26:26,117 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:26:26,292 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:26:26,309 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\maps\views.py changed, reloading.
+2021-12-06 16:26:27,129 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 16:26:28,503 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:26:28,770 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:26:28,929 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:26:28,975 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:35:55,973 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:35:56,186 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:35:56,201 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:40:15,665 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:40:15,912 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:40:15,928 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:40:21,404 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:40:21,525 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:40:21,540 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:48:07,842 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:48:07,999 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:48:08,014 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:48:09,080 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:48:09,172 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:48:09,189 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:48:11,810 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:48:11,884 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:48:11,899 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:48:15,301 [ERROR] django.request: Internal Server Error: /pybo/177/
+2021-12-06 16:48:15,335 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:48:15,401 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:48:15,419 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:50:40,542 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\maps\views.py changed, reloading.
+2021-12-06 16:50:41,437 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 16:50:44,847 [ERROR] django.request: Internal Server Error: /pybo/1sadf77/
+2021-12-06 16:50:45,049 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:50:45,161 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:50:45,178 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:51:55,508 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\config\urls.py changed, reloading.
+2021-12-06 16:51:56,617 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 16:52:00,776 [ERROR] django.request: Internal Server Error: /pybo/1sadf77/
+2021-12-06 16:52:01,031 [ERROR] django.request: Internal Server Error: /favicon.ico
+2021-12-06 16:52:02,398 [ERROR] django.request: Internal Server Error: /pybo/1sadf77/
+2021-12-06 16:52:02,494 [ERROR] django.request: Internal Server Error: /favicon.ico
+2021-12-06 16:52:05,002 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:52:05,062 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:05,078 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:07,772 [ERROR] django.request: Internal Server Error: /pybo/177/
+2021-12-06 16:52:07,837 [ERROR] django.request: Internal Server Error: /favicon.ico
+2021-12-06 16:52:08,734 [ERROR] django.request: Internal Server Error: /favicon.ico
+2021-12-06 16:52:09,456 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:09,474 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:10,396 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:10,411 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:12,028 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:52:12,172 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:12,188 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:16,109 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:52:16,241 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:16,257 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:52:18,749 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 34, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 169, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-06 16:52:18,981 [ERROR] django.request: Internal Server Error: /favicon.ico
+2021-12-06 16:52:34,332 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\config\urls.py changed, reloading.
+2021-12-06 16:52:35,597 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-06 16:53:53,126 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:53:53,270 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:53:54,578 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:53:54,646 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:53:54,662 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:53:55,932 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:53:56,028 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:53:56,045 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:53:58,246 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:53:58,264 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:54:00,576 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:54:00,681 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:54:00,696 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:54:02,952 [ERROR] django.request: Internal Server Error: /static/locker.png
+2021-12-06 16:54:02,961 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:54:03,035 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:54:03,053 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:54:05,043 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:54:05,046 [ERROR] django.request: Internal Server Error: /static/locker.png
+2021-12-06 16:54:05,102 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:54:05,118 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:54:10,238 [ERROR] django.request: Internal Server Error: /common/login3/
+2021-12-06 16:54:10,278 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:54:10,333 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:54:10,349 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:58:29,796 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:58:29,965 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:58:30,006 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:58:37,342 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:58:37,486 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:58:37,503 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:58:42,856 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-06 16:58:43,002 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-06 16:58:43,019 [ERROR] django.request: Internal Server Error: /static/favicon.ico
+2021-12-07 13:54:33,127 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-07 13:54:34,437 [ERROR] django.request: Internal Server Error: /lis33
+2021-12-07 13:54:40,654 [ERROR] django.request: Internal Server Error: /lis33
+2021-12-07 13:55:38,950 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject2\common\views.py changed, reloading.
+2021-12-07 13:55:39,981 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-07 14:11:57,652 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-07 14:12:00,843 [ERROR] django.request: Internal Server Error: /static/common-mobile.css
+2021-12-07 14:12:00,845 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-07 14:12:01,104 [ERROR] django.request: Internal Server Error: /favicon.ico
+2021-12-07 14:12:10,792 [ERROR] django.request: Internal Server Error: /ygyug
+2021-12-07 14:12:10,835 [ERROR] django.request: Internal Server Error: /static/common.css
+2021-12-07 14:12:10,852 [ERROR] django.request: Internal Server Error: /static/common-mobile.css
+2021-12-07 14:12:10,909 [ERROR] django.request: Internal Server Error: /favicon.ico
+2021-12-07 14:13:38,045 [INFO] django.utils.autoreload: C:\Users\BIT\PycharmProjects\map_project2\config\settings\local.py changed, reloading.
+<<<<<<< HEAD
+=======
+2021-12-09 14:46:17,377 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:46:18,681 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-yjin2\maps\views.py", line 34, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-yjin2\maps\views.py", line 169, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-09 14:46:33,383 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:46:34,180 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:46:49,811 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\common\views.py changed, reloading.
+2021-12-09 14:46:50,607 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:50:12,203 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:50:13,309 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:51:25,881 [ERROR] django.request: Internal Server Error: /static/751463.png
+2021-12-09 14:51:32,628 [ERROR] django.request: Internal Server Error: /pybo/199/
+2021-12-09 14:52:09,351 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:52:10,257 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:52:20,450 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\common\views.py changed, reloading.
+2021-12-09 14:52:21,635 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:52:23,526 [ERROR] django.request: Internal Server Error: /pybo/199/
+2021-12-09 14:52:24,802 [ERROR] django.request: Internal Server Error: /pybo/199/
+2021-12-09 14:54:47,907 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:54:49,046 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:54:50,312 [WARNING] django.request: Not Found: /pybo/199/
+2021-12-09 14:54:51,337 [WARNING] django.request: Not Found: /pybo/199/
+2021-12-09 14:54:52,089 [WARNING] django.request: Not Found: /pybo/199/
+2021-12-09 14:55:09,440 [WARNING] django.request: Not Found: /li777
+2021-12-09 14:55:20,907 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:55:21,940 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:55:24,683 [ERROR] django.request: Internal Server Error: /pybo/177/
+2021-12-09 14:56:49,789 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\common\views.py changed, reloading.
+2021-12-09 14:56:50,912 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:56:52,209 [WARNING] django.request: Not Found: /pybo/177/
+2021-12-09 14:57:07,943 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\urls.py changed, reloading.
+2021-12-09 14:57:08,960 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:57:12,266 [WARNING] django.request: Not Found: /li333
+2021-12-09 14:57:45,656 [WARNING] django.request: Not Found: /pybo/177/
+2021-12-09 14:57:49,907 [WARNING] django.request: Not Found: /pybo/177/
+2021-12-09 14:58:38,754 [WARNING] django.request: Not Found: /pybo/177/
+2021-12-09 14:58:54,625 [WARNING] django.request: Not Found: /static/bootstrap.min.css
+2021-12-09 14:58:54,629 [WARNING] django.request: Not Found: /static/font.css
+2021-12-09 14:58:54,634 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 14:58:54,639 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-09 14:58:54,643 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-09 14:58:54,680 [WARNING] django.request: Not Found: /static/logo4.png
+2021-12-09 14:58:54,685 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 14:58:54,769 [WARNING] django.request: Not Found: /favicon.ico
+2021-12-09 14:59:13,488 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\settings\local.py changed, reloading.
+2021-12-09 14:59:34,261 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-09 14:59:35,548 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\Desktop\mapproject-yjin2\maps\views.py", line 34, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\Desktop\mapproject-yjin2\maps\views.py", line 169, in search_map
+    lat_data = data['addresses'][0]['y']
+IndexError: list index out of range
+2021-12-09 14:59:35,888 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 14:59:35,897 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 14:59:41,810 [WARNING] django.request: Not Found: /lis555
+2021-12-09 14:59:41,850 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 14:59:41,857 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 15:08:20,538 [WARNING] django.request: Not Found: /lis555
+2021-12-09 15:08:20,600 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 15:08:20,622 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 15:08:23,362 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 15:08:23,372 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 15:08:25,155 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 15:08:25,170 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-09 15:08:27,480 [WARNING] django.request: Not Found: /pybo/4564/
+2021-12-09 15:08:27,505 [WARNING] django.request: Not Found: /static/common.css
+2021-12-09 15:08:27,525 [WARNING] django.request: Not Found: /static/common-mobile.css
+>>>>>>> f8c52731113b7aa1fc07955fd79ff520694d0880
+2021-12-13 17:34:01,344 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-13 17:34:02,583 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:34:02,641 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:34:51,300 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:34:51,341 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:34:52,845 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:35:29,003 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:44,840 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:53,346 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-13 17:39:56,951 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:56,983 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:56,996 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:39:58,766 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:39:58,790 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:40:48,753 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:40:48,786 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:40:50,443 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:40:50,466 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:40:57,329 [WARNING] django.request: Not Found: /static/common.css
+2021-12-13 17:40:57,332 [WARNING] django.request: Not Found: /static/jquery-3.4.1.min.js
+2021-12-13 17:40:57,339 [WARNING] django.request: Not Found: /static/bootstrap.min.js
+2021-12-13 17:40:57,356 [WARNING] django.request: Not Found: /static/night-view.jpg
+2021-12-13 17:41:05,012 [INFO] django.utils.autoreload: C:\Users\BIT\Desktop\mapproject-yjin2\config\settings\local.py changed, reloading.
