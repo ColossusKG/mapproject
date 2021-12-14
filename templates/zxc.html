@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <link rel="shortcut icon" type="image/x-icon" href="https://search.konacard.co.kr/img/ico_search_fvc.ico" />
+    <meta name="og:image"  content="https://search.konacard.co.kr/img/meta_img.png">
+    <meta name="og:title" content="경기지역화폐">
+    <meta name="og:description" content="지역별 사용처를 검색해보세요.">
+    <meta name="keywords" content="경기지역화폐,가맹점,검색,찾기,사용처,매장,선불카드,가평사랑상품권,고양페이카드,과천토리,광명사랑화폐,광주사랑카드,구리사랑상품권,군포애머니,Thank You Pay-N,동두천사랑카드,부천페이,수원페이,다온,안성사랑카드,안양사랑상품권,양주사랑카드,양평통보,여주사랑카드,연천사랑상품권,오색전,용인와이페이,의왕사랑상품권,의정부사랑카드,이천사랑지역화폐,파주Pay,평택사랑상품권,포천사랑상품권,하머니,행복화성지역화폐">
+	<link rel="stylesheet" media="screen" type="text/css" href="https://search.konacard.co.kr/css/font.css">
+	<link rel="stylesheet" media="screen" type="text/css" href="https://search.konacard.co.kr/css/reset.css">
+	<link rel="stylesheet" media="screen" type="text/css" href="https://search.konacard.co.kr/css/common.css?v=8">
+    <script type="text/javascript" src="https://search.konacard.co.kr/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://search.konacard.co.kr/js/common.js?v=11"></script>
+	<title>경기지역화폐 결제 매장 검색</title>
+</head>
+
+<body>
+<div class="wrap">
+	<!-- header -->
+	<div class="header">
+    <img src="https://search.konacard.co.kr/img/search_img.png" alt="검색이미지" class="search_img">
+		<h1>경기지역화폐 결제 매장 검색</h1>
+		<p class="txt">
+            경기지역화폐는 소상공인 경쟁력 강화를 위해 백화점, 대형마트, 일부 제외업종 및<br/>
+            일정 기준 매출액 이상의 매장에서 사용이 제한됩니다. </p>
+        <p style="margin-top: 9px;text-align: center;">* 가맹점 폐업 또는 업종변경, 가맹점 정보변경 등으로 현재 정보와 다를 수 있으니 매장에 사용 가능 여부를 확인하기 바랍니다.</p>
+	</div>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+        <div id="noti_area" style="text-align:center;">
+		<!--<img src="/img/search_img.png" alt="검색이미지" class="search_img">-->
+		<h2>검색하려는 지역을 선택해 주세요.</h2>
+        </div>
+
+        <form id="frm"><input type="hidden" name="ptSignature" value="vgQwdtNbFnHJyQ2SFTZuTyjueS6KMPlrmvGMfEyXV1MniOCSGqzGUiX4PcMly9sqYwmtygFt9Z0+W7qOyGM3Kw+rtIBof48ixUQu3qIl8sGQkwC9NQfK8w3Oa2d5OdFZI7QNWrTYh5zKhhNvI7dMlWifyoBBHCqHR7Ih2LtugUSFFEJwilJ306d24WMWOV1Q">
+
+            <div id="search_area" class="search_wrap" style="display: none;">
+                <div class="top_search">
+                    <input type="hidden" name="id">
+                    <input type="hidden" name="bizType">
+                    <input type="hidden" name="merchantType" value="BC">
+                    <input type="hidden" name="pageNum" id="pageNum" value="1">
+                    <input type="hidden" name="pageSize" id="pageSize" value="30">
+                    <input type="text" name="affiliateName" readonly="readonly">
+
+                        <a href="javascript:void(0);" class="btn_change btn_underline">
+                            <span>지역변경</span>
+                        </a>
+
+                </div>
+                <div class="bottom_search" >
+                    <input type="text" name="searchKey" placeholder="매장명을 입력해 주세요.">
+                    <button type="button" class="btn_search btn_black_s">검색</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="kalist_area">
+            <div class="area_list">
+                <ul>
+
+                        <li data-id="1"><span>가평군</span></li>
+                        <li data-id="2"><span>고양시</span></li>
+                        <li data-id="3"><span>과천시</span></li>
+                        <li data-id="5"><span>광명시</span></li>
+                        <li data-id="6"><span>광주시</span></li>
+                        <li data-id="8"><span>구리시</span></li>
+                        <li data-id="9"><span>군포시</span></li>
+                        <li data-id="11"><span>남양주시</span></li>
+                        <li data-id="13"><span>동두천시</span></li>
+                        <li data-id="14"><span>부천시</span></li>
+                        <li data-id="16"><span>수원시</span></li>
+                        <li data-id="19"><span>안산시</span></li>
+                        <li data-id="4"><span>안성시</span></li>
+                        <li data-id="7"><span>안양시</span></li>
+                        <li data-id="10"><span>양주시</span></li>
+                        <li data-id="12"><span>양평군</span></li>
+                        <li data-id="15"><span>여주시</span></li>
+                        <li data-id="17"><span>연천군</span></li>
+                        <li data-id="18"><span>오산시</span></li>
+                        <li data-id="20"><span>용인시</span></li>
+                        <li data-id="21"><span>의왕시</span></li>
+                        <li data-id="23"><span>의정부시</span></li>
+                        <li data-id="25"><span>이천시</span></li>
+                        <li data-id="28"><span>파주시</span></li>
+                        <li data-id="27"><span>평택시</span></li>
+                        <li data-id="22"><span>포천시</span></li>
+                        <li data-id="24"><span>하남시</span></li>
+                        <li data-id="26"><span>화성시</span></li>
+
+                </ul>
+            </div>
+            <div class="btn_wrap">
+                <a href="javascript:void(0);" class="btn_select btn_black">선택완료</a>
+                <a href="javascript:void(0);" class="btn_cancel btn_white">선택취소</a>
+            </div>
+        </div>
+
+
+            <!-- 업종 리스트 불러오기-->
+            <div id="bizlist_area">
+                <div class="biz_area_list">
+                    <ul>
+                        <li class data-biz-type="1001"><span>숙박</span></li>
+                        <li class data-biz-type="1101"><span>여행</span></li>
+                        <li class data-biz-type="2001"><span>레저</span></li>
+                        <li class data-biz-type="2201"><span>문화/취미</span></li>
+                        <li class data-biz-type="4201"><span>의류/잡화/생활가전</span></li>
+                        <li class data-biz-type="3301"><span>주유소</span></li>
+                        <li class data-biz-type="4001"><span>유통</span></li>
+                        <li class data-biz-type="5001"><span>서적/문구</span></li>
+                        <li class data-biz-type="5101"><span>학원</span></li>
+                        <li class data-biz-type="5201"><span>사무통신</span></li>
+                        <li class data-biz-type="6001"><span>자동차판매</span></li>
+                        <li class data-biz-type="6101"><span>서비스</span></li>
+                        <li class data-biz-type="6201"><span>보험</span></li>
+                        <li class data-biz-type="7001"><span>병원</span></li>
+                        <li class data-biz-type="7040"><span>약국</span></li>
+                        <li class data-biz-type="7043"><span>기타 의료기관</span></li>
+                        <li class data-biz-type="7101"><span>미용/안경/보건위생</span></li>
+                        <li class data-biz-type="8001"><span>일반/휴게음식</span></li>
+                        <li class data-biz-type="8301"><span>제과/음료식품</span></li>
+                        <li class data-biz-type="9993"><span>기타</span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        <div id="table_view" style="display: none;">
+            <div class="tab_top">
+                <span class="tit">결제 가능매장</span><span class="txt">검색결과 <em><span id="count">50</span>개</em></span>
+            </div>
+            <div class="tab_wrap">
+                <table id="dataList">
+                    <colgroup>
+                        <col width="220px">
+                        <col width="180px">
+                        <col width="*">
+                        <col width="180px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">매장명</th>
+                            <th scope="col">업종</th>
+                            <th scope="col">주소</th>
+                            <th scope="col">전화번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="paging" class="paging">
+            </div>
+        </div>
+    </div>
+	<!-- //contents -->
+</div>
+<div class="footer">
+	<div class="foot_wrap">
+		<div class="foot_logo">
+			<img src="https://search.konacard.co.kr/img/foot_logo.png" alt="KONA I">
+		</div>
+		<div class="foot_info">
+			<p class="foot_tit">
+				코나아이(주)는 경기지역화폐 사업의 운영대행사입니다.
+			</p>
+			<ul>
+				<li>주소: 서울특별시 영등포구 은행로 3 익스콘벤처타워 8층 대표자: 조정일 사업자등록번호: 109-81-53365</li>
+				<li>고객센터: 1899-7997 (주말 공휴일 제외 09:00~18:00)</li>
+			</ul>
+			<p class="copy">Copyright KONA I Co., Ltd. All Rights Reserved.</p>
+		</div>
+	</div>
+</div>
+</body>
+
+<script>
+
+    $(function(){
+
+        $.goPage = function(page){
+            if (CommonJs.isNull(page)) {
+                $("#pageNum").val(1);
+            } else {
+                $("#pageNum").val(page);
+            }
+
+            if(CommonJs.isNull(Board.$affiliateName.val())) {
+                alert('검색할 지역을 선택해주세요.');
+                Board.$affiliateName.focus();
+                return false;
+            }
+            if(CommonJs.isNull(Board.$searchKey.val()) && !$('.biz_area_list>ul>li').hasClass('on')) {
+                alert('검색할 매장명 입력 또는 업종을 선택해주세요.');
+                Board.$searchKey.focus();
+                return false;
+            }
+
+            Board.fnBtnSearchDisable();
+            Board.searhList();
+            CommonJs.focus($('.wrap'), 100, 500);
+        }
+
+        var Board = {
+            // 초기화
+            init: function (){
+                this.cache();
+                this.bindEvent();
+                this.initBoard();
+                return this;
+            },
+            // 변수 선언
+            cache : function (){
+                this.$search_area = $('#search_area');
+                this.$noti_area = $('#noti_area');
+                this.$kalist_area = $('#kalist_area');
+                // added by damhee kim
+                this.$bizlist_area = $('#bizlist_area');
+                this.$table_view = $('#table_view');
+
+                this.$frm = $('#frm');
+                this.$dataList = $("#dataList > tbody");
+
+                this.$id = $('input[name="id"]');
+                this.$affiliateName = $('input[name="affiliateName"]');
+                this.$searchKey = $('input[name="searchKey"]');
+                this.$bizType = $('input[name="bizType"]');
+
+                this.$count = $('#count');
+
+                this.$paging = $('#paging');
+
+                this.$regexText = "(OR|SELECT|INSERT|DELETE|UPDATE|CREATE|DROP|EXEC|UNION|FETCH|DECLARE|TRUNCATE|\uCE74\uC6B4\uC140|\uC6B4\uC140\uB7EC|\uC140\uB7EC|\uC544\uBAA8|\uBAA8\uB808|\uC678\uD310)";
+            },
+            // 이벤트 연결
+            bindEvent : function (){
+            }
+            // 초기화 작업
+            ,initBoard : function () {
+                //$('input[name="searchKey"]').bind('keyup focusout', this.getCheckedInput());
+                var checkKa = true;
+                if(!checkKa) {
+                    $('.area_list>ul>li:first').addClass('on');
+
+                    var $selectedKa = $('.area_list>ul>li.on');
+                    var affiliateName = $selectedKa.text();
+                    var id = $selectedKa.data('id');
+
+                    Board.$affiliateName.val(affiliateName);
+                    Board.$id.val(id);
+
+                    Board.$search_area.show();
+                    Board.$kalist_area.hide();
+                    Board.$noti_area.hide();
+                    Board.$table_view.hide();
+                    Board.$searchKey.focus();
+                    Board.$bizlist_area.show();
+                } else {
+                    Board.$bizlist_area.hide();
+                }
+            }
+            ,searhList : function () {
+
+                var formData = Board.$frm.formToJson();
+                var merchantType = "BC";
+
+                $.ajax({
+                    url: 'https://konacard.co.kr/api/v1/payable-merchants',
+                    contentType: 'application/json; charset=UTF-8',
+                    type: 'POST',
+                    async: true,
+                    data: JSON.stringify(formData),
+                    dataType: 'json',
+                    success: function(response){
+                        //console.log('response: ', response);
+                        Board.$dataList.empty();
+                        if(response.header.resultCode == 200) {
+                            var totalCount = response.data.totalCount;
+                            var contents = response.data.merchants;
+                            if(totalCount > 0) {
+                                var tempTag = '';
+                                $(contents).each(function (i) {
+                                    tempTag += '<tr data-seq="'+contents[i].seq+'">';
+                                    tempTag += '<td>'+contents[i].simpleNm+'</td>';
+                                    tempTag += '<td>'+(CommonJs.isNull(contents[i].bizTypeNm) ? '-' : contents[i].bizTypeNm)+'</td>';
+                                    tempTag += '<td>'+contents[i].addr+'</td>';
+                                    if(merchantType == 'BC') {
+                                        tempTag += '<td>'+(CommonJs.isNull(contents[i].telephone) ? '-' : contents[i].telephone)+'</td>';
+                                    } else if(merchantType == 'KB') {
+                                        tempTag += '<td>'+(CommonJs.isNull(contents[i].telNo) ? '-' : contents[i].telNo)+'</td>';
+                                    } else {
+                                        tempTag += '<td>-</td>';
+                                    }
+                                    tempTag += '</tr>';
+                                });
+                                Board.$count.text(totalCount);
+                                Board.$dataList.append(tempTag);
+
+                                Board.$paging.show();
+                                CommonJs.setPage(Board.$count, Board.$paging, totalCount);
+                            } else {
+                                var tempTag = '';
+                                tempTag += '<tr>';
+                                tempTag += '<td colspan="4">';
+                                tempTag += '<img src="https://search.konacard.co.kr/img/no_data.png" alt="검색한 정보로 결제 가능한 매장을 찾을 수 없습니다." class="no_data">';
+                                tempTag += '<p class="notice">검색한 정보로 결제 가능한 매장을 찾을 수 없습니다.</p>';
+                                tempTag += '</td>';
+                                tempTag += '</tr>';
+                                Board.$count.text(0);
+                                Board.$dataList.append(tempTag);
+
+                                Board.$paging.hide();
+                            }
+
+                        }
+                        Board.$table_view.show();
+                    },
+                    error: function(response){
+                        alert('이용에 불편을 드려 죄송합니다.\n잠시 후에 다시 시도해주세요.\n동일한 문제가 지속적으로 발생할 경우 고객센터로 문의하시길 바랍니다.');
+                    }
+
+                });
+
+            },
+            fnBtnSearchDisable : function () {
+                $('.btn_search').attr("disabled", true);
+                setTimeout( function() {
+                    $('.btn_search').attr("disabled", false);
+                }, 2000 );
+            }
+
+        }
+
+        window.Board = Board.init();
+    });
+
+    $(document)
+        .on('click', '.area_list>ul>li', function () {
+            $('.area_list>ul>li').removeClass('on');
+            $(this).addClass('on');
+        })
+        .on('click', '.btn_cancel', function () {
+            $('.area_list>ul>li').removeClass('on');
+        })
+        .on('click', '.btn_select', function () {
+
+            var $selectedKa = $('.area_list>ul>li.on');
+            var affiliateName = $selectedKa.text();
+            var id = $selectedKa.data('id');
+
+            Board.$affiliateName.val(affiliateName);
+            Board.$id.val(id);
+
+            Board.$search_area.show();
+            Board.$kalist_area.hide();
+            Board.$noti_area.hide();
+            Board.$table_view.hide();
+            Board.$searchKey.focus();
+
+            // damhee kim
+            Board.$bizlist_area.show();
+        })
+        .on('click', '.btn_change', function () {
+            Board.$kalist_area.show();
+        })
+        .on('click', '.btn_search', function () {
+            if(CommonJs.isNull(Board.$affiliateName.val())) {
+                alert('검색할 지역을 선택해주세요.');
+                Board.$affiliateName.focus();
+                return false;
+            }
+            if(CommonJs.isNull(Board.$searchKey.val()) && !$('.biz_area_list>ul>li').hasClass('on')) {
+                alert('검색할 매장명 입력 또는 업종을 선택해주세요.');
+                Board.$searchKey.focus();
+                return false;
+            }
+            Board.$kalist_area.hide();
+
+            Board.fnBtnSearchDisable();
+
+            $("#pageNum").val(1);
+            Board.searhList();
+
+            $('.area_list>ul>li').removeClass('on');
+            $('.area_list>ul>li').each(function () {
+                if($(this).data('id') == Board.$id.val()) {
+                    $(this).addClass('on')
+                }
+            })
+        })
+        .on('keydown', 'input[name="searchKey"]', function (e) {
+            if(e.keyCode == 13){
+                if(!CommonJs.getCheckedString($(this).val(), Board.$regexText)) {
+                    $(this).val("");
+                } else {
+                    $('.btn_search').click();
+                }
+
+                return false;
+            }
+        })
+        .on('keyup focusout', 'input[name="searchKey"]', function () {
+            CommonJs.getCheckedInput(this, Board.$regexText);
+        })
+        .on('click', '.biz_area_list>ul>li', function () {
+            if($(this).hasClass('on')) {
+                $('.biz_area_list>ul>li').removeClass('on');
+                Board.$bizType.val('');
+            } else {
+                $('.biz_area_list>ul>li').removeClass('on');
+                $(this).addClass('on');
+                var bizType = $(this).data('bizType');
+                if(!CommonJs.isNull(bizType)) {
+                    Board.$bizType.val(bizType);
+                } else {
+                    Board.$bizType.val('');
+                }
+            }
+        })
+
+</script>
+
+</html>
