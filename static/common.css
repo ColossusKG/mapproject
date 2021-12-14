@@ -8,7 +8,6 @@ font
  */
 
 body {
-	background: #fff;
 }
 
 
@@ -42,7 +41,6 @@ h2{font-size:30px;color:#000;font-weight:800}
 }
 #mainpage-logo{
     float:left;
-    background: lightsteelblue;
     height:100vh;
     flex-basis:41.666667%;
     font-family: SBAggroB;
@@ -64,7 +62,6 @@ h2{font-size:30px;color:#000;font-weight:800}
 }
 
 #mainpage-citylist{
-    background-color: lightgoldenrodyellow;
     display:flex; height:100vh;
     flex-basis:58.333333%;
 }
