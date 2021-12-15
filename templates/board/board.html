@@ -4,7 +4,7 @@
 <div class="container my-3">
     <div calss="col-3" style="font-family:SBAggroB; font-size:30px;">가맹점 후기</div>
     <hr style="margin-top: 0.1rem;">
-    <div style=" margin-top:10%;">
+    <div style="">
         <div class="serach_box" style="text-align:center;  border-top:1px solid grey; border-bottom:1px solid grey;">
             <div style="font-family:OTWelcomeRA; font-size:30px; margin-top:10%">후기가 궁금한 가맹점의 <span style="color:blue">이름과 주소</span>를 입력하세요!</div>
             {% if messages %}
@@ -21,7 +21,7 @@
         </div>
 
     {% if shop_list %}
-    <table class="table question_table">
+    <table class="table question_table" >
         <thead>
         <tr class="text-center">
             <th style="width:30%">상호명</th>
@@ -100,6 +100,9 @@
            $("#address").val($(".address").val());
            $("#boardForm").submit();
         });
+
+        var offset = $('#search_btn').offset(); //선택한 태그의 위치를 반환
+        $('html').animate({scrollTop : offset.top}, 100);
 
         $(".page-link").on('click',function(){
             $("#page").val($(this).data("page"));
