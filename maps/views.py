@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 from django.core.paginator import Paginator
 from django.db.models import Q,Count
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
 from .models import *
 
 
@@ -113,9 +114,6 @@ def shop_list(request):
                     map = folium.Map(location=(search_map(city + ' ' + area2)), zoom_start=16)
 
 
-        # 가맹점 지도 표시 코드
-        if marker:
-            map = map_marker(marker)
 
         # 가맹점 검색 코드
         if kw:
@@ -133,24 +131,28 @@ def shop_list(request):
                 name = shop.name
                 latlng = 'LAT ' + str(lat) + '\nLNG ' + str(lng)
                 folium.Marker(location=[lat, lng], tooltip=name).add_to(map)
-            # 검색 후 가맹점 지도 표시
-            if marker:
-                map = map_marker(marker)
 
-        if save:  # 가맹점 저장 코드
+
+        # 가맹점 지도 표시 코드
+        if marker:
+            map = map_marker(marker)
+
+        # 가맹점 저장 코드
+        if save:
             shop = get_object_or_404(data, pk=save)
-            shop.mark.add(request.user)
+            if request.user in shop.mark.all():
+                messages.error(request,'(상호명: '+shop.name+') 이미 추천한 가맹점입니다.')
+            else:
+                shop.mark.add(request.user)
+                print('추천 완료')
 
         map = map._repr_html_()
-
-
 
         # 페이징 처리
         paginator = Paginator(shop_list, 10)  # 페이지당 10개 보여주기
         page_obj = paginator.get_page(page)  # 페이지 객체 생성
         content = {'shop_list': page_obj, 'page': page, 'kw': kw, 'map': map, 'city': city, 'area1_list': area1_list,
-                'area1':area1, 'area2':area2, 'so':so}
-
+                'area1':area1, 'area2':area2, 'so':so, 'marker':marker}
 
     return render(request, 'maps/shop_list2.html', content)
 
@@ -191,7 +193,7 @@ def map_marker(marker):
     name = shop.name
     latlng = 'LAT ' + str(lat) + '\nLNG ' + str(lng)
     map = folium.Map(location=[lat, lng], zoom_start=17)
-    folium.Marker(location=[lat, lng], popup=latlng, tooltip=name).add_to(map)
+    folium.Marker(location=[lat, lng], tooltip=name).add_to(map)
 
     return map
 
@@ -210,4 +212,4 @@ def naver(request, id):
             a = bs['href']
 
     return redirect(a)
-    # return render(request,'maps/shop_list.html', {'next':next})
+    # return render(request,'map
