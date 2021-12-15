@@ -3,4 +3,4 @@ E.idea
 __pycache__
 db.sqlite3
 db.sqbpro
-mysite.log
+/logs/
