@@ -85,8 +85,10 @@
         {% if list %}
         <div class="row justify-content-around comment_list">
             {% for comment in list %}
+
             <div class="comment" style="border: 1px solid ;">
-                <img src="{{comment.image.url}}" width="100%"; min-height="200px" height="280px" ><br>
+                <div style="font-size:15px; height:30px; text-align:center;">[{{comment.shop}}]</div>
+                <img src="{{comment.image.url}}" width="100%"; min-height="200px" height="250px" ><br>
                 <div style="width:100%; min-height:100px; height:100%; border-top:1px solid; font-family:IBMPlexSansKR-Regular; font-size:17px; padding:5px; text-align:center;">
                     <span>{{comment.content}}</span>
                     <br>
