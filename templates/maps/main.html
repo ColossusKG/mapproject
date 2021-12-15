@@ -44,7 +44,7 @@
     </script>
 </head>
 <!--background-image:url('static/wide01.jpg');-->
-<body id="main_body" style="background-size:100% 100%" onload="init()">
+<body id="main_body" style="background-size:100% 100%">
     <div id="mainpage" class="container-fluid">
 
         <div id="mainpage-logo">
@@ -54,10 +54,10 @@
                 <a class="btn btn-light" href="{% url 'common:login' %}?next={{request.path}}">로그인</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="btn btn-light" href="{% url 'common:signup' %}?next={{request.path}}">회원가입</a>
                 {% else %}
-                <div style="font-size:20px;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;color:whitesmoke">{{request.user}}님 환영합니다!</div>
 
+                <div style=" width:230px; font-size:18px; background-color:black; ctext-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;color:whitesmoke; margin:auto; margin-bottom:1%">{{request.user}}님 환영합니다!</div>
                 <a class="btn btn-light" href="{% url 'common:logout' %}?next={{request.path}}">로그아웃</a>
-
+                <a class="btn btn-light" href="{% url 'mypage:index' %}?next={{request.path}}">마이페이지</a>
                 {% endif %}
             </div>
         </div>
@@ -116,6 +116,5 @@
         </div>
     </div>
 
-</script>
 </body>
 </html>
