@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css'%}">
 
     <link rel="stylesheet" media="screen" type="text/css" href="{% static 'font.css' %}">
-	<link rel="stylesheet" media="screen" type="text/css" href="../static/common.css?ver=11">
+	<link rel="stylesheet" media="screen" type="text/css" href="../static/common.css?ver=1">
     <link rel="stylesheet" media="screen and (max-width:660px)"  type="text/css" href="../static/common-mobile.css?ver=1">
     <link rel="icon" href="{% static 'favicon.ico' %}">
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
@@ -20,15 +20,31 @@
     <script src="../static/bootstrap.min.js?0ver=1"></script>
 
     <script type='text/javascript'>
+        function getDisplayInfo() {
+            var size = {
+              width: window.innerWidth || document.body.clientWidth,
+              height: window.innerHeight || document.body.clientHeight
+            }
+            return size;
+        }
         $(document).ready(function() {
             $(".city-link").on ('click', function(){
             $("#city").val($(this).data("id"));
             $("#cityForm").submit();
             });
         });
+        $(document).ready(function() {
+            let rand_1_5 = Math.floor(Math.random() * 5) + 1;
+            if(getDisplayInfo().width<660){
+                $('#main_body').css({'background-image': 'url(static/narrow0' + rand_1_5 + '.jpg)'});
+            }else{
+                $('#main_body').css({'background-image': 'url(static/wide0' + rand_1_5 + '.jpg)'});
+            }
+        });
     </script>
 </head>
-<body style="background-image:url('static/night-view2.jpg'); background-size:100% 100%" >
+<!--background-image:url('static/wide01.jpg');-->
+<body id="main_body" style="background-size:100% 100%" onload="init()">
     <div id="mainpage" class="container-fluid">
 
         <div id="mainpage-logo">
@@ -38,8 +54,10 @@
                 <a class="btn btn-light" href="{% url 'common:login' %}?next={{request.path}}">로그인</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="btn btn-light" href="{% url 'common:signup' %}?next={{request.path}}">회원가입</a>
                 {% else %}
-                <div style="font-size:20px;">{{request.user}}님 환영합니다!</div>
+                <div style="font-size:20px;text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;color:whitesmoke">{{request.user}}님 환영합니다!</div>
+
                 <a class="btn btn-light" href="{% url 'common:logout' %}?next={{request.path}}">로그아웃</a>
+
                 {% endif %}
             </div>
         </div>
@@ -48,7 +66,7 @@
 
             <div class="test">
 
-                <div style="font-size:15px; color:black; font-family: OTWelcomeRA; text-align:center; -webkit-text-stroke: 0.5px white;">* 가맹점 폐업 또는 업종변경, 가맹점 정보변경 등으로 현재 정보와 다를 수 있으니 매장에 사용 가능 여부를 확인하기 바랍니다. *</div>
+                <div class="mainpage-font-small">* 가맹점 폐업 또는 업종변경, 가맹점 정보변경 등으로 현재 정보와 다를 수 있으니 매장에 사용 가능 여부를 확인하기 바랍니다. *</div>
                 <br>
                 <div class="city_list" style="width:80%">
                     <ul>
@@ -83,7 +101,7 @@
                     </ul>
 
                     <br>
-                    <div style="font-size:15px; color:black; font-family: OTWelcomeRA; text-align:center;">* 외부링크로 연결됩니다. *</div>
+                    <div class="mainpage-font-small">* 외부링크로 연결됩니다. *</div>
                     <ul style="width:75%">
                         <li style="width:33.3%" onclick="location.href='https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283'"><span>김포시</span></li>
                         <li style="width:33.3%" onclick="location.href='https://www.seongnam.go.kr/prgm/slove/sloveAgentList.do?menuIdx=1000329'"><span>성남시</span></li>
