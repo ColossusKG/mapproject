@@ -370,7 +370,7 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 
 
 
-.table_a>a:link{
+.table_a>a{
     color:black;
 }
 
@@ -382,24 +382,6 @@ td{
     vertical-align : middle;
 }
 
-.sort>.tooltiptext{
-    visibility: hidden;
-    width: 70px;
-    border:1px solid DarkSlateGray;
-    border-radius:5px;
-    color:DarkSlateGray;
-    text-align:center;
-    padding: 5px 0;
-    font-size:10px;
-    position: absolute;
-    z-index: 1;
-    top:-50%
-
-}
-
-.sort:hover>.tooltiptext{
-    visibility: visible;
-}
 
 
 

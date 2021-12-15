@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
-    <br class="display-when-wide">
+    <br class="display-when-wide" id="location">
     <details open id="button-in-wide-map" class="display-when-wide">
         <summary>주소 검색</summary>
         <div class="row justify-content-between my-3 address">
@@ -216,7 +216,7 @@
                         </div>
                     </div>
                 </details>
-                <div class="map">
+                <div class="map"  >
                 {{ map | safe}}
                 </div>
             </div>
@@ -236,8 +236,15 @@
         <div class="shoplist-list-col-side"></div>
         {% else %}
         <div class="shoplist-list-col-small"></div>
-        <div id="shoplist-list-list-div">
-            <table class= "table table-striped shop_table">
+        <div id="shoplist-list-list-div" >
+            {% if messages %}
+            <div class="alert alert-danger my-3" role="alert">
+                {% for message in messages %}
+                <strong>{{ message.message }}</strong>
+                {% endfor %}
+            </div>
+        {% endif %}
+            <table class= "table table-striped shop_table" >
                 <thead>
                 <tr class="text-center">
                     <th class="shoplist-list-table-name">상호명</th>
@@ -341,7 +348,6 @@
             <input type="hidden" id="city" name="city" value="{{ city }}">
             <input type="hidden" id="area1" name="area1" value="{{ area1 }}">
             <input type="hidden"  id="area2" name="area2" value="{{ area2 }}">
-            <input type="hidden"  id="etc" name="etc" value="{{ etc }}">
             <input type="hidden" id="save" name="save" value="{{ save }}">
             <input type="hidden" id="marker" name="marker" value="{{ marker }}">
             <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
@@ -378,6 +384,10 @@ function enterkey2(){
     }
 }
 
+var offset = $('#location').offset(); //선택한 태그의 위치를 반환
+$('html').animate({scrollTop : offset.top}, 100);
+
+
 
 $(document).ready(function(){
     $("#btn_search").on('click', function() {
@@ -386,30 +396,33 @@ $(document).ready(function(){
         $("#searchForm").submit();
     });
 
-
      $("#btn_search2").on('click', function() {
         $("#kw").val($(".kw2").val());
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
 
-     $(".addr_map").on('click',function() {
-        $("#marker").val($(this).data("id"));
+
+
+    $(".addr_map").on('click',function() {
+        marker = $("#marker").val($(this).data("id"));
         $("#searchForm").submit();
     });
+
+
 
     $(".save_btn").on('click',function() {
         if(confirm("정말로 추천하시겠습니까?")) {
         $("#save").val($(this).data("save"));
         $("#searchForm").submit();
         }
+        $("#save").val("");
     });
 
     $(".city").on('change',function() {
         $("#city").val($(this).val());
         $("#area1").val("");
         $("#area2").val("");
-        $("#etc").val("");
         $("#page").val(1);
         $("#searchForm").submit();
     });
@@ -417,22 +430,12 @@ $(document).ready(function(){
     $(".area1").on('change', function() {
         $("#area1").val($(this).val());
         $("#area2").val("");
-        $("#etc").val("");
         $("#page").val(1);
         $("#searchForm").submit();
     });
 
     $(".area2").on ('change', function(){
         $("#area2").val($(this).val());
-        $("#etc").val("");
-        $("#searchForm").submit();
-    });
-
-    $(".etc").on ('click', function(){
-        $("#etc").val($(this).data("etc"));
-        $("#city").val("경기도");
-        $("#area1").val("");
-        $("#area2").val("");
         $("#searchForm").submit();
     });
 
@@ -446,6 +449,8 @@ $(document).ready(function(){
         $("#searchForm").submit();
     })
 });
+
+
 
 
 </script>
