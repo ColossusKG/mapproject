@@ -465,7 +465,7 @@ Traceback (most recent call last):
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 146, in shop_list
-    page_obj = paginator.get_page(page)  # ÆäÀÌÁö °´Ã¼ »ý¼º
+    page_obj = paginator.get_page(page)  # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
     number = self.validate_number(number)
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
@@ -615,7 +615,7 @@ Traceback (most recent call last):
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 146, in shop_list
-    page_obj = paginator.get_page(page)  # ÆäÀÌÁö °´Ã¼ »ý¼º
+    page_obj = paginator.get_page(page)  # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
     number = self.validate_number(number)
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
@@ -665,7 +665,7 @@ Traceback (most recent call last):
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 146, in shop_list
-    page_obj = paginator.get_page(page)  # ÆäÀÌÁö °´Ã¼ »ý¼º
+    page_obj = paginator.get_page(page)  # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
     number = self.validate_number(number)
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
@@ -1015,7 +1015,7 @@ Traceback (most recent call last):
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "C:\Users\BIT\Desktop\mapproject2\maps\views.py", line 146, in shop_list
-    page_obj = paginator.get_page(page)  # ÆäÀÌÁö °´Ã¼ »ý¼º
+    page_obj = paginator.get_page(page)  # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 64, in get_page
     number = self.validate_number(number)
   File "C:\Users\BIT\OneDrive\venvs\mysite\lib\site-packages\django\core\paginator.py", line 51, in validate_number
@@ -1501,6 +1501,158 @@ IndexError: list index out of range
 2021-12-09 15:08:27,505 [WARNING] django.request: Not Found: /static/common.css
 2021-12-09 15:08:27,525 [WARNING] django.request: Not Found: /static/common-mobile.css
 >>>>>>> f8c52731113b7aa1fc07955fd79ff520694d0880
+2021-12-10 10:13:19,068 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-10 10:14:09,475 [WARNING] django.request: Not Found: /pybo/fg
+2021-12-10 10:14:12,321 [WARNING] django.request: Not Found: /pybo/fg
+2021-12-10 10:15:15,142 [WARNING] django.request: Not Found: /pybo/fg
+2021-12-10 10:26:40,336 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-10 10:26:41,351 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:26:44,932 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:26:46,232 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:26:48,661 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:26:54,047 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:04,465 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:06,143 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:14,522 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:41,757 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:44,352 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:03,518 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:05,991 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:08,397 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\PycharmProjects\map_project2\maps\views.py", line 34, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\PycharmProjects\map_project2\maps\views.py", line 169, in search_map
+    lat_data = data['addresses'][0]['y']
+KeyError: 'addresses'
+2021-12-10 10:28:08,666 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:14,984 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:22,638 [WARNING] django.request: Not Found: /pybo/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 10:28:22,659 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 11:22:46,366 [WARNING] django.request: Not Found: /media/ï¿½ï¿½ï¿½2_o3oq94C.jpg
+2021-12-10 13:54:33,499 [INFO] django.utils.autoreload: C:\Users\BIT\PycharmProjects\map_project2\board\urls.py changed, reloading.
+2021-12-10 13:54:34,413 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-10 13:54:35,322 [WARNING] django.request: Not Found: /board/comment/70/
+2021-12-10 13:54:35,359 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:54:35,372 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:54:43,903 [WARNING] django.request: Not Found: /board/comment/create/70/
+2021-12-10 13:54:54,807 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:54:54,827 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:04,012 [WARNING] django.request: Not Found: /pybo/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 13:55:04,038 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:04,053 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:04,887 [WARNING] django.request: Not Found: /pybo/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 13:55:04,908 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:04,922 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:08,652 [WARNING] django.request: Not Found: /pybo/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 13:55:08,667 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:08,671 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:18,314 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:18,320 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:29,164 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:29,168 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:37,982 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:37,987 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:45,367 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:45,370 [WARNING] django.request: Not Found: /media/ï¿½ï¿½ï¿½2_o3oq94C.jpg
+2021-12-10 13:55:45,374 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:56:01,870 [INFO] django.utils.autoreload: C:\Users\BIT\PycharmProjects\map_project2\config\settings\local.py changed, reloading.
+2021-12-10 14:06:09,414 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-10 14:13:20,177 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\PycharmProjects\map_project2\maps\views.py", line 34, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\PycharmProjects\map_project2\maps\views.py", line 169, in search_map
+    lat_data = data['addresses'][0]['y']
+KeyError: 'addresses'
+2021-12-10 14:14:46,138 [WARNING] django.request: Not Found: /board/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 14:16:56,595 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 14:17:03,275 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 14:17:22,301 [INFO] django.utils.autoreload: C:\Users\BIT\PycharmProjects\map_project2\config\settings\local.py changed, reloading.
+2021-12-10 10:13:19,068 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-10 10:14:09,475 [WARNING] django.request: Not Found: /pybo/fg
+2021-12-10 10:14:12,321 [WARNING] django.request: Not Found: /pybo/fg
+2021-12-10 10:15:15,142 [WARNING] django.request: Not Found: /pybo/fg
+2021-12-10 10:26:40,336 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-10 10:26:41,351 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:26:44,932 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:26:46,232 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:26:48,661 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:26:54,047 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:04,465 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:06,143 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:14,522 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:41,757 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:27:44,352 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:03,518 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:05,991 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:08,397 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\PycharmProjects\map_project2\maps\views.py", line 34, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\PycharmProjects\map_project2\maps\views.py", line 169, in search_map
+    lat_data = data['addresses'][0]['y']
+KeyError: 'addresses'
+2021-12-10 10:28:08,666 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:14,984 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 10:28:22,638 [WARNING] django.request: Not Found: /pybo/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 10:28:22,659 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 11:22:46,366 [WARNING] django.request: Not Found: /media/ï¿½ï¿½ï¿½2_o3oq94C.jpg
+2021-12-10 13:54:33,499 [INFO] django.utils.autoreload: C:\Users\BIT\PycharmProjects\map_project2\board\urls.py changed, reloading.
+2021-12-10 13:54:34,413 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-10 13:54:35,322 [WARNING] django.request: Not Found: /board/comment/70/
+2021-12-10 13:54:35,359 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:54:35,372 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:54:43,903 [WARNING] django.request: Not Found: /board/comment/create/70/
+2021-12-10 13:54:54,807 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:54:54,827 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:04,012 [WARNING] django.request: Not Found: /pybo/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 13:55:04,038 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:04,053 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:04,887 [WARNING] django.request: Not Found: /pybo/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 13:55:04,908 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:04,922 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:08,652 [WARNING] django.request: Not Found: /pybo/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 13:55:08,667 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:08,671 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:18,314 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:18,320 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:29,164 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:29,168 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:37,982 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:37,987 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:55:45,367 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 13:55:45,370 [WARNING] django.request: Not Found: /media/ï¿½ï¿½ï¿½2_o3oq94C.jpg
+2021-12-10 13:55:45,374 [WARNING] django.request: Not Found: /static/common-mobile.css
+2021-12-10 13:56:01,870 [INFO] django.utils.autoreload: C:\Users\BIT\PycharmProjects\map_project2\config\settings\local.py changed, reloading.
+2021-12-10 14:06:09,414 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2021-12-10 14:13:20,177 [ERROR] django.request: Internal Server Error: /list/
+Traceback (most recent call last):
+  File "C:\Users\BIT\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\BIT\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\BIT\PycharmProjects\map_project2\maps\views.py", line 34, in shop_list
+    map = folium.Map(location=(search_map(city)), zoom_start=12)
+  File "C:\Users\BIT\PycharmProjects\map_project2\maps\views.py", line 169, in search_map
+    lat_data = data['addresses'][0]['y']
+KeyError: 'addresses'
+2021-12-10 14:14:46,138 [WARNING] django.request: Not Found: /board/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2021-12-10 14:16:56,595 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 14:17:03,275 [WARNING] django.request: Not Found: /static/common.css
+2021-12-10 14:17:22,301 [INFO] django.utils.autoreload: C:\Users\BIT\PycharmProjects\map_project2\config\settings\local.py changed, reloading.
 2021-12-13 17:34:01,344 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2021-12-13 17:34:02,583 [WARNING] django.request: Not Found: /static/bootstrap.min.js
 2021-12-13 17:34:02,641 [WARNING] django.request: Not Found: /static/bootstrap.min.js
