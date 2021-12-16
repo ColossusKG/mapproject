@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container my-3">
+    <div calss="col-3" style="font-family:SBAggroB; font-size:30px;">가맹점 후기</div>
+    <hr style="margin-top: 0.1rem;">
+    <div style="">
+        <div class="serach_box" style="text-align:center;  border-top:1px solid grey; border-bottom:1px solid grey;">
+            <div style="font-family:OTWelcomeRA; font-size:30px; margin-top:10%">후기가 궁금한 가맹점의 <span style="color:blue">이름과 주소</span>를 입력하세요!</div>
+            {% if messages %}
+            <div class="alert alert-danger my-3" role="alert">
+                {% for message in messages %}
+                <strong>{{ message.message }}</strong>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <br><br>
+            <input type="text" class="shop_name" value="{{shop_name|default_if_none:''}}" placeholder="가맹점의 이름을 입력하세요" style="width:50%"><br><br>
+            <input type="text" class="address" value="{{address|default_if_none:''}}" placeholder="읍/면/동을 입력하세요 ex)매교동,삼성동... " style="width:50%"><br><br><br>
+            <button id="search_btn" class="btn btn-light" type="button"  style="margin-bottom:10%"><img src="{% static '751463.png'%}" style="width:40px; height:40px;"/></button>
+        </div>
+
+    {% if shop_list %}
+    <table class="table question_table" >
+        <thead>
+        <tr class="text-center">
+            <th style="width:30%">상호명</th>
+            <th style="width:40%">주소</th>
+            <th style="width:20%"></th>
+        </tr>
+        </thead>
+            <tbody>
+            {% for shop in shop_list %}
+            <tr class="text-center">
+                <td>{{shop.name}}</td>
+                <td>{{shop.addr2}}</td>
+                <td><a id="mark_btn" href="{% url 'board:shop_comment' shop.id %}" data-uri="#"
+                   class="btn float-right btn-info btn-block" style="width:50%; text-align:center;"><span>후기</span></a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+
+        <!-- 페이징처리 시작 -->
+
+    <div class="paging">
+    <ul >
+        <!-- 이전페이지 -->
+        {% if shop_list.has_previous %}
+        <li class="page-item">
+            <a class="page-link" data-page="{{ shop_list.previous_page_number }}" href="#"><</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><</a>
+        </li>
+        {% endif %}
+        <!-- 페이지리스트 -->
+        {% for page_number in shop_list.paginator.page_range %}
+        {% if page_number >= shop_list.number|add:-3 and page_number <= shop_list.number|add:3 %}
+            {% if page_number == shop_list.number %}
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
+            </li>
+            {% else %}
+            <li class="page-item">
+                <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
+            </li>
+            {% endif %}
+        {% endif %}
+        {% endfor %}
+        <!-- 다음페이지 -->
+        {% if shop_list.has_next %}
+        <li class="page-item">
+            <a class="page-link" data-page="{{ shop.next_page_number }}" href="#">></a>
+        </li>
+        {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" tabindex="-1" aria-disabled="true" href="#">></a>
+                </li>
+        {% endif %}
+            </ul>
+    </div>
+    {% endif %}
+    </div>
+</div>
+
+    <form id="boardForm" method="get" action="{% url 'board:index' %}">
+        <input type="hidden" id="shop_name" name="shop_name" value="{{ shop_name|default_if_none:'' }}">
+        <input type="hidden" id="address" name="address" value="{{ address|default_if_none:'' }}">
+        <input type="hidden" id="page" name="page" value="{{page}}">
+    </form>
+
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#search_btn").on('click',function(){
+           $("#shop_name").val($(".shop_name").val());
+           $("#address").val($(".address").val());
+           $("#boardForm").submit();
+        });
+
+        var offset = $('#search_btn').offset(); //선택한 태그의 위치를 반환
+        $('html').animate({scrollTop : offset.top}, 100);
+
+        $(".page-link").on('click',function(){
+            $("#page").val($(this).data("page"));
+            $("#boardForm").submit();
+        });
+    });
+</script>
+{% endblock %}

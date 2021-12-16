@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="container my-3">
-    <div class="comment">
-        <h5 class="border-bottom pb-2" style="font-size:30px; text-align:center;">댓글 등록</h5>
+    <div class="ques_comment">
+        <div class="border-bottom border-top pb-2 pt-2" style=" font-family: OTWelcomeRA; font-size:30px; text-align:center; vertical-align:bottom;">[댓글 등록]</div>
     <form method="post" class="post-form my-3">
         {% csrf_token %}
         {% include "form_errors.html" %}

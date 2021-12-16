@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
-    <br class="display-when-wide">
+
+    <br class="display-when-wide" id="location">
+
     <details open id="button-in-wide-map" class="display-when-wide">
         <summary>주소 검색</summary>
         <div class="row justify-content-between my-3 address">
@@ -36,14 +39,9 @@
                     <option  value="포천시" {% if city == '포천시' %}selected{% endif %}>포천시</option>
                     <option  value="하남시" {% if city == '하남시' %}selected{% endif %}>하남시</option>
                     <option  value="화성시" {% if city == '화성시' %}selected{% endif %}>화성시</option>
+                    <option  value="김포/성남/시흥" {% if city == '김포/성남/시흥' %}selected{% endif %}>김포/성남/시흥</option>
                 </select>
                 <br>
-                <select class="form-control" onchange="if(this.value) location.href=(this.value)" >
-                    <option>김포,성남,시흥 선택</option>
-                    <option value="https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283" >김포시</option>
-                    <option value="https://www.seongnam.go.kr/prgm/slove/sloveAgentList.do?menuIdx=1000329">성남시</option>
-                    <option value="https://www.si-ru.kr/?inc=store">시흥시</option>
-                </select>
             </div>
             <div class="col-4">
                 {% if city == '고양시' %}
@@ -103,18 +101,19 @@
                 </select>
                 {% endif %}
             </div>
+             <div class="col-8 display-when-wide input-group" style="width:80%; ">
+                <input onkeyup="enterkey();" type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
+                </div>
+            </div>
         </div>
     </details>
 
     <div class="row justify-content-between my-3" style="">
         <div class="shoplist-list-col-side"></div>
         <div id="shoplist-list-map-div"  style="">
-            <div class="display-when-wide input-group">
-                <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
-                </div>
-            </div>
+
             <div id="shoplist-list-map-object" style="width:100%;">
                 <details open class="display-when-narrow" id="button-in-narrow-map">
                     <summary>주소 검색</summary>
@@ -150,12 +149,7 @@
                                 <option  value="포천시" {% if city == '포천시' %}selected{% endif %}>포천시</option>
                                 <option  value="하남시" {% if city == '하남시' %}selected{% endif %}>하남시</option>
                                 <option  value="화성시" {% if city == '화성시' %}selected{% endif %}>화성시</option>
-                            </select>
-                            <select class="form-control" onchange="if(this.value) location.href=(this.value)" >
-                                <option>김포/성남/시흥</option>
-                                <option value="https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283" >김포시</option>
-                                <option value="https://www.seongnam.go.kr/prgm/slove/sloveAgentList.do?menuIdx=1000329">성남시</option>
-                                <option value="https://www.si-ru.kr/?inc=store">시흥시</option>
+                                <option  value="김포/성남/시흥" {% if city == '김포/성남/시흥' %}selected{% endif %}>김포/성남/시흥</option>
                             </select>
                         </div>
                         <div class="col-4">
@@ -217,27 +211,49 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div class="display-when-narrow input-group">
-                    <input type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">찾기</button>
-                    </div>
+                    <div class="input-group">
+                    <input onkeyup="enterkey2();" type="text" class="form-control kw2" value="{{ kw2|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="btn_search2">찾기</button>
+                        </div>
                     </div>
                 </details>
+                <div class="map"  >
                 {{ map | safe}}
+                </div>
             </div>
         </div>
+
+        {% if city == "김포/성남/시흥" %}
+        <div id="etc_list">
+            <br><br><br>
+                <div style="font-size:20px; text-align:center; font-family:SBAggroB;"> 김포시, 성남시, 시흥시는 외부링크로 연결됩니다.</div>
+            <div class="row justify-content-around" style="margin-top:10%; text-align:center; font-family:SBAggroB;">
+                <div class="etc_list" style="border: 1px solid;"><a href="https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283"><img src="{% static '김포시.png' %}"><br>김포시 가맹점 찾기</a></div>
+                <div class="etc_list" style="border: 1px solid;"><a href="https://www.seongnam.go.kr/prgm/slove/sloveAgentList.do?menuIdx=1000329"><img src="{% static '성남시.png' %}"><br>성남시 가맹점 찾기</a></div>
+                <div class="etc_list" style="border: 1px solid;"><a href="https://www.si-ru.kr/?inc=store"><img src="{% static '시흥시.png' %}"><br>시흥시 가맹점 찾기</a></div>
+            </div>
+        </div>
+        <div class="shoplist-list-col-side"></div>
+        {% else %}
         <div class="shoplist-list-col-small"></div>
-        <div id="shoplist-list-list-div">
-            <table class= "table table-striped shop_table">
+        <div id="shoplist-list-list-div" >
+            {% if messages %}
+            <div class="alert alert-danger my-3" role="alert">
+                {% for message in messages %}
+                <strong>{{ message.message }}</strong>
+                {% endfor %}
+            </div>
+        {% endif %}
+            <table class= "table table-striped shop_table" >
                 <thead>
                 <tr class="text-center">
                     <th class="shoplist-list-table-name">상호명</th>
                     <th class="shoplist-list-table-addr">주소</th>
                     {% if so == '추천순' %}
-                    <th class="shoplist-list-table-recom1"><a href="#" class="so" data-so="이름순"><span class="sort">추천▲<span class="tooltiptext">이름순 정렬하기</span></span></a></th>
+                    <th class="shoplist-list-table-recom1"><a href="#" class="so" data-so="이름순" title="이름순 정렬하기"><span class="sort">추천▲</span></a></th>
                     {% else %}
-                    <th class="shoplist-list-table-recom2"><a href="#" class="so" data-so="추천순"><span class="sort">추천<span class="tooltiptext">추천순 정렬하기</span></span></a></th>
+                    <th class="shoplist-list-table-recom2"><a href="#" class="so" data-so="추천순" title="추천순 정렬하기"><span class="sort">추천</span></a></th>
                     {% endif %}
 
                 </tr>
@@ -251,20 +267,30 @@
                     </td>
                     <td class="table_a shoplist-list-table-addr" style="vertical-align : middle;"><a href="#" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
                         {%if user.is_authenticated %}
-                        <td class="table_a shoplist-list-table-recom1" ><!-- 추천영역 -->
-                            <div style="width:50px; border:1px solid gray;  margin-left:10px;"><span class="" style="">{{shop.mark.count}}  </span></div>
+                        <td class="table_a shoplist-list-table-recom1" >
+                            <!-- 추천영역 -->
+                            <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span class="" style="">{{shop.mark.count}}  </span></div>
                             <a href="#" data-save="{{ shop.id }}" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a>
                              </td>
                         {% else %}
                         <td class="table_a shoplist-list-table-recom2" >
-                            <div style="width:50px; border:1px solid gray;  margin-left:10px;"><span class="" style="">{{shop.mark.count}}  </span></div>
-                            <a href="{% url 'common:login' %}" data-save="#" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a></td>
+                            <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span class="" style="">{{shop.mark.count}}</span></div>
+                            <a href="{% url 'common:login' %}?next={{request.path}}" data-save="#" class="save_btn">
+                                <i class="fas fa-thumbs-up recommend" >
+                                    <span class="tooltiptext">추천하기</span>
+                                </i>
+                            </a>
+                        </td>
                         {% endif %}
                 </tr>
                 {% endfor %}
                 {% else %}
                 <tr>
+                    {%if city == '경기도' %}
+                    <td colspan="3">주소를 선택해주세요.</td>
+                    {% else %}
                     <td colspan="3">일치하는 항목이 없습니다.</td>
+                    {% endif %}
                 </tr>
                 {% endif %}
                 </tbody>
@@ -290,7 +316,7 @@
                 {% endif %}
                 <!-- 페이지리스트 -->
                 {% for page_number in shop_list.paginator.page_range %}
-                {% if page_number >= shop_list.number|add:-3 and page_number <= shop_list.number|add:3 %}
+                {% if page_number >= shop_list.number|add:-2 and page_number <= shop_list.number|add:2 %}
                     {% if page_number == shop_list.number %}
                     <li class="page-item active" aria-current="page">
                         <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
@@ -315,6 +341,7 @@
             </ul>
         </div>
         <div class="col-2"></div>
+        {% endif %}
     </div>
         <!-- 페이징처리 끝 -->
 
@@ -341,23 +368,56 @@ function getDisplayInfo() {
     return size;
 }
 
+
+function enterkey(){
+    if(window.event.keyCode==13){
+        $("#kw").val($(".kw").val());
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+        $("#searchForm").submit();
+    }
+}
+
+function enterkey2(){
+    if(window.event.keyCode==13){
+        $("#kw").val($(".kw2").val());
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+        $("#searchForm").submit();
+    }
+}
+
+var offset = $('#location').offset(); //선택한 태그의 위치를 반환
+$('html').animate({scrollTop : offset.top}, 100);
+
+
+
 $(document).ready(function(){
-
-
     $("#btn_search").on('click', function() {
         $("#kw").val($(".kw").val());
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
 
-     $(".addr_map").on('click',function() {
-        $("#marker").val($(this).data("id"));
+     $("#btn_search2").on('click', function() {
+        $("#kw").val($(".kw2").val());
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
 
+
+
+    $(".addr_map").on('click',function() {
+        marker = $("#marker").val($(this).data("id"));
+        $("#searchForm").submit();
+    });
+
+
+
     $(".save_btn").on('click',function() {
+        if(confirm("정말로 추천하시겠습니까?")) {
         $("#save").val($(this).data("save"));
         $("#searchForm").submit();
+        }
+        $("#save").val("");
     });
 
     $(".city").on('change',function() {
@@ -390,6 +450,8 @@ $(document).ready(function(){
         $("#searchForm").submit();
     })
 });
+
+
 
 
 </script>

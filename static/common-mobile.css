@@ -8,7 +8,6 @@ font
  */
 
 body {
-	background: #fff;
 }
 
 
@@ -16,18 +15,19 @@ body {
 h1{font-size:50px;color:#000;font-weight:800}
 h2{font-size:22px;color:#000;font-weight:800}
 
-.header{width:95vw;height:70px;
+.header{width:95vw;height:80px;
     text-align:center;
     font-family:IBMPlexSansKR-Regular; background:white; padding:3px;
     display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;
 }
 #header-img{
-    -ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;
+    margin:auto;
+     text-align:center;
+
 }
 #header-paragraph{
-    margin:0px;
+    margin:1%;
     text-align:center;font-size:12px;color:#000;line-height:15px;
-    -ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;
 }
 
 
@@ -49,28 +49,35 @@ h2{font-size:22px;color:#000;font-weight:800}
 
 #mainpage-logo{
     width:100%;
-    line-height: 20vh;
-    background: lightsteelblue;
+    height:10vh;
     font-family: SBAggroB;
     text-align:center;
+
 }
 
 #mainpage-logo-div{
     width:100%;
-    height:20vh;
-    line-height:20vh;
+     margin:50px 0;
+
 }
 #mainpage-logo-div-img{
     width:60%;
 }
 
 #mainpage-citylist{
-    height:80vh;
+    height:90vh;
     width:100%;
 }
 
-
-
+.mainpage-font-small{
+    font-size:15px;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    /*-webkit-text-stroke-width: 1px;*/
+	/*-webkit-text-stroke-color: white;*/
+    color:whitesmoke;
+    font-family: OTWelcomeRA;
+    text-align:center;
+}
 
 em, address, cite {font-style:normal;}
 
@@ -92,9 +99,10 @@ table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-to
     height:40px;
     font-family:IBMPlexSansKR-Bold;
     margin:auto;
+    padding-left:10px;
 }
 .navbar-brand{
-    font-size:16px;
+    font-size:13px;
 }
 
 .navbar>ul{
@@ -145,7 +153,6 @@ table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-to
     margin: 100px auto;
     border: solid 1px gray;
     width: 50%;
-    height: 500px;
     text-align: center;
 
 }
@@ -216,7 +223,7 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 .form-group>input{
 	display: inline-block;
 	color: #000;
-	font-size:13px;
+	font-size:17px;
 	padding: 10px 0;
 	border: 0;
 	line-height: inherit;
@@ -227,8 +234,13 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 }
 
 .form-group>label{
-    font-family:OTWelcomeRA;
-    font-size:15px;
+    font-family: OTWelcomeRA;
+    font-size:17px;
+}
+
+.form-group>textarea{
+	color: #000;
+	font-size:17px;
 }
 
 
@@ -278,49 +290,6 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 	}
 
 
-/*area_list*/
-/*version1
-.area1{
-    width:100%;
-}
-
-.area_list{display:block;  margin:auto;  margin-bottom:auto;}
-.area_list>ul{
-    display: table;
-    width :100%;
-    margin-left:auto;
-    margin-right:auto;
-    padding:0;
-	font-size:0;
-
-}
-.area_list>ul>li{
-    font-family:SBAggroB;
-	display: inline-flex;
-    width: 10%;
-	font-size: 16px;
-	color: #000;
-	height: 60px;
-	line-height: 19px;
-	border-left:1px solid #ddd;
-	border-top:1px solid #ddd;
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	text-align: center;
-	background: #fff;
-	align-items: center;
-}
-.area_list>ul>li span {
-	margin: 0 auto;
-}
-.area_list>ul>li:hover{
-	background:#eee;
-	}
-
-.area_list>ul>li.on{
-	background:#eee;
-	}
-}*/
 
 
 /*version2*/
@@ -348,6 +317,22 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 #shoplist-list-list-div{
     -ms-flex:0 0 95%;flex:0 0 95%;max-width:95%
 }
+#etc_list{
+    -ms-flex:0 0 95%;flex:0 0 95%;max-width:95%
+}
+.etc_list{
+ width:25%;
+ height:200px;
+ margin:1%;
+}
+.etc_list>a>img{
+    width:80%;
+    height:80%;
+}
+.etc_list>a{
+    font-size:13px;
+    margin-top:20%;
+}
 
 .text-center{
     width:100vw;
@@ -367,6 +352,9 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
     width:15%;
 }
 
+#shoplist-list-map-object>.map{
+    margin-top: 0;
+}
 
 
 
@@ -444,7 +432,15 @@ td{
     visibility: visible;
 }
 
+/* comment_lsit */
 
+.comment_list>.comment{
+    width:47%;
+    margin:3% 0.5%;
+    min-height:400px;
+    height:100%;
+    padding:1px;
+}
 
 
 
@@ -454,7 +450,7 @@ td{
 }
 
 .question_btn>span{
-    font-family: GowunBatang-Regular;
+    font-family:  OTWelcomeRA;
     font-size:17px;
 
 }
@@ -476,7 +472,7 @@ td{
 /*question detail*/
 
 .question_detail{
- font-family: GowunBatang-Regular;
+ font-family:  OTWelcomeRA;
  font-size:18px;
 }
 
@@ -485,11 +481,10 @@ td{
 }
 
 .comment{
-    font-family: GowunBatang-Regular;
+    font-family: OTWelcomeRA;
 }
 
 .question{
-    font-family: GowunBatang-Regular;
 }
 
 
@@ -504,6 +499,13 @@ td{
 .paging>ul>li>a{display:inline-block;font-size:15px;color:#999;width:50px}
 .paging>ul>li>a.on{display:inline-block;font-size:15px;color:#000;font-weight:800}
 /*paging*/
+
+
+
+.errorpage{
+    height: calc(100vh - 260px);
+}
+
 
 
 /*footer*/

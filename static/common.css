@@ -8,7 +8,6 @@ font
  */
 
 body {
-	background: #fff;
 }
 
 
@@ -18,10 +17,11 @@ body {
 
 /*header*/
 h1{font-size:50px;color:#000;font-weight:800}
-h2{font-size:22px;color:#000;font-weight:800}
+h2{font-size:30px;color:#000;font-weight:800}
 
 .header{
     height:150px; font-family:SBAggroB;
+    vertical-align:middle;
     background:white; padding:20px;}
 #header-paragraph{
     margin-top:18px;text-align:center;
@@ -36,11 +36,11 @@ h2{font-size:22px;color:#000;font-weight:800}
 #mainpage {
     margin:0px;
     padding:0px;
+    height:100%;
     display: inline-flex;
 }
 #mainpage-logo{
     float:left;
-    background: lightsteelblue;
     height:100vh;
     flex-basis:41.666667%;
     font-family: SBAggroB;
@@ -49,8 +49,11 @@ h2{font-size:22px;color:#000;font-weight:800}
 }
 
 #mainpage-logo-div{
-    width:100%; height:80vh; line-height: 80vh; text-align: center;
-    align-items: center; justify-items: center;
+    width:100%;
+    align-items: center;
+    justify-items: center;
+    margin-top:40%;
+    margin-bottom:35%;
 
 }
 
@@ -59,10 +62,20 @@ h2{font-size:22px;color:#000;font-weight:800}
 }
 
 #mainpage-citylist{
-    background-color: lightgoldenrodyellow;
     display:flex; height:100vh;
-    flex-basis:58.333333%
+    flex-basis:58.333333%;
 }
+
+.mainpage-font-small{
+    font-size:15px;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    /*-webkit-text-stroke-width: 1px;*/
+	/*-webkit-text-stroke-color: white;*/
+    color:whitesmoke;
+    font-family: OTWelcomeRA;
+    text-align:center;
+}
+
 
 .test{
     margin:auto;
@@ -92,10 +105,13 @@ table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-to
 
 
 .navbar{
+    text-align:center;
+    height:60px;
     font-family:SBAggroB;
     border-top:1px solid #ddd;
     }
 .navbar>ul{
+
             width:100%;
 			list-style-type: none;
 			margin: 0;
@@ -131,6 +147,12 @@ table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-to
     padding-bottom:0px;
 }
 
+/* navbar2*/
+.menu{
+    color:black;
+    margin: 0 15px;
+}
+
 
 
 /*common*/
@@ -142,10 +164,9 @@ table caption,legend{overflow:hidden;width:100%;height:1px;*height:0px;margin-to
 
 }
 .signup{
-    margin: 100px auto;
+    margin: auto;
     border: solid 1px gray;
     width: 50%;
-    height: 500px;
     text-align: center;
 
 }
@@ -165,18 +186,36 @@ h3{
     border-radius:7px;
 }
 
+
 .display-when-wide{
 }
 .display-when-narrow{
     display: none;
 }
 
+#button-in-wide-map{
+    border:1px solid black;
+    border-radius:7px;
+
+}
+
+#button-addr{
+    width:90%;
+    background-color: white;
+    margin : auto;
+    border:1px solid black;
+    border-radius:5px;
+}
+
+
 
 
 details{
     align-content: center;
+    margin:auto;
+    width:90%;
 }
-details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+details > summary {background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
 details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
 details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
 details[open] > summary { background:#444;}
@@ -193,20 +232,25 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 
 .form-group>input{
 	display: inline-block;
-	color: #000;
-	font-size:13px;
 	padding: 10px 0;
+	color: #000;
+	font-size:17px;
 	border: 0;
 	line-height: inherit;
-	height: 40px;
+	height: 50px;
 	width: 50%;
-	margin: 10px auto;
+	margin: auto;
 	border:1px solid #ddd
+}
+
+.form-group>textarea{
+	color: #000;
+	font-size:17px;
 }
 
 .form-group>label{
     font-family:OTWelcomeRA;
-    font-size:15px;
+    font-size:20px;
 }
 
 
@@ -255,49 +299,6 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 	}
 
 
-/*area_list*/
-/*version1
-.area1{
-    width:100%;
-}
-
-.area_list{display:block;  margin:auto;  margin-bottom:auto;}
-.area_list>ul{
-    display: table;
-    width :100%;
-    margin-left:auto;
-    margin-right:auto;
-    padding:0;
-	font-size:0;
-
-}
-.area_list>ul>li{
-    font-family:SBAggroB;
-	display: inline-flex;
-    width: 10%;
-	font-size: 16px;
-	color: #000;
-	height: 60px;
-	line-height: 19px;
-	border-left:1px solid #ddd;
-	border-top:1px solid #ddd;
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	text-align: center;
-	background: #fff;
-	align-items: center;
-}
-.area_list>ul>li span {
-	margin: 0 auto;
-}
-.area_list>ul>li:hover{
-	background:#eee;
-	}
-
-.area_list>ul>li.on{
-	background:#eee;
-	}
-}*/
 
 
 /*version2*/
@@ -321,6 +322,22 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 #shoplist-list-list-div {
     -ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;
 }
+#etc_list {
+    -ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%;
+}
+
+.etc_list{
+ width:25%;
+ height:300px;
+}
+.etc_list>a>img{
+    width:80%;
+    height:80%;
+}
+.etc_list>a{
+    font-size:20px;
+    margin-top:20%;
+}
 
 
 .text-center{
@@ -339,6 +356,10 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
     width:15%;
 }
 
+#shoplist-list-map-object>.map{
+    margin-top: 15%;
+}
+
 
 /*shop list*/
 .shop_table{
@@ -352,7 +373,7 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 
 
 
-.table_a>a:link{
+.table_a>a{
     color:black;
 }
 
@@ -364,25 +385,6 @@ td{
     vertical-align : middle;
 }
 
-.sort>.tooltiptext{
-    visibility: hidden;
-    width: 70px;
-    border:1px solid DarkSlateGray;
-    border-radius:5px;
-    color:DarkSlateGray;
-    text-align:center;
-    padding: 5px 0;
-    font-size:10px;
-    position: absolute;
-    z-index: 1;
-    left:88%;
-    bottom:99%
-
-}
-
-.sort:hover>.tooltiptext{
-    visibility: visible;
-}
 
 
 
@@ -403,7 +405,6 @@ td{
     font-size:10px;
     position: absolute;
     z-index: 1;
-    left:70%;
 
 }
 
@@ -412,7 +413,15 @@ td{
 }
 
 
+/* comment_lsit */
 
+.comment_list>.comment{
+    width:25%;
+    margin:1%;
+    min-height:400px;
+    height:100%;
+    padding:1px;
+}
 
 
 /*question list*/
@@ -421,7 +430,7 @@ td{
 }
 
 .question_btn>span{
-    font-family: GowunBatang-Regular;
+    font-family: OTWelcomeRA;
     font-size:17px;
 
 }
@@ -443,23 +452,27 @@ td{
 /*question detail*/
 
 .question_detail{
- font-family: GowunBatang-Regular;
- font-size:18px;
+    height:100%;
+    font-size:18px;
 }
 
 .detail{
     margin:0;
 }
 
-.comment{
-    font-family: GowunBatang-Regular;
+.ques_comment{
+    height:100vh;
 }
 
 .question{
-    font-family: GowunBatang-Regular;
+    height:100vh;
 }
 
+.ques_form{
 
+}
+
+/* mypage */
 
 
 
@@ -467,8 +480,7 @@ td{
 .paging{display:block; margin:60px 0 180px 0}
 .paging>ul{display:block;font-size:0;text-align:center;}
 .paging>ul>li{display:inline-block;vertical-align: top;}
-.paging>ul>li>a>img{width:auto}
-.paging>ul>li>a{display:inline-block;font-size:15px;color:#999;width:50px}
+.paging>ul>li>a{display:inline-block;font-size:15px;color:#999;width:auto;}
 .paging>ul>li>a.on{display:inline-block;font-size:15px;color:#000;font-weight:800}
 /*paging*/
 
@@ -482,8 +494,7 @@ td{
     display:flex;
     background: #C0C0C0;
     padding:10px 0 10px 0;
-
-    }
+}
 
 .footer>.foot_content{
     text-align:center;
@@ -493,6 +504,9 @@ td{
     font-size:15px;
 }
 
+.errorpage{
+    height: calc(100vh - 360px);
+}
 
 
 
