@@ -1,0 +1,18 @@
+<!-- 네비게이션바-->
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom nav-item">
+    <ul>
+        <li><a href="{% url 'maps:index' %}">
+            <img id="navbar-logo" src="{% static 'logo3.png' %}"></a>
+        </li>
+            <ul class="right_bar" >
+                {%if user.is_authenticated %}
+                    <li><a class="navbar-brand char" href="{% url 'mypage:index' %}">마이페이지</a></li>
+                    <li><a class="navbar-brand char" href="{% url 'common:logout' %}">로그아웃({{request.user}})</a></li>
+                {% else %}
+                    <li><a class="navbar-brand char" href="{% url 'common:login' %}?next={{request.path}}">로그인</a></li>
+                    <li><a class="navbar-brand char" href="{% url 'common:signup' %}">회원가입</a></li>
+                {% endif %}
+            </ul>
+    </ul>
+</nav>

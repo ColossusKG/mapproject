@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-3">
+    <div class="ques_comment">
+        <div class="border-bottom border-top pb-2 pt-2" style=" font-family: OTWelcomeRA; font-size:30px; text-align:center; vertical-align:bottom;">[댓글 등록]</div>
+    <form method="post" class="post-form my-3">
+        {% csrf_token %}
+        {% include "form_errors.html" %}
+        <div class="form-group">
+            <label for="content">댓글내용</label>
+            <textarea class="form-control"name="content" id="content" 
+                      rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
+        </div>
+        <div style="text-align:right;">
+            <button type="submit" class="btn btn-primary">저장하기</button>
+        </div>
+
+    </form>
+    </div>
+</div>
+{% endblock %}

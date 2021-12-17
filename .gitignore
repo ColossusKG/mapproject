@@ -1,0 +1,6 @@
+E.idea
+*.pyc
+__pycache__
+db.sqbpro
+db.sqlite3
+/logs/

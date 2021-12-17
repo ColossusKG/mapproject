@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css'%}">
+
+    <link rel="stylesheet" media="screen" type="text/css" href="{% static 'font.css' %}">
+	<link rel="stylesheet" media="screen" type="text/css" href="../static/common.css?ver=1">
+    <link rel="stylesheet" media="screen and (max-width:660px)"  type="text/css" href="../static/common-mobile.css?ver=1">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <title>경기지역화폐</title>
+
+    <!-- jQuery JS-->
+    <script src="../static/jquery-3.4.1.min.js?ver=1"></script>
+    <!-- bootstrap js -->
+    <script src="../static/bootstrap.min.js?0ver=1"></script>
+
+    <script type='text/javascript'>
+        function getDisplayInfo() {
+            var size = {
+              width: window.innerWidth || document.body.clientWidth,
+              height: window.innerHeight || document.body.clientHeight
+            }
+            return size;
+        }
+        $(document).ready(function() {
+            $(".city-link").on ('click', function(){
+            $("#city").val($(this).data("id"));
+            $("#cityForm").submit();
+            });
+        });
+        $(document).ready(function() {
+            let rand_1_5 = Math.floor(Math.random() * 5) + 1;
+            if(getDisplayInfo().width<660){
+                $('#main_body').css({'background-image': 'url(static/narrow0' + rand_1_5 + '.jpg)'});
+            }else{
+                $('#main_body').css({'background-image': 'url(static/wide0' + rand_1_5 + '.jpg)'});
+            }
+        });
+    </script>
+</head>
+<!--background-image:url('static/wide01.jpg');-->
+<body id="main_body" style="background-size:100% 100%">
+    <div id="mainpage" class="container-fluid">
+
+        <div id="mainpage-logo">
+            <div id="mainpage-logo-div">
+                <img id="mainpage-logo-div-img" class="logo" src="{% static 'logo4_border.png' %}"><br><br>
+                {%if not user.is_authenticated %}
+                <a class="btn btn-light" href="{% url 'common:login' %}?next={{request.path}}">로그인</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="btn btn-light" href="{% url 'common:signup' %}?next={{request.path}}">회원가입</a>
+                {% else %}
+
+                <div style=" width:230px; font-size:18px; background-color:black; ctext-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;color:whitesmoke; margin:auto; margin-bottom:1%">{{request.user}}님 환영합니다!</div>
+                <a class="btn btn-light" href="{% url 'common:logout' %}?next={{request.path}}">로그아웃</a>
+                <a class="btn btn-light" href="{% url 'mypage:index' %}?next={{request.path}}">마이페이지</a>
+                {% endif %}
+            </div>
+        </div>
+
+        <div id="mainpage-citylist">
+
+            <div class="test">
+
+                <div class="mainpage-font-small">* 가맹점 폐업 또는 업종변경, 가맹점 정보변경 등으로 현재 정보와 다를 수 있으니 매장에 사용 가능 여부를 확인하기 바랍니다. *</div>
+                <br>
+                <div class="city_list">
+                    <ul>
+                        <li class="city-link " data-id="가평군"  href="#"><span>가평군</span></li>
+                        <li class="city-link " data-id="고양시"  href="#"><span>고양시</span></li>
+                        <li class="city-link" data-id="과천시"  href="#"><span>과천시</span></li>
+                        <li class="city-link" data-id="광명시"  href="#"><span>광명시</span></li>
+                        <li class="city-link" data-id="광주시"  href="#"><span>광주시</span></li>
+                        <li class="city-link" data-id="구리시"  href="#"><span>구리시</span></li>
+                        <li class="city-link" data-id="군포시"  href="#"> <span>군포시</span></li>
+                        <li class="city-link" data-id="남양주시" href="#"><span>남양주시</span></li>
+                        <li class="city-link" data-id="동두천시" href="#"><span>동두천시</span></li>
+                        <li class="city-link" data-id="부천시" href="#"><span>부천시</span></li>
+                        <li class="city-link" data-id="수원시" href="#"><span>수원시</span></li>
+                        <li class="city-link" data-id="안산시" href="#"><span>안산시</span></li>
+                        <li class="city-link" data-id="안성시" href="#"><span>안성시</span></li>
+                        <li class="city-link" data-id="안양시" href="#"><span>안양시</span></li>
+                        <li class="city-link" data-id="양주시" href="#"><span>양주시</span></li>
+                        <li class="city-link" data-id="양평군" href="#"><span>양평군</span></li>
+                        <li class="city-link" data-id="여주시" href="#"><span>여주시</span></li>
+                        <li class="city-link" data-id="연천군" href="#"><span>연천군</span></li>
+                        <li class="city-link" data-id="오산시" href="#"><span>오산시</span></li>
+                        <li class="city-link" data-id="용인시" href="#"><span>용인시</span></li>
+                        <li class="city-link" data-id="의왕시" href="#"><span>의왕시</span></li>
+                        <li class="city-link" data-id="의정부시" href="#"><span>의정부시</span></li>
+                        <li class="city-link" data-id="이천시" href="#"><span>이천시</span></li>
+                        <li class="city-link" data-id="파주시" href="#"><span>파주시</span></li>
+                        <li class="city-link" data-id="평택시" href="#"><span>평택시</span></li>
+                        <li class="city-link" data-id="포천시" href="#"><span>포천시</span></li>
+                        <li class="city-link" data-id="하남시" href="#"><span>하남시</span></li>
+                        <li class="city-link" data-id="화성시" href="#"><span>화성시</span></li>
+                    </ul>
+
+                    <br>
+                    <div class="mainpage-font-small">* 외부링크로 연결됩니다. *</div>
+                    <ul style="width:75%">
+                        <li style="width:32%" onclick="location.href='https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283'"><span>김포시</span></li>
+                        <li style="width:32%" onclick="location.href='https://www.seongnam.go.kr/prgm/slove/sloveAgentList.do?menuIdx=1000329'"><span>성남시</span></li>
+                        <li style="width:32%" onclick="location.href='https://www.si-ru.kr/?inc=store'"><span>시흥시</span></li>
+                    </ul>
+                </div>
+                <form id="cityForm" method="get" action="{% url 'maps:shop_list' %}">
+                    <input type="hidden"  id="city" name="city" value="{{ city }}">
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
