@@ -279,7 +279,7 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 .city_list>ul>li{
     font-family:SBAggroB;
 	display: inline-flex;
-    width: 20%;
+    width: 24%;
 	font-size: 16px;
 	color: #000;
 	height: 60px;
