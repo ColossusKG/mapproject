@@ -2,11 +2,11 @@
 {% load static %}
 {% block content %}
 <div class="container my-3">
-    <div calss="col-3" style="font-family:SBAggroB; font-size:30px;">가맹점 후기</div>
+    <div class="col-3 review" >가맹점 후기</div>
     <hr style="margin-top: 0.1rem;">
-    <div style="">
-        <div class="serach_box" style="text-align:center;  border-top:1px solid grey; border-bottom:1px solid grey;">
-            <div style="font-family:OTWelcomeRA; font-size:30px; margin-top:10%">후기가 궁금한 가맹점의 <span style="color:blue">이름과 주소</span>를 입력하세요!</div>
+    <div >
+        <div class="search_box" >
+            <div class="explain" >후기가 궁금한 가맹점의 <span>이름과 주소</span>를 입력하세요!</div>
             {% if messages %}
             <div class="alert alert-danger my-3" role="alert">
                 {% for message in messages %}
@@ -15,9 +15,9 @@
             </div>
             {% endif %}
             <br><br>
-            <input type="text" class="shop_name" value="{{shop_name|default_if_none:''}}" placeholder="가맹점의 이름을 입력하세요" style="width:50%"><br><br>
-            <input type="text" class="address" value="{{address|default_if_none:''}}" placeholder="읍/면/동을 입력하세요 ex)매교동,삼성동... " style="width:50%"><br><br><br>
-            <button id="search_btn" class="btn btn-light" type="button"  style="margin-bottom:10%"><img src="{% static '751463.png'%}" style="width:40px; height:40px;"/></button>
+            <input type="text" class="shop_name" value="{{shop_name|default_if_none:''}}" placeholder="가맹점의 이름을 입력하세요"><br><br>
+            <input type="text" class="address" value="{{address|default_if_none:''}}" placeholder="읍/면/동을 입력하세요 ex)매교동,삼성동... "><br><br><br>
+            <button id="search_btn" class="btn btn-light" type="button" ><img src="{% static '751463.png'%}" style="width:40px; height:40px;"/></button>
         </div>
 
     {% if shop_list %}
@@ -35,7 +35,7 @@
                 <td>{{shop.name}}</td>
                 <td>{{shop.addr2}}</td>
                 <td><a id="mark_btn" href="{% url 'board:shop_comment' shop.id %}" data-uri="#"
-                   class="btn float-right btn-info btn-block" style="width:50%; text-align:center;"><span>후기</span></a></td>
+                   class="btn float-right btn-info btn-block" ><span>후기</span></a></td>
             </tr>
             {% endfor %}
             </tbody>
