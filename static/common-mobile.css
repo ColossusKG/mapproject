@@ -271,16 +271,17 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 .city_list>ul>li{
     font-family:SBAggroB;
 	display: inline-flex;
-    width: 25%;
+    width: 24%;
 	font-size: 16px;
 	color: #000;
-	height: 60px;
+	height: 55px;
 	line-height: 19px;
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+    margin:2px;
+	border:1px solid gray;
 	text-align: center;
 	background: #fff;
 	align-items: center;
+    opacity: 75%;
 }
 .city_list>ul>li span {
 	margin: 0 auto;
