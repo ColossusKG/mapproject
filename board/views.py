@@ -12,18 +12,6 @@ from maps.models import *
 
 # Create your views here.
 
-# 이미지 경로,파일명 결정하는 함수
-def date_upload_to(instance, filename):
-    # 이미지 업로드 날짜에 따라 디렉토리에 저장
-    ymd_path = timezone().now.strftime('%y/%m/%d')
-    # 길이가 32인 uuid값
-    uuid_name = uuid4().hex
-    # 확장자 추출
-    extension = os.path.splitext(filename)[-1].lower()
-    return '/'.join([ymd_path,
-                     uuid_name + extension,
-                     ])
-
 
 def index(request):
     shop_name = request.GET.get('shop_name','')
