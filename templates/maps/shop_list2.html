@@ -218,7 +218,9 @@
                     </div>
                 </details>
                 <div class="map"  >
+                    <div id="map">
                 {{ map | safe}}
+                    </div>
                 </div>
             </div>
         </div>
@@ -264,12 +266,12 @@
                     <td class="table_a shoplist-list-table-name" style="vertical-align : middle;">
                         <a href="{% url 'maps:naver' shop.id %}" data-id="{{ shop.id }}" class="naver">{{shop.name}}</a>
                     </td>
-                    <td class="table_a shoplist-list-table-addr" style="vertical-align : middle;"><a href="#" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
+                    <td class="table_a shoplist-list-table-addr" style="vertical-align : middle;"><a href="#" onclick="return false;" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
                         {%if user.is_authenticated %}
                         <td class="table_a shoplist-list-table-recom1" >
                             <!-- 추천영역 -->
-                            <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span class="" style="">{{shop.mark.count}}  </span></div>
-                            <a href="#" data-save="{{ shop.id }}" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a>
+                            <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span id="recommend-{{shop.id}}">{{shop.mark.count}}  </span></div>
+                            <a href="#" onclick="return false;" data-save="{{ shop.id }}" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a>
                              </td>
                         {% else %}
                         <td class="table_a shoplist-list-table-recom2" >
@@ -348,8 +350,6 @@
             <input type="hidden" id="city" name="city" value="{{ city }}">
             <input type="hidden" id="area1" name="area1" value="{{ area1 }}">
             <input type="hidden"  id="area2" name="area2" value="{{ area2 }}">
-            <input type="hidden" id="save" name="save" value="{{ save }}">
-            <input type="hidden" id="marker" name="marker" value="{{ marker }}">
             <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
             <input type="hidden" id="page" name="page" value="{{ page }}">
             <input type="hidden" id="so" name="so" value="{{ so }}">
@@ -385,11 +385,52 @@ function enterkey2(){
 }
 
 var offset = $('#location').offset(); //선택한 태그의 위치를 반환
-$('html').animate({scrollTop : offset.top}, 100);
+$('html').animate({scrollTop : offset.top}, 10);
 
 
 
 $(document).ready(function(){
+    $(".addr_map").on('click',function() {
+        var shop_id = $(this).data("id");
+        $.ajax({
+            url:'{% url 'maps:marker' %}',
+            type:"get",
+            data:{'shop_id':shop_id,'csrfmiddlewaretokens':'{{csrf_token}}'},
+            dataType: "json",
+            success:function(response){
+                $("#map").html(response.map);
+                //console.log("성공");
+                },
+            error:function(){
+                //console.log("실패");
+                },
+             }); //ajax
+          });  // city
+
+     $(".save_btn").on('click',function() {
+        if(confirm("추천하시겠습니까?")){
+            var shop_id = $(this).data("save");
+            $.ajax({
+                url:'{% url 'maps:recommend' %}',
+                type:"get",
+                data:{'shop_id':shop_id,'csrfmiddlewaretokens':'{{csrf_token}}'},
+                dataType: "json",
+                success:function(response){
+                    if(response.message != ""){
+                        alert('이미 추천한 가맹점입니다.');
+                    }else{
+                        $("#recommend-"+shop_id).html(response.recomment_count);
+                        alert('추천완료');
+                    }
+                    //console.log("성공");
+                    },
+                error:function(){
+                    //console.log("실패");
+                    },
+                 }); //ajax
+            }
+          });  // city
+
     $("#btn_search").on('click', function() {
         $("#kw").val($(".kw").val());
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
@@ -402,22 +443,6 @@ $(document).ready(function(){
         $("#searchForm").submit();
     });
 
-
-
-    $(".addr_map").on('click',function() {
-        marker = $("#marker").val($(this).data("id"));
-        $("#searchForm").submit();
-    });
-
-
-
-    $(".save_btn").on('click',function() {
-        if(confirm("정말로 추천하시겠습니까?")) {
-        $("#save").val($(this).data("save"));
-        $("#searchForm").submit();
-        }
-        $("#save").val("");
-    });
 
     $(".city").on('change',function() {
         $("#city").val($(this).val());
@@ -449,8 +474,6 @@ $(document).ready(function(){
         $("#searchForm").submit();
     })
 });
-
-
 
 
 </script>

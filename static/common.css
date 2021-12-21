@@ -31,6 +31,19 @@ h2{font-size:30px;color:#000;font-weight:800}
     text-align:center;
 }
 
+#main_body{
+    background-size:100% 100%
+}
+.wel_comment{
+    width:230px;
+    font-size:18px;
+    background-color: black;
+    ctext-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+    color:whitesmoke; margin:auto;
+    margin-bottom:1%;
+    z-index:1;
+
+}
 
 
 #mainpage {
@@ -287,6 +300,7 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 	text-align: center;
 	background: #fff;
 	align-items: center;
+	cursor:pointer;
 }
 .city_list>ul>li span {
 	margin: 0 auto;
@@ -409,8 +423,47 @@ td{
     visibility: visible;
 }
 
+/* board */
+div>.review{
+   font-family:SBAggroB;
+   font-size:30px;
+}
 
-/* comment_lsit */
+div>.search_box{
+    text-align:center;
+    border-top:1px solid grey;
+    border-bottom:1px solid grey;
+}
+
+.search_box>.explain{
+    font-family:OTWelcomeRA;
+    font-size:30px;
+    margin-top:10%
+}
+
+.search_box>.explain>span{
+    color:blue;
+}
+
+.search_box>.shop_name{
+    width:50%;
+}
+
+.search_box>.address{
+    width:50%;
+}
+
+.search_box>#search_btn{
+    margin-bottom:10%;
+}
+
+#mark_btn{
+    width:50%;
+    text-align:center;
+}
+
+
+/* comment_list */
 
 .comment_list>.comment{
     width:25%;
