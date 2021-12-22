@@ -44,6 +44,7 @@ h2{font-size:22px;color:#000;font-weight:800}
     height:100%;
     flex-direction: column;
     display:inline-flex;
+    text-align:center;
 }
 
 
@@ -258,20 +259,18 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 
 
 
-.city_list{display:block; margin:auto; align-items:center; }
+.city_list{display:block; margin:auto; align-items:center; width:90%;}
 .city_list>ul{
     display: table;
     margin-left: auto;
     margin-right: auto;
     padding:0;
 	font-size:0;
-	border-left:1px solid #ddd;
-	border-top:1px solid #ddd;
 }
 .city_list>ul>li{
     font-family:SBAggroB;
 	display: inline-flex;
-    width: 24%;
+    width: 23%;
 	font-size: 16px;
 	color: #000;
 	height: 55px;
@@ -281,6 +280,7 @@ details[open] > summary ~ * { animation:reveal 0.5s;}
 	text-align: center;
 	background: #fff;
 	align-items: center;
+    cursor:pointer;
     opacity: 75%;
 }
 .city_list>ul>li span {
