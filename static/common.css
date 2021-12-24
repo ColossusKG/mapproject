@@ -1,6 +1,13 @@
 @charset "UTF-8";
 
-
+#mapimagehover area{
+    position : relative
+}
+#mapimagehover area::before,
+#mapimagehover area::after{
+    width:100%;height:100%;background:red;
+    position : absolute;
+}
 body {
 }
 

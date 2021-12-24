@@ -24,6 +24,7 @@ def shop_list(request):
     area2 = request.GET.get('area2','') # 읍/면/동
     page = request.GET.get('page', '1')  # 페이지
     kw = request.GET.get('kw', '')  # 검색
+    type = request.GET.get('type', '')
     so = request.GET.get('so','')
 
     if city == "김포/성남/시흥":
@@ -130,7 +131,20 @@ def shop_list(request):
                 name = shop.name
                 folium.Marker(location=[lat, lng], tooltip=name).add_to(map)
 
-
+        if type:
+            shop_list = shop_list.filter(
+                Q(type__icontains=type)
+            )
+            for shop in shop_list:
+                lat1 = shop.lat
+                lng1 = shop.lng
+                map = folium.Map(location=[lat1, lng1], zoom_start=17)
+                break
+            for shop in shop_list:
+                lat = shop.lat
+                lng = shop.lng
+                name = shop.name
+                folium.Marker(location=[lat, lng], tooltip=name).add_to(map)
         map = map._repr_html_()
 
         # 페이징 처리

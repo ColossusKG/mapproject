@@ -100,7 +100,13 @@
                 </select>
                 {% endif %}
             </div>
-             <div class="col-8 display-when-wide input-group" style="width:80%; ">
+            <div class="col-4 display-when-wide input-group" style="width:80%; ">
+                <input onkeyup="enterkey3();" type="text" class="form-control type" value="{{ type|default_if_none:'' }}"placeholder="분류명을 입력하세요">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="btn_search3">찾기</button>
+                </div>
+            </div>
+            <div class="col-8 display-when-wide input-group" style="width:80%; ">
                 <input onkeyup="enterkey();" type="text" class="form-control kw" value="{{ kw|default_if_none:'' }}"placeholder="상호명을 입력하세요">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
@@ -211,6 +217,12 @@
                         </div>
                     </div>
                     <div class="input-group">
+                        <input onkeyup="enterkey4();" type="text" class="form-control type2" value="{{ type2|default_if_none:'' }}"placeholder="분류명을 입력하세요">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="btn_search4">찾기</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
                     <input onkeyup="enterkey2();" type="text" class="form-control kw2" value="{{ kw2|default_if_none:'' }}"placeholder="상호명을 입력하세요">
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="button" id="btn_search2">찾기</button>
@@ -251,6 +263,7 @@
                 <tr class="text-center">
                     <th class="shoplist-list-table-name">상호명</th>
                     <th class="shoplist-list-table-addr">주소</th>
+                    <th class="shoplist-list-table-after">후기</th>
                     {% if so == '추천순' %}
                     <th class="shoplist-list-table-recom1"><a href="#" class="so" data-so="이름순" title="이름순 정렬하기"><span class="sort">추천▲</span></a></th>
                     {% else %}
@@ -267,22 +280,23 @@
                         <a href="{% url 'maps:naver' shop.id %}" data-id="{{ shop.id }}" class="naver">{{shop.name}}</a>
                     </td>
                     <td class="table_a shoplist-list-table-addr" style="vertical-align : middle;"><a href="#" onclick="return false;" data-id="{{ shop.id }}"  class="col-7 addr_map">{{shop.addr2}}</a></td>
-                        {%if user.is_authenticated %}
-                        <td class="table_a shoplist-list-table-recom1" >
-                            <!-- 추천영역 -->
-                            <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span id="recommend-{{shop.id}}">{{shop.mark.count}}  </span></div>
-                            <a href="#" onclick="return false;" data-save="{{ shop.id }}" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a>
-                             </td>
-                        {% else %}
-                        <td class="table_a shoplist-list-table-recom2" >
-                            <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span class="" style="">{{shop.mark.count}}</span></div>
-                            <a href="{% url 'common:login' %}?next={{request.path}}" data-save="#" class="save_btn">
-                                <i class="fas fa-thumbs-up recommend" >
-                                    <span class="tooltiptext">추천하기</span>
-                                </i>
-                            </a>
+                    <td class="table_a" style="vertical-align : middle;"><a href="/board/comment/{{shop.id}}">등록</a></td>
+                    {%if user.is_authenticated %}
+                    <td class="table_a shoplist-list-table-recom1" >
+                        <!-- 추천영역 -->
+                        <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span id="recommend-{{shop.id}}">{{shop.mark.count}}  </span></div>
+                        <a href="#" onclick="return false;" data-save="{{ shop.id }}" class="save_btn"><i class="fas fa-thumbs-up recommend" ><span class="tooltiptext">추천하기</span></i></a>
                         </td>
-                        {% endif %}
+                    {% else %}
+                    <td class="table_a shoplist-list-table-recom2" >
+                        <div style="width:50px; border:1px solid gray;  margin-left:auto; margin-right:auto;"><span class="" style="">{{shop.mark.count}}</span></div>
+                        <a href="{% url 'common:login' %}?next={{request.path}}" data-save="#" class="save_btn">
+                            <i class="fas fa-thumbs-up recommend" >
+                                <span class="tooltiptext">추천하기</span>
+                            </i>
+                        </a>
+                    </td>
+                    {% endif %}
                 </tr>
                 {% endfor %}
                 {% else %}
@@ -351,6 +365,7 @@
             <input type="hidden" id="area1" name="area1" value="{{ area1 }}">
             <input type="hidden"  id="area2" name="area2" value="{{ area2 }}">
             <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
+            <input type="hidden" id="type" name="type" value="{{ type|default_if_none:'' }}">
             <input type="hidden" id="page" name="page" value="{{ page }}">
             <input type="hidden" id="so" name="so" value="{{ so }}">
         </form>
@@ -371,6 +386,9 @@ function getDisplayInfo() {
 function enterkey(){
     if(window.event.keyCode==13){
         $("#kw").val($(".kw").val());
+        if($("#type").val($(".type")!='')){
+            $("#type").val($(".type").val());
+        }
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     }
@@ -379,6 +397,31 @@ function enterkey(){
 function enterkey2(){
     if(window.event.keyCode==13){
         $("#kw").val($(".kw2").val());
+        if($("#type").val($(".type2")!='')){
+            $("#type").val($(".type2").val());
+        }
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+        $("#searchForm").submit();
+    }
+}
+
+function enterkey3(){
+    if(window.event.keyCode==13){
+        $("#type").val($(".type").val());
+        if($("#kw").val($(".kw")!='')){
+            $("#kw").val($(".kw").val());
+        }
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+        $("#searchForm").submit();
+    }
+}
+
+function enterkey4(){
+    if(window.event.keyCode==13){
+        $("#type").val($(".type2").val());
+        if($("#kw").val($(".kw2")!='')){
+            $("#kw").val($(".kw2").val());
+        }
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     }
@@ -407,7 +450,7 @@ $(document).ready(function(){
              }); //ajax
           });  // city
 
-     $(".save_btn").on('click',function() {
+    $(".save_btn").on('click',function() {
         if(confirm("추천하시겠습니까?")){
             var shop_id = $(this).data("save");
             $.ajax({
@@ -433,12 +476,36 @@ $(document).ready(function(){
 
     $("#btn_search").on('click', function() {
         $("#kw").val($(".kw").val());
+        if($("#type").val($(".type")!='')){
+            $("#type").val($(".type").val());
+        }
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
 
-     $("#btn_search2").on('click', function() {
+    $("#btn_search2").on('click', function() {
         $("#kw").val($(".kw2").val());
+        if($("#type").val($(".type2")!='')){
+            $("#type").val($(".type2").val());
+        }
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+        $("#searchForm").submit();
+    });
+
+    $("#btn_search3").on('click', function() {
+        $("#type").val($(".type").val());
+        if($("#kw").val($(".kw")!='')){
+            $("#kw").val($(".kw").val());
+        }
+        $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+        $("#searchForm").submit();
+    });
+
+    $("#btn_search4").on('click', function() {
+        $("#type").val($(".type2").val());
+        if($("#kw").val($(".kw2")!='')){
+            $("#kw").val($(".kw2").val());
+        }
         $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
         $("#searchForm").submit();
     });
