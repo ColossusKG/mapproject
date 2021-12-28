@@ -132,9 +132,13 @@ def shop_list(request):
                 folium.Marker(location=[lat, lng], tooltip=name).add_to(map)
 
         if type:
-            shop_list = shop_list.filter(
-                Q(type__icontains=type)
-            )
+            if type=='의료':
+                shop_list = shop_list.filter(Q(type__icontains='의원') | Q(type__icontains='병원'))
+
+            elif type=='병원':
+                shop_list = shop_list.filter(Q(type__icontains='의원 - 의원') | Q(type__icontains='병원 - 병원'))
+            else:
+                shop_list = shop_list.filter(Q(type__icontains=type))
             for shop in shop_list:
                 lat1 = shop.lat
                 lng1 = shop.lng
@@ -151,7 +155,7 @@ def shop_list(request):
         paginator = Paginator(shop_list, 10)  # 페이지당 10개 보여주기
         page_obj = paginator.get_page(page)  # 페이지 객체 생성
         content = {'shop_list': page_obj, 'page': page, 'kw': kw, 'map': map, 'city': city, 'area1_list': area1_list,
-                'area1':area1, 'area2':area2, 'so':so}
+                'area1':area1, 'area2':area2, 'so':so, 'type':type}
 
     return render(request, 'maps/shop_list2.html', content)
 
