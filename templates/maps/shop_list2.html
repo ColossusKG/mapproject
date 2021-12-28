@@ -392,16 +392,194 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div class="input-group">
-                        <input onkeyup="enterkey4();" type="text" class="form-control type2" value="{{ type2|default_if_none:'' }}"placeholder="분류명을 입력하세요">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="btn_search4">찾기</button>
+                    <div class="row justify-content-between my-3 address" >
+<!--                    <div class="input-group">-->
+<!--                        <input onkeyup="enterkey4();" type="text" class="form-control type2" value="{{ type2|default_if_none:'' }}"placeholder="분류명을 입력하세요">-->
+<!--                        <div class="input-group-append">-->
+<!--                            <button class="btn btn-outline-secondary" type="button" id="btn_search4">찾기</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                        <div class="col-4">
+                            <select class="form-control type">
+                            <option value="" >분류를 선택하세요</option>
+                            <option value="음식"{% if type == '음식' %}selected{% endif %}>식당</option>
+                            <option value="학원"{% if type == '학원' %}selected{% endif %}>학원</option>
+                            <option value="숙박"{% if type == '숙박' %}selected{% endif %}>숙박</option>
+                            <option value="여행"{% if type == '여행' %}selected{% endif %}>여행</option>
+                            <option value="레저"{% if type == '레저' %}selected{% endif %}>레저</option>
+                            <option value="문화"{% if type == '문화' %}selected{% endif %}>문화</option>
+                            <option value="의류"{% if type == '의류' %}selected{% endif %}>의류</option>
+                            <option value="잡화"{% if type == '잡화' %}selected{% endif %}>잡화</option>
+                            <option value="가전"{% if type == '가전' %}selected{% endif %}>가전</option>
+                            <option value="의료"{% if type == '의료' %}selected{% endif %}>병원</option>
+                            <option value="연료판매점"{% if type == '연료판매점' %}selected{% endif %}>주유소</option>
+                            <option value="서적문구"{% if type == '서적문구' %}selected{% endif %}>서적/문구</option>
+                            <option value="사무통신"{% if type == '사무통신' %}selected{% endif %}>통신/디지털</option>
+                            <option value="자동차판매"{% if type == '자동차판매' %}selected{% endif %}>차량</option>
+                            <option value="보건위생"{% if type == '보건위생' %}selected{% endif %}>보건위생/미용/안경</option>
+                            <option value="음료식품"{% if type == '음료식품' %}selected{% endif %}>식품</option>
+                            <option value="보험"{% if type == '보험' %}selected{% endif %}>보험</option>
+                        </select>
                         </div>
-                    </div>
-                    <div class="input-group">
-                    <input onkeyup="enterkey2();" type="text" class="form-control kw2" value="{{ kw2|default_if_none:'' }}"placeholder="상호명을 입력하세요">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="btn_search2">찾기</button>
+                        <div class="col-4">
+                            {% if type == '음식' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="한식">한식</option>
+                                <option value="서양음식">양식</option>
+                                <option value="일식">일식</option>
+                                <option value="중국식">중식</option>
+                                <option value="스넥">스낵</option>
+                                <option value="주점">주점</option>
+                                <option value="칵테일바">바</option>
+                                <option value="위탁급식업">위탁급식</option>
+                            </select>
+                            {% elif type == '학원' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="보습학원">보습학원</option>
+                                <option value="외국어학원">외국어</option>
+                                <option value="예?체능계학원">예체능</option>
+                                <option value="컴퓨터학원">컴퓨터</option>
+                                <option value="독서실">독서실</option>
+                                <option value="기능학원">기능학원</option>
+                                <option value="유아원">어린이집</option>
+                                <option value="기타 교육기관">기타</option>
+                            </select>
+                            {% elif type == '여행' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="관광여행">관광</option>
+                                <option value="렌터카">렌터카</option>
+                                <option value="여객선">여객선</option>
+                                <option value="택시회사">택시</option>
+                                <option value="기타교통수단">기타</option>
+                            </select>
+                            {% elif type == '레저' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="헬스">헬스</option>
+                                <option value="골프">골프</option>
+                                <option value="테니스장">테니스장</option>
+                                <option value="당 구 장">당구장</option>
+                                <option value="볼 링 장">볼링장</option>
+                                <option value="수 영 장">수영장</option>
+                                <option value="노 래 방">노래방</option>
+                                <option value="기타레져업소">기타</option>
+                            </select>
+                            {% elif type == '문화' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="영화관">영화관</option>
+                                <option value="애완동물">애완동물</option>
+                                <option value="화원">화원</option>
+                                <option value="수족관">수족관</option>
+                                <option value="공예품">공예</option>
+                                <option value="화방">화방</option>
+                                <option value="화랑">화랑</option>
+                                <option value="티켓">티켓</option>
+                                <option value="문화취미기타">기타</option>
+                            </select>
+                            {% elif type == '의류' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="정장">정장</option>
+                                <option value="스포츠의류">스포츠</option>
+                                <option value="캐주얼의류">캐주얼</option>
+                                <option value="아동의류">아동복</option>
+                                <option value="맞춤복점">맞춤복</option>
+                                <option value="내의판매">내복</option>
+                                <option value="단체복">단체복</option>
+                                <option value="와이셔츠">와이셔츠&타이</option>
+                                <option value="기타의류">기타</option>
+                            </select>
+                            {% elif type == '잡화' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="귀금속">귀금속</option>
+                                <option value="시계">시계</option>
+                                <option value="액세서리">악세서리</option>
+                                <option value="신발">신발</option>
+                                <option value="가방">가방</option>
+                                <option value="기념품">기념품</option>
+                                <option value="잡화수리">수리</option>
+                                <option value="기타잡화">기타</option>
+                            </select>
+                            {% elif type == '의료' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="병원">일반병원</option>
+                                <option value="종합병원">종합병원</option>
+                                <option value="치과">치과</option>
+                                <option value="한의원">한의원</option>
+                                <option value="한방병원">한방병원</option>
+                                <option value="동물병원">동물병원</option>
+                                <option value="산후조리원">산후조리원</option>
+                                <option value="기타의료기관">기타</option>
+                            </select>
+                            {% elif type == '서적문구' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="일반서적">일반서적</option>
+                                <option value="전문서적">전문서적</option>
+                                <option value="문구용품">문구용품</option>
+                                <option value="간행물">간행물</option>
+                                <option value="과학기자재">과학기자재</option>
+                                <option value="출판">출판</option>
+                                <option value="완구점">완구</option>
+                                <option value="기타서적문구">기타</option>
+                            </select>
+                            {% elif type == '사무통신' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="통신기기">통신기기</option>
+                                <option value="컴퓨터">컴퓨터</option>
+                                <option value="OA기기">OA기기</option>
+                                <option value="기타 사무용품">기타</option>
+                            </select>
+                            {% elif type == '자동차판매' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value=""></option>
+                                <option value="국산신차판매">국산차</option>
+                                <option value="수입자동차">수입차</option>
+                                <option value="중고차판매">중고차</option>
+                                <option value="이륜차판매">이륜차</option>
+                                <option value="기타운송">기타</option>
+                            </select>
+                            {% elif type == '보건위생' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="안경">안경</option>
+                                <option value="미용원">미용원</option>
+                                <option value="피부미용실">피부미용</option>
+                                <option value="미용재료">미용재료</option>
+                                <option value="화장품">화장품</option>
+                                <option value="안마시술소">안마시술</option>
+                                <option value="사우나">사우나</option>
+                                <option value="의료용품">의료용품</option>
+                                <option value="기타대인서비스">기타</option>
+                            </select>
+                            {% elif type == '음료식품' %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                                <option value="제과점">제과점</option>
+                                <option value="정육점">정육점</option>
+                                <option value="농?축?수산물">농산/축산/수산물</option>
+                                <option value="미곡상">미곡</option>
+                                <option value="기타음료식품">기타</option>
+                            </select>
+                            {% else %}
+                            <select class="form-control type">
+                                <option value="">상세분류</option>
+                            </select>
+                            {% endif %}
+                        </div>
+                        <div class="input-group col-4">
+                        <input onkeyup="enterkey2();" type="text" class="form-control kw2" value="{{ kw2|default_if_none:'' }}"placeholder="상호명을 입력하세요">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="btn_search2">찾기</button>
+                            </div>
                         </div>
                     </div>
                 </details>
